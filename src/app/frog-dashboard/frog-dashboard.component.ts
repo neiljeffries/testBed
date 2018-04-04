@@ -1,8 +1,9 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { FrogsService } from 'app/frogs.service'
 import { MatDatepickerInputEvent } from '@angular/material/datepicker';
-import { MatDialog } from '@angular/material';
-import { DialogComponent } from "app/dialog/dialog.component";
+import { MatDialog, MatAccordion, MatExpansionPanel,
+         MatExpansionModule, MatExpansionPanelTitle, MatExpansionPanelHeader } from '@angular/material';
+import { DialogComponent } from 'app/dialog/dialog.component';
 
 @Component({
   selector: 'frogs',
@@ -10,9 +11,9 @@ import { DialogComponent } from "app/dialog/dialog.component";
   templateUrl: './frog-dashboard.component.html'
 })
 
-//template: `<br><br><div>{{project?.date}} <br>{{project?.time}} <br>{{project?.milliseconds_since_epoch}}  <a href="#" (click)="load()">Load 1234</a> </div>`,
-export class FrogDashboardComponent implements OnInit {
 
+export class FrogDashboardComponent implements OnInit {
+  panelOpenState = false;
   color = 'accent';
   checked = false;
   disabled = false;
@@ -27,12 +28,12 @@ export class FrogDashboardComponent implements OnInit {
   }
 
   constructor(
-    private frogsService: FrogsService, 
+    private frogsService: FrogsService,
     public dialog: MatDialog
   ) { }
 
   openDialog(dialogId): void {
-    let dialogRef = this.dialog.open(DialogComponent, {
+    const dialogRef = this.dialog.open(DialogComponent, {
       width: '250px',
       data: {name: this.name, animal: this.animal },
       id: dialogId
@@ -41,15 +42,16 @@ export class FrogDashboardComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
       console.log(result);
-      if(result)
-      this.animal = result.animal;
+      if (result) {
+        this.animal = result.animal;
+      }
     });
   }
 
   ngOnInit() {
 
     this.frogsService.activeProject
-      .subscribe(res => 
+      .subscribe(res =>
         this.project = res
       );
 
@@ -61,7 +63,7 @@ export class FrogDashboardComponent implements OnInit {
 
 
   public slideChanged(e) {
-      console.log(e.checked ? "on" : "off");
+      console.log(e.checked ? 'on' : 'off');
   }
 
 

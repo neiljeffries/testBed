@@ -8,14 +8,14 @@ import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 })
 export class DialogComponent implements OnInit {
 
-animal:string;
-dialogId:string;
+animal: string;
+dialogId: string;
 
   constructor(
     public dialogRef: MatDialogRef<DialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any
     ) {
-      this.dialogId = this.dialogRef.id.toString(); 
+      this.dialogId = this.dialogRef.id.toString();
     }
 
   onNoClick(): void {
