@@ -1,0 +1,60 @@
+<div class="container-fluid">
+  <div class="panel panel-default">
+    <div class="panel-heading">Crewmembers</div>
+    <div class="panel-body">
+
+      <div class="container-fluid">
+
+        <div class="row" style="margin-bottom:10px;">
+          <div class="col-xs-12">
+            <button class="btn btn-default" (click)="loadCrewmembers()">Load Crewmembers</button>
+          </div>
+        </div>
+      
+
+<div class="row">
+  <div class="col-xs-12">
+<div *ngIf="crewmembers; else elseBlock">
+<!--<label>JSON</label>
+{{crewmembers | json}}-->
+
+<!--<table class="table table-striped" style="width:787px;">-->
+  <table class="table table-striped" style="width:100%;">
+  <thead>
+    <tr>
+    <th class="c1">ID</th>
+    <th class="c2">Fname</th>
+    <th class="c3">Lname</th>
+    <th class="c4">Email</th>
+    <th class="c5">Phone</th>
+    <th class="c6">Gemsid</th>
+    <th class="c7">Slide</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let crewmember of crewmembers">
+      <td class="c1">{{crewmember.id}}</td>
+      <td class="c2">{{crewmember.first_name}}</td>
+      <td class="c3">{{crewmember.last_name}}</td>
+      <td class="c4">{{crewmember.email}}</td>
+      <td class="c5">{{crewmember.phone}}</td>
+      <td class="c6">{{crewmember.gemsid}}</td>
+      <td class="c7">{{crewmember.sliderequested}}</td>
+    </tr>
+  </tbody>
+</table>
+    <div class="form-group">
+      <label for="comment"><button (click)="toggleId()" class="btn btn-default">JSON</button></label>
+      <textarea *ngIf="showId" class="form-control" rows="5" id="comment">{{ crewmembers | json }}<</textarea>
+    </div>  
+</div>
+<ng-template #elseBlock>Click to test the crewmember service.</ng-template>
+  </div>
+</div>
+</div>
+
+ 
+
+     </div>
+  </div>
+</div>

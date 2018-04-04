@@ -1,0 +1,32 @@
+/*table {
+        width: 787px;
+    }
+thead, tbody, tr, td, th { display: block; }
+tr:after {
+    content: ' ';
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+thead th {
+    height: 40px;
+}
+tbody {
+    height: 400px;
+    overflow-y: auto;
+}
+tbody td, thead th {
+
+    float: left;
+}
+tbody td {
+
+}
+
+.c1{width:50px;}
+.c2{width:100px;}
+.c3{width:100px;}
+.c4{width:216px;}
+.c5{width:150px;}
+.c6{width:80px;}
+.c7{width:74px;}*/

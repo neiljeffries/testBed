@@ -1,0 +1,23 @@
+{{dialogId}}
+
+<div [hidden]="dialogId != 'favoriteAnimal'">
+
+    <h1>hello! {{data.name}}</h1>
+
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="Favorite animal" [(ngModel)]="data.animal">
+    </mat-form-field>
+
+    <mat-dialog-actions>
+        <button mat-raised-button mat-dialog-close>Cancel</button>
+        <!-- The mat-dialog-close directive optionally accepts a value as a result for the dialog. -->
+        <button mat-raised-button [mat-dialog-close]="data">Save</button>
+    </mat-dialog-actions>
+
+</div>
+
+
+<div [hidden]="dialogId != 'test1'">
+
+    <h1>test1</h1>
+</div>
