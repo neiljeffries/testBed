@@ -10,11 +10,11 @@ import { Zippy } from './event-emitter-test/event-emitter-test.component';
   ]
 })
 export class AppComponent {
-  title = 'Hubx';
+  title = 'testBed1';
 
   handleUserUpdated(user) {
     // Handle the event
-    console.log("boom");
+    console.log('boom');
   }
 
 }
