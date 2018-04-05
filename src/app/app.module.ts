@@ -12,13 +12,13 @@ import { CrewmemberSearchComponent } from './crewmember-search/crewmember-search
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { Zippy } from './event-emitter-test/event-emitter-test.component';
 import { FrogDashboardComponent } from './frog-dashboard/frog-dashboard.component';
-import { FrogsService } from "app/frogs.service";
+import { FrogsService } from 'app/frogs.service'
 import { AppRoutingModule } from './/app-routing.module';
 import { DataTableComponent } from './data-table/data-table.component';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { HubxDashboardComponent } from './hubx-dashboard/hubx-dashboard.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AppMaterialModule } from "app/app-material/app-material.module";
+import { AppMaterialModule } from 'app/app-material/app-material.module';
 import { DialogComponent } from './dialog/dialog.component';
 
 @NgModule({

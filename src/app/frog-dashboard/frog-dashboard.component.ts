@@ -1,18 +1,21 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit, Inject, ViewEncapsulation, ViewChild } from '@angular/core';
 import { FrogsService } from 'app/frogs.service'
 import { MatDatepickerInputEvent } from '@angular/material/datepicker';
 import { MatDialog, MatAccordion, MatExpansionPanel,
-         MatExpansionModule, MatExpansionPanelTitle, MatExpansionPanelHeader } from '@angular/material';
+         MatExpansionPanelTitle, MatExpansionPanelHeader } from '@angular/material';
 import { DialogComponent } from 'app/dialog/dialog.component';
-
+import {MatExpansionModule} from '@angular/material/expansion';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 @Component({
   selector: 'frogs',
   styleUrls: ['./frog-dashboard.component.css'],
-  templateUrl: './frog-dashboard.component.html'
+  templateUrl: './frog-dashboard.component.html',
+  encapsulation: ViewEncapsulation.None
 })
 
 
 export class FrogDashboardComponent implements OnInit {
+  @ViewChild(MatAccordion) accordion: MatAccordion;
   panelOpenState = false;
   color = 'accent';
   checked = false;
