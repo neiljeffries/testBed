@@ -22,6 +22,13 @@ export class FrogDashboardComponent implements OnInit {
   animal: string;
   name: string;
 
+  availableColors = [
+    { name: 'none', color: '' },
+    { name: 'Primary', color: 'primary' },
+    { name: 'Accent', color: 'accent' },
+    { name: 'Warn', color: 'warn' }
+  ];
+
   constructor(
     private frogsService: FrogsService,
     public dialog: MatDialog,
