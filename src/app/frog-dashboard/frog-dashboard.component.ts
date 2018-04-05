@@ -1,7 +1,8 @@
 import { Component, OnInit, Inject, ViewChild } from '@angular/core';
 import { FrogsService } from 'app/frogs.service'
-import { MatDialog, MatDatepickerInputEvent, MatAccordion } from '@angular/material';
+import { MatDialog, MatDatepickerInputEvent, MatAccordion, MatSnackBar } from '@angular/material';
 import { DialogComponent } from 'app/dialog/dialog.component';
+import { ProfileComponent } from 'app/profile/profile.component';
 @Component({
   selector: 'app-frogs',
   styleUrls: ['./frog-dashboard.component.css'],
@@ -23,8 +24,31 @@ export class FrogDashboardComponent implements OnInit {
 
   constructor(
     private frogsService: FrogsService,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    public snackBar: MatSnackBar
   ) { }
+
+  openSnackBar() {
+    // this.snackBar.openFromComponent(ProfileComponent, {
+    //   duration: 5000,
+    //   data: { name: this.name, animal: this.animal },
+    // });
+    const snackBarRef = this.snackBar.open('Message archived', 'Undo', {
+      duration: 30000
+    });
+
+    snackBarRef.afterDismissed().subscribe(() => {
+      console.log('The snack-bar was dismissed');
+    });
+
+
+    snackBarRef.onAction().subscribe(() => {
+      console.log('The snack-bar action was triggered!');
+    });
+
+    // snackBarRef.dismiss();
+  }
+
 
 
   addEvent(type: string, event: MatDatepickerInputEvent<Date>) {
