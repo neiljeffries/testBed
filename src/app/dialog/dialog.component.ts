@@ -26,10 +26,13 @@ dialogId: string;
     console.log(this.data);
     console.log(this.dialogRef.id);
 
-      // this.dialogRef.afterOpen().subscribe(() => {
-      //   this.dialogId = this.dialogRef.id.toString();
-      //   console.log(this.dialogId)
-      // })
+      this.dialogRef.afterOpen().subscribe(() => {
+        console.log('after open fired');
+      });
+
+      this.dialogRef.afterClosed().subscribe(() => {
+        console.log('after closed fired');
+      });
   }
 
 

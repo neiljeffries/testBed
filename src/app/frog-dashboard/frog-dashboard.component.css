@@ -1,6 +1,16 @@
 .example-events {
-  width: 400px;
-  height: 200px;
-  border: 1px solid #555;
-  overflow: auto;
+    width: 400px;
+    height: 200px;
+    border: 1px solid #555;
+    overflow: auto;
+}
+
+.mat-accordian-headers-align .mat-expansion-panel-header-title,
+.mat-accordian-headers-align .mat-expansion-panel-header-description {
+    flex-basis: 0;
+}
+
+.mat-accordian-headers-align .mat-expansion-panel-header-description {
+    justify-content: space-between;
+    align-items: center;
 }
