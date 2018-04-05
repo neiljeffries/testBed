@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 
 import {
   MatAutocompleteModule,
@@ -38,7 +38,6 @@ import {
 @NgModule({
   declarations: [],
   imports: [
-    CommonModule,
     MatAutocompleteModule,
     MatButtonModule,
     MatButtonToggleModule,

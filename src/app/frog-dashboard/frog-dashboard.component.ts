@@ -1,7 +1,6 @@
 import { Component, OnInit, Inject, ViewChild } from '@angular/core';
 import { FrogsService } from 'app/frogs.service'
-import { MatDatepickerInputEvent } from '@angular/material/datepicker';
-import { MatDialog, MatAccordion } from '@angular/material';
+import { MatDialog, MatDatepickerInputEvent, MatAccordion } from '@angular/material';
 import { DialogComponent } from 'app/dialog/dialog.component';
 @Component({
   selector: 'app-frogs',
@@ -11,7 +10,7 @@ import { DialogComponent } from 'app/dialog/dialog.component';
 
 
 export class FrogDashboardComponent implements OnInit {
-  @ViewChild(MatAccordion) accordion: MatAccordion;
+  // @ViewChild(MatAccordion) accordion: MatAccordion;
   panelOpenState = false;
   color = 'accent';
   checked = false;
@@ -22,19 +21,21 @@ export class FrogDashboardComponent implements OnInit {
   animal: string;
   name: string;
 
-  addEvent(type: string, event: MatDatepickerInputEvent<Date>) {
-    this.events.push(`${type}: ${event.value}`);
-  }
-
   constructor(
     private frogsService: FrogsService,
     public dialog: MatDialog
   ) { }
 
+
+  addEvent(type: string, event: MatDatepickerInputEvent<Date>) {
+    this.events.push(`${type}: ${event.value}`);
+    console.log(`${type}: ${event.value}`);
+  }
+
   openDialog(dialogId): void {
     const dialogRef = this.dialog.open(DialogComponent, {
       width: '250px',
-      data: {name: this.name, animal: this.animal },
+      data: { name: this.name, animal: this.animal },
       id: dialogId
     });
 
@@ -45,14 +46,14 @@ export class FrogDashboardComponent implements OnInit {
         this.animal = result.animal;
       }
     });
+
   }
 
   ngOnInit() {
 
-    this.frogsService.activeProject
-      .subscribe(res =>
-        this.project = res
-      );
+    this.frogsService.activeProject.subscribe(res =>
+      this.project = res
+    );
 
   }
 
@@ -62,7 +63,7 @@ export class FrogDashboardComponent implements OnInit {
 
 
   public slideChanged(e) {
-      console.log(e.checked ? 'on' : 'off');
+    console.log(e.checked ? 'on' : 'off');
   }
 
 
