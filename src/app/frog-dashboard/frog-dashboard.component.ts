@@ -1,16 +1,12 @@
-import { Component, OnInit, Inject, ViewEncapsulation, ViewChild } from '@angular/core';
+import { Component, OnInit, Inject, ViewChild } from '@angular/core';
 import { FrogsService } from 'app/frogs.service'
 import { MatDatepickerInputEvent } from '@angular/material/datepicker';
-import { MatDialog, MatAccordion, MatExpansionPanel,
-         MatExpansionPanelTitle, MatExpansionPanelHeader } from '@angular/material';
+import { MatDialog, MatAccordion } from '@angular/material';
 import { DialogComponent } from 'app/dialog/dialog.component';
-import {MatExpansionModule} from '@angular/material/expansion';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 @Component({
-  selector: 'frogs',
+  selector: 'app-frogs',
   styleUrls: ['./frog-dashboard.component.css'],
-  templateUrl: './frog-dashboard.component.html',
-  encapsulation: ViewEncapsulation.None
+  templateUrl: './frog-dashboard.component.html'
 })
 
 
