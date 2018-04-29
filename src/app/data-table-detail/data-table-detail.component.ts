@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation, ViewChild, OnInit } from '@angular/core';
+import { Component, ViewEncapsulation, ViewChild } from '@angular/core';
 import { Http, Response } from "@angular/http";
 import { Observable } from "rxjs";
 import { DataTableDetailService } from "app/data-table-detail/data-table-detail.service";
@@ -13,23 +13,21 @@ import { Person } from './person';
   encapsulation: ViewEncapsulation.None
 })
 
-export class DataTableDetailComponent implements OnInit {
+export class DataTableDetailComponent {
 
   @ViewChild('myTable') table: any;
-  person: Person[];
+  people: Person[];
   expanded: any;
   timeout: any;
   errorMessage: String;
-  selectedRow = [];
+  selectedRow: Person[] = [];
 
   constructor(
     private dataService: DataTableDetailService
-  ) { }
-
-  ngOnInit(): void {
+  ) {
     this.dataService.getData().subscribe(
-      person => this.person = <Person[]>person,
-      error => this.errorMessage = <any>error
+      people => {this.people = <Person[]>people}, 
+      error => {this.errorMessage = <any>error; console.log(this.errorMessage)}
     );
   }
 
@@ -40,15 +38,16 @@ export class DataTableDetailComponent implements OnInit {
     }, 100);
   }
 
-  // customized the row/detail selection behaviour.
+  // my customized detail-row open/close behaviour, kinda hackish?... irdgaf.
   onSelect({ selected }) {
-    this.table.rowDetail.collapseAllRows();
-    this.table.rowDetail.toggleExpandRow(selected[0]);
-    if(JSON.stringify(selected) == JSON.stringify(this.selectedRow)){
-      this.table.rowDetail.collapseAllRows();
-      this.selectedRow = null;
-    }else{
-      this.selectedRow = selected;
+    this.table.rowDetail.collapseAllRows(); // close all detail rows
+    this.table.rowDetail.toggleExpandRow(selected[0]); // expand selected detail row
+
+    if (JSON.stringify(selected) === JSON.stringify(this.selectedRow)) { // if they click the same row again...
+      this.table.rowDetail.collapseAllRows(); // collapse detail
+      this.selectedRow = null; // reset selectedRow variable
+    } else {
+      this.selectedRow = selected; // they clicked a new row
     }
   }
 

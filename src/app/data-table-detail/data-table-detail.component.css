@@ -233,6 +233,7 @@
 
 .ngx-datatable .datatable-body .datatable-body-row {
     outline: none;
+    cursor: pointer;
 }
 
 .ngx-datatable .datatable-body .datatable-body-row>div {
