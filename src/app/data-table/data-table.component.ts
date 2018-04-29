@@ -10,11 +10,20 @@ export class DataTableComponent implements OnInit {
 
 @Output() emittedData: EventEmitter<any> = new EventEmitter();
 
+  rows = [];
+  loadingIndicator = true;
+  reorderable = true;
+  columns = [
+    { name: 'Name' },
+    { name: 'Gender' },
+    { name: 'Company' }
+  ];
+
   constructor() {
     this.fetch((data) => {
       this.rows = data;
       this.emittedData.emit(data);
-      console.log("GOOD - emitting data now!");
+      console.log('GOOD - emitting data now!');
       console.log(data);
       setTimeout(() => { this.loadingIndicator = false; }, 1500);
     });
@@ -23,14 +32,7 @@ export class DataTableComponent implements OnInit {
   ngOnInit() {
   }
 
-  rows = [];
-  loadingIndicator: boolean = true;
-  reorderable: boolean = true;
-  columns = [
-    { prop: 'name' },
-    { name: 'Gender' },
-    { name: 'Company' }
-  ];
+
 
 
 

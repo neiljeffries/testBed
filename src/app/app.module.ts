@@ -20,6 +20,7 @@ import { HubxDashboardComponent } from './hubx-dashboard/hubx-dashboard.componen
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppMaterialModule } from 'app/app-material/app-material.module';
 import { DialogComponent } from './dialog/dialog.component';
+import { DataTableDetailComponent } from './data-table-detail/data-table-detail.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { DialogComponent } from './dialog/dialog.component';
     FrogDashboardComponent,
     DataTableComponent,
     HubxDashboardComponent,
-    DialogComponent
+    DialogComponent,
+    DataTableDetailComponent
   ],
   imports: [
     BrowserModule,
