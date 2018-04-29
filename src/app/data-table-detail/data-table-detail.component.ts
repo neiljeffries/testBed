@@ -8,7 +8,8 @@ import { Person } from './person';
   templateUrl: './data-table-detail.component.html',
   styleUrls: ['./data-table-detail.component.css',
     '../../../node_modules/@swimlane/ngx-datatable/release/assets/icons.css',
-    '../../../node_modules/@swimlane/ngx-datatable/release/themes/material.css'],
+    '../../../node_modules/@swimlane/ngx-datatable/release/themes/material.css',
+    '../../../node_modules/@swimlane/ngx-datatable/release/themes/bootstrap.css'],
   encapsulation: ViewEncapsulation.None
 })
 
@@ -19,6 +20,7 @@ export class DataTableDetailComponent implements OnInit {
   expanded: any = {};
   timeout: any;
   errorMessage: String;
+  selected = [];
 
   constructor(
     private dataService: DataTableDetailService
@@ -38,16 +40,22 @@ export class DataTableDetailComponent implements OnInit {
     }, 100);
   }
 
-  onSelect(event){
-console.log(event);
-  }
+  onSelect({ selected }) {
+    this.table.rowDetail.collapseAllRows()
+    this.table.rowDetail.toggleExpandRow(selected[0]);
 
-  toggleExpandRow(row) {
-    console.log('Toggled Expand Row!', row);
-    this.table.rowDetail.toggleExpandRow(row);
+    // console.log(selected[0])
+    // if(this.selected != selected[0]){
+    //   console.log("NOT SAME")
+    // }else{
+    //   console.log("SAME");
+    // }
+   // this.selected = selected[0];
+
+
   }
 
   onDetailToggle(event) {
-    console.log('Detail Toggled', event);
+    console.log('Detail Toggled', event.value.id);
   }
 }

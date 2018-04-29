@@ -4,6 +4,21 @@
  * Licensed under MIT
  */
 
+.ngx-datatable.bootstrap .datatable-body .datatable-body-row.active {
+    background-color: whitesmoke !important;
+    color: #000 !important;
+}
+
+.ngx-datatable.material.single-selection .datatable-body-row.active,
+.ngx-datatable.material.single-selection .datatable-body-row.active .datatable-row-group,
+.ngx-datatable.material.multi-selection .datatable-body-row.active,
+.ngx-datatable.material.multi-selection .datatable-body-row.active .datatable-row-group,
+.ngx-datatable.material.multi-click-selection .datatable-body-row.active,
+.ngx-datatable.material.multi-click-selection .datatable-body-row.active .datatable-row-group {
+    background-color: whitesmoke !important;
+    color: #000 !important;
+}
+
 .ngx-datatable {
     display: block;
     overflow: hidden;
