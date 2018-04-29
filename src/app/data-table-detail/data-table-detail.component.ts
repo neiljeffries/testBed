@@ -17,11 +17,10 @@ export class DataTableDetailComponent implements OnInit {
 
   @ViewChild('myTable') table: any;
   person: Person[];
-  expanded: any = {};
+  expanded: any;
   timeout: any;
   errorMessage: String;
-  selected = [];
-  selectedId:String;
+  selectedRow = [];
 
   constructor(
     private dataService: DataTableDetailService
@@ -29,7 +28,7 @@ export class DataTableDetailComponent implements OnInit {
 
   ngOnInit(): void {
     this.dataService.getData().subscribe(
-      person => this.person = person,
+      person => this.person = <Person[]>person,
       error => this.errorMessage = <any>error
     );
   }
@@ -41,17 +40,22 @@ export class DataTableDetailComponent implements OnInit {
     }, 100);
   }
 
+  // customized the row/detail selection behaviour.
   onSelect({ selected }) {
-    this.table.rowDetail.collapseAllRows()
+    this.table.rowDetail.collapseAllRows();
     this.table.rowDetail.toggleExpandRow(selected[0]);
-    let selectedRowId = selected[0].id.toString();
-    if(this.selectedId == selectedRowId){
+    if(JSON.stringify(selected) == JSON.stringify(this.selectedRow)){
       this.table.rowDetail.collapseAllRows();
+      this.selectedRow = null;
+    }else{
+      this.selectedRow = selected;
     }
-    this.selectedId = selected[0].id.toString();
   }
 
   onDetailToggle(event) {
-    console.log('Detail Toggled', event.value.id);
+    if(event.type == 'row'){ //clicked row
+      console.log('Row Clicked', event.value.id);
+    }
+    
   }
 }
