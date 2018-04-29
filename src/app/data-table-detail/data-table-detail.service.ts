@@ -1,4 +1,6 @@
-
+/*
+Remember to add DataTableDetailService to providers in your app.module!
+*/
 import { Http, Response } from "@angular/http";
 import { Observable } from "rxjs";
 import { Injectable } from '@angular/core';

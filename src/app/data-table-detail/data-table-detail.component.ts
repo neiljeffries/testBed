@@ -1,3 +1,6 @@
+/*
+Remember to declare DataTableDetailComponent in your app.module!
+*/
 import { Component, ViewEncapsulation, ViewChild } from '@angular/core';
 import { Http, Response } from "@angular/http";
 import { Observable } from "rxjs";
@@ -26,8 +29,11 @@ export class DataTableDetailComponent {
     private dataService: DataTableDetailService
   ) {
     this.dataService.getData().subscribe(
-      people => {this.people = <Person[]>people}, 
-      error => {this.errorMessage = <any>error; console.log(this.errorMessage)}
+      people => this.people = <Person[]>people, 
+      error => {
+        this.errorMessage = <any>error; 
+        console.log(this.errorMessage)
+      }
     );
   }
 
@@ -38,7 +44,6 @@ export class DataTableDetailComponent {
     }, 100);
   }
 
-  // my customized detail-row open/close behaviour, kinda hackish?... irdgaf.
   onSelect({ selected }) {
     this.table.rowDetail.collapseAllRows(); // close all detail rows
     this.table.rowDetail.toggleExpandRow(selected[0]); // expand selected detail row
