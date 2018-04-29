@@ -21,6 +21,7 @@ export class DataTableDetailComponent implements OnInit {
   timeout: any;
   errorMessage: String;
   selected = [];
+  selectedId:String;
 
   constructor(
     private dataService: DataTableDetailService
@@ -43,16 +44,11 @@ export class DataTableDetailComponent implements OnInit {
   onSelect({ selected }) {
     this.table.rowDetail.collapseAllRows()
     this.table.rowDetail.toggleExpandRow(selected[0]);
-
-    // console.log(selected[0])
-    // if(this.selected != selected[0]){
-    //   console.log("NOT SAME")
-    // }else{
-    //   console.log("SAME");
-    // }
-   // this.selected = selected[0];
-
-
+    let selectedRowId = selected[0].id.toString();
+    if(this.selectedId == selectedRowId){
+      this.table.rowDetail.collapseAllRows();
+    }
+    this.selectedId = selected[0].id.toString();
   }
 
   onDetailToggle(event) {
