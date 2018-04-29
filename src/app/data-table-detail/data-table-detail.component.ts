@@ -52,10 +52,4 @@ export class DataTableDetailComponent implements OnInit {
     }
   }
 
-  onDetailToggle(event) {
-    if(event.type == 'row'){ //clicked row
-      console.log('Row Clicked', event.value.id);
-    }
-    
-  }
 }
