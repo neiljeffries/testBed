@@ -21,6 +21,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppMaterialModule } from 'app/app-material/app-material.module';
 import { DialogComponent } from './dialog/dialog.component';
 import { DataTableDetailComponent } from './data-table-detail/data-table-detail.component';
+import { DataTableDetailService } from "app/data-table-detail/data-table-detail.service";
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { DataTableDetailComponent } from './data-table-detail/data-table-detail.
     HubxDashboardComponent,
     DialogComponent,
     DataTableDetailComponent
+    
   ],
   imports: [
     BrowserModule,
@@ -48,7 +50,7 @@ import { DataTableDetailComponent } from './data-table-detail/data-table-detail.
   entryComponents: [
     DialogComponent
   ],
-  providers: [ProfileService, CrewmembersService, FrogsService],
+  providers: [ProfileService, CrewmembersService, FrogsService, DataTableDetailService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

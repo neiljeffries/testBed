@@ -12,7 +12,7 @@
         </small>
     </h3>
 
-    <ngx-datatable #myTable class='material expandable' [columnMode]="'standard'" [headerHeight]="50" [footerHeight]="50" [rowHeight]="50" [scrollbarV]="true" [rows]='rows' (page)="onPage($event)">
+    <ngx-datatable #myTable class='material expandable' [columnMode]="'standard'" [headerHeight]="50" [footerHeight]="50" [rowHeight]="50" [scrollbarV]="true" [rows]='person' (select)="onSelect($event)" (page)="onPage($event)">
 
         <!-- Row Detail Template -->
         <ngx-datatable-row-detail [rowHeight]="100" #myDetailRow (toggle)="onDetailToggle($event)">
@@ -26,12 +26,10 @@
 
         <!-- Column Templates -->
         <ngx-datatable-column [width]="50" [resizeable]="false" [sortable]="false" [draggable]="false" [canAutoResize]="false">
-
             <ng-template let-row="row" let-expanded="expanded" ngx-datatable-cell-template>
                 <a href="javascript:void(0)" [class.datatable-icon-right]="!expanded" [class.datatable-icon-down]="expanded" title="Expand/Collapse Row" (click)="toggleExpandRow(row)">
                 </a>
             </ng-template>
-
         </ngx-datatable-column>
 
         <ngx-datatable-column name="Index" width="80">
