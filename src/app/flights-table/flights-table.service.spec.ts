@@ -1,15 +1,15 @@
 import { TestBed, inject } from '@angular/core/testing';
 
-import { DataTableDetailService } from './data-table-detail.service';
+import { FlightsService } from './flights-table.service';
 
 describe('DataTableDetailService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [DataTableDetailService]
+      providers: [FlightsService]
     });
   });
 
-  it('should be created', inject([DataTableDetailService], (service: DataTableDetailService) => {
+  it('should be created', inject([FlightsService], (service: FlightsService) => {
     expect(service).toBeTruthy();
   }));
 });

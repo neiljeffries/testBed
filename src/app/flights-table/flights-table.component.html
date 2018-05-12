@@ -2,12 +2,12 @@
 
     <div style="margin:auto; width:130px;">
         <small>
-            <a href="javascript:void(0)" (click)="table.rowDetail.expandAllRows()">Expand All</a> | 
-            <a href="javascript:void(0)" (click)="table.rowDetail.collapseAllRows()">Collapse All</a>
+            <a href="javascript:void(0)" (click)="flightsTable.rowDetail.expandAllRows()">Expand All</a> | 
+            <a href="javascript:void(0)" (click)="flightsTable.rowDetail.collapseAllRows()">Collapse All</a>
         </small>
     </div>
 
-    <ngx-datatable #myTable class='material expandable' [columnMode]="'standard'" [headerHeight]="40" [footerHeight]="50" [rowHeight]="40" [scrollbarV]="true" [rows]='people' [selectionType]="'single'" (select)='onSelect($event)' (page)="onPage($event)">
+    <ngx-datatable #flightsTable class='material expandable' [columnMode]="'standard'" [headerHeight]="40" [footerHeight]="50" [rowHeight]="40" [scrollbarV]="true" [rows]='flights' [selectionType]="'single'" (select)='onSelect($event)' (page)="onPage($event)">
 
         <!-- Detail Row Template -->
         <ngx-datatable-row-detail [rowHeight]="100">
@@ -15,7 +15,9 @@
                 <div style="padding-left:35px;">
                     <div><strong>Address</strong></div>
                     <div>{{row.address.city}}, {{row.address.state}}</div>
+
                 </div>
+                <button mat-raised-button (click)="openDialog('favoriteAnimal')">View</button>
             </ng-template>
         </ngx-datatable-row-detail>
 
@@ -48,14 +50,27 @@
         </ngx-datatable-column>
 
         <!-- Gender Column  -->
-        <ngx-datatable-column name="Gender" width="300">
+        <ngx-datatable-column name="Gender" width="200">
             <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
                 <i [innerHTML]="row['name']"></i> and <i>{{value}}</i>
             </ng-template>
         </ngx-datatable-column>
 
         <!-- Age Column  -->
-        <ngx-datatable-column name="Age"></ngx-datatable-column>
+        <ngx-datatable-column name="Age" width="100"></ngx-datatable-column>
+
+        <!-- loading progress -->
+        <ngx-datatable-column name="Age">
+            <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+                <div style="float:left">{{value}}%</div>
+
+                <mat-progress-bar style="float:right" class="example-margin" [color]="primary" [mode]="determinate" [value]="row['age']" [bufferValue]="75">
+
+                </mat-progress-bar>
+
+            </ng-template>
+
+        </ngx-datatable-column>
 
     </ngx-datatable>
 </div>

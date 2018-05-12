@@ -20,8 +20,8 @@ import { HubxDashboardComponent } from './hubx-dashboard/hubx-dashboard.componen
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppMaterialModule } from 'app/app-material/app-material.module';
 import { DialogComponent } from './dialog/dialog.component';
-import { DataTableDetailComponent } from './data-table-detail/data-table-detail.component';
-import { DataTableDetailService } from "app/data-table-detail/data-table-detail.service";
+import { FlightsTableComponent } from './flights-table/flights-table.component';
+import { FlightsService } from "app/flights-table/flights-table.service";
 
 @NgModule({
   declarations: [
@@ -35,7 +35,7 @@ import { DataTableDetailService } from "app/data-table-detail/data-table-detail.
     DataTableComponent,
     HubxDashboardComponent,
     DialogComponent,
-    DataTableDetailComponent
+    FlightsTableComponent
     
   ],
   imports: [
@@ -50,7 +50,7 @@ import { DataTableDetailService } from "app/data-table-detail/data-table-detail.
   entryComponents: [
     DialogComponent
   ],
-  providers: [ProfileService, CrewmembersService, FrogsService, DataTableDetailService],
+  providers: [ProfileService, CrewmembersService, FrogsService, FlightsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
