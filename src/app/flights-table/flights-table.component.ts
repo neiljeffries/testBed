@@ -4,7 +4,7 @@
 3. Add DataTableDetailService to providers in your app.module!
 */
 import { Component, ViewEncapsulation, ViewChild } from '@angular/core';
-import { MatDialog, MatDatepickerInputEvent, MatAccordion, MatSnackBar, MatProgressBar } from '@angular/material';
+import { MatDialog, MatDatepickerInputEvent, MatAccordion, MatSnackBar, MatProgressBar, MatMenu } from '@angular/material';
 import { DialogComponent } from 'app/dialog/dialog.component';
 import { Http, Response } from "@angular/http";
 import { Observable } from "rxjs";

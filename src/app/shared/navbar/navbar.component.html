@@ -1,14 +1,14 @@
-<nav class="navbar navbar-inverse">
+<!-- <nav class="navbar navbar-inverse">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" routerLink="/hubx">Hubx</a>
+            <a class="navbar-brand" routerLink="/hubx">FIDS</a>
         </div>
         <ul class="nav navbar-nav">
-            <li><a routerLink="/datatable">Data Table</a></li>
-            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
+            <li><a routerLink="/datatable">Dashboard</a></li>
+            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Airline<span class="caret"></span></a>
                 <ul class="dropdown-menu">
                     <li><a routerLink="/crew" class="active">crew</a></li>
-                    <li><a routerLink="/frogs">frogs</a></li>
+                    <li><a routerLink="/frogs">alerts</a></li>
                     <li><a routerLink="/profile">profile</a></li>
                     <li><a routerLink="/flights">flights</a></li>
                 </ul>
@@ -16,8 +16,33 @@
             <li><a href="#">Page 2</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up for alerts</a></li>
             <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
         </ul>
     </div>
-</nav>
+</nav> -->
+
+
+<mat-toolbar color="primary">
+
+    <span class="leftSideMenuArea">FIDS</span>
+
+
+    <span class="example-fill-remaining-space">
+        <!-- This fills the remaining space of the current row -->
+    </span>
+
+    <span class="rightSideMenuArea">
+        <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item><span class="glyphicon glyphicon-log-in"></span> &nbsp; Login</button>
+    <button mat-menu-item><a routerLink="/profile"><span class="glyphicon glyphicon-user"></span> &nbsp; Profile</a></button>
+    <button mat-menu-item>Preferences</button>
+    <button mat-menu-item><a routerLink="/flights">Flights</a></button>
+    <button mat-menu-item><a routerLink="/frogs">Alerts</a></button>
+
+    <button mat-menu-item><a routerLink="/crew">Crew</a></button>
+    </mat-menu>
+    </span>
+
+</mat-toolbar>
