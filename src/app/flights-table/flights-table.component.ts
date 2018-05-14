@@ -47,9 +47,10 @@ export class FlightsTableComponent {
       console.log('paged!', event);
     }, 100);
   }
-test1:any;
+
+
   onSelect({ selected }) {
-    this.test1 = selected;
+
     this.flightsTable.rowDetail.collapseAllRows(); // close all detail rows
     this.flightsTable.rowDetail.toggleExpandRow(selected[0]); // expand selected detail row
 console.log(selected);
@@ -63,10 +64,10 @@ console.log(selected);
 
     openDialog(dialogId): void {
 
-      console.log(this.test1);
+      console.log(this.selectedRow);
     const dialogRef = this.dialog.open(DialogComponent, {
       width: '250px',
-      data: { name: this.test1[0].name, animal: this.test1[0].gender },
+      data: { name: this.selectedRow[0].name, animal: this.selectedRow[0].gender },
       id: dialogId
     });
 
