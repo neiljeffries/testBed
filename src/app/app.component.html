@@ -1,4 +1,15 @@
-<app-navbar></app-navbar>
-<router-outlet></router-outlet>
+<mat-sidenav-container class="example-container">
 
+    <mat-sidenav #sidenav [mode]="'push'">
+        <div style="width:420px">
+            <p><button mat-button (click)="sidenav.toggle()">Toggle</button></p>
+        </div>
+    </mat-sidenav>
 
+    <mat-sidenav-content>
+        <button mat-button (click)="sidenav.toggle()" style="position: absolute; top: 0; left:0">Toggle</button>
+        <app-navbar></app-navbar>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+
+</mat-sidenav-container>

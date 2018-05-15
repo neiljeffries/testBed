@@ -7,7 +7,7 @@
         </small>
     </div>
 
-    <ngx-datatable #flightsTable class='material expandable' [columnMode]="'standard'" [limit]="10" [footerHeight]="50" [headerHeight]="40" [rowHeight]="40" [rows]='flights' [selectionType]="'single'" (select)='onSelect($event)' (page)="onPage($event)">
+    <ngx-datatable style="margin-bottom:25px" #flightsTable class='material striped' [columnMode]="'standard'" [limit]="12" [footerHeight]="40" [headerHeight]="40" [rowHeight]="40" [rows]='flights' [selectionType]="'single'" (select)='onSelect($event)' (page)="onPage($event)">
 
         <!-- Detail Row Template -->
         <ngx-datatable-row-detail [rowHeight]="100">
@@ -60,11 +60,11 @@
         <ngx-datatable-column name="Age" width="50"></ngx-datatable-column>
 
         <!-- loading progress -->
-        <ngx-datatable-column name="Age" width="200">
+        <ngx-datatable-column name="Age">
             <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
-                <div style="float:left">{{value}}%</div>
+                <div>{{value}}%</div>
 
-                <mat-progress-bar style="float:right" class="example-margin" [color]="primary" [mode]="determinate" [value]="row['age']" [bufferValue]="75">
+                <mat-progress-bar class="example-margin" [color]="primary" [mode]="determinate" [value]="row['age']" [bufferValue]="75">
 
                 </mat-progress-bar>
 
