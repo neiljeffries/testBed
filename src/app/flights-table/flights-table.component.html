@@ -64,11 +64,11 @@
         <ngx-datatable-column name="Age"></ngx-datatable-column>
 
         <!-- loading progress -->
-        <ngx-datatable-column name="Age">
+        <ngx-datatable-column name="Load%" [prop]="'age'">
             <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
                 <div>{{value}}%</div>
 
-                <mat-progress-bar class="example-margin" [color]="primary" [mode]="determinate" [value]="row['age']" [bufferValue]="75">
+                <mat-progress-bar class="example-margin" [color]="primary" [mode]="determinate" [value]="value" [bufferValue]="75">
 
                 </mat-progress-bar>
 
