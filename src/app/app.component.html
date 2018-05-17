@@ -1,18 +1,13 @@
-<mat-sidenav-container class="example-container">
+<mat-sidenav-container class="sidenavContainer">
 
     <mat-sidenav #sidenav [mode]="'push'">
         <div style="width:320px">
-            <p style="float:right"><button mat-button (click)="sidenav.toggle()" style="height:65px"><i class="material-icons">
-menu
-</i></button></p>
+            <p style="float:right"><button mat-button (click)="sidenav.toggle()" style="height:46px"><i class="material-icons">menu</i></button></p>
         </div>
     </mat-sidenav>
 
     <mat-sidenav-content>
-        <button mat-button (click)="sidenav.toggle()" class="navBarSlideOverButton"><i class="material-icons">
-menu
-</i></button>
-        <app-navbar></app-navbar>
+        <app-navbar (notifyParent)="getNotification($event)"></app-navbar>
         <router-outlet></router-outlet>
     </mat-sidenav-content>
 

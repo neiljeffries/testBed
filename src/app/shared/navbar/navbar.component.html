@@ -25,18 +25,23 @@
 
 <mat-toolbar class="ups-top-navigation navbar-fixed-top">
 
+    <button mat-button (click)="openSideMenu($event)" class="navBarSlideOverButton"><i class="material-icons">menu</i></button>
+
     <div>
         <span class="headerInset">
             <div class="zone zone-header">
-
-                <a id="brandLink" class="navbar-brand" href="/uxams/">
+                <a id="brandLink" class="navbar-brand" href="/flights">
                     <img alt="Ups-Logo" class="img-responsive ups_logo" src="assets/images/UPS_Logo.png">
                 </a>
             </div>
         </span>
+
         <span class="brandingContainer">
-            <span class="brandingText">FIDS <a (click)="clickedSlideMenu($event)"></a></span>
+            <span class="brandingText">FIDS </span>
         </span>
+
+
+
     </div>
 
 

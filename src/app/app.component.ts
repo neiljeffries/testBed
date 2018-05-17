@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { Zippy } from './event-emitter-test/event-emitter-test.component';
 
 
@@ -10,11 +10,17 @@ import { Zippy } from './event-emitter-test/event-emitter-test.component';
   ]
 })
 export class AppComponent {
+   @ViewChild('sidenav') sidenav: any;
   title = 'testBed1';
+
 
   handleUserUpdated(user) {
     // Handle the event
     console.log('boom');
   }
+
+      getNotification(evt) { //from navbar event emitter
+        this.sidenav.toggle();
+    }
 
 }

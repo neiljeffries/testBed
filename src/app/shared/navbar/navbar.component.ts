@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -6,12 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-
+@Output() notifyParent: EventEmitter<any> = new EventEmitter();
   constructor() { }
 
   ngOnInit() {
   }
-
+    
+    openSideMenu() {
+        this.notifyParent.emit(null);
+    }
 
   clickedSlideMenu(event) {
     // emit event
