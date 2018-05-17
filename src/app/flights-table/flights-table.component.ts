@@ -4,7 +4,7 @@
 3. Add DataTableDetailService to providers in your app.module!
 */
 import { Component, ViewEncapsulation, ViewChild } from '@angular/core';
-import { MatDialog, MatDatepickerInputEvent, MatAccordion, MatSnackBar, MatProgressBar, MatMenu, MatSidenav, MatSidenavContainer, MatSidenavContent, MatSidenavModule } from '@angular/material';
+import { MatDialog, MatFormField, MatSelect, MatProgressSpinner, MatDatepickerInputEvent, MatAccordion, MatSnackBar, MatProgressBar, MatMenu, MatSidenav, MatSidenavContainer, MatSidenavContent, MatSidenavModule } from '@angular/material';
 import { DialogComponent } from 'app/dialog/dialog.component';
 import { Http, Response } from "@angular/http";
 import { Observable } from "rxjs";
@@ -23,12 +23,15 @@ import { Flight } from './flight';
 export class FlightsTableComponent {
 
   @ViewChild('flightsTable') flightsTable: any;
-  flights: Flight[];
+  flights: Flight[] = null;
   expanded: any;
   timeout: any;
   errorMessage: String;
   selectedRow: Flight[] = [];
-
+  color = 'primary';
+  mode = 'indeterminate';
+  rowLimit = 12;
+  value = 50;
   constructor(
     private flightsService: FlightsService, public dialog: MatDialog,
   ) {

@@ -1,13 +1,33 @@
 <div style="padding-bottom: 200px;">
 
-    <div style="margin:auto; width:130px;">
-        <small>
-            <a href="javascript:void(0)" (click)="flightsTable.rowDetail.expandAllRows()">Expand All</a> | 
-            <a href="javascript:void(0)" (click)="flightsTable.rowDetail.collapseAllRows()">Collapse All</a>
-        </small>
-    </div>
+    <mat-card>
+        <div style="margin:auto; text-align:center">
 
-    <ngx-datatable style="margin-bottom:25px" #flightsTable class='material fullscreen' style="top: 2px; width:100%; " [columnMode]="'force'" [limit]="12" [footerHeight]="40" [headerHeight]="40" [rowHeight]="40" [rows]='flights' [selectionType]="'single'"
+            <button mat-button (click)="flightsTable.rowDetail.expandAllRows()">Expand All</button>
+            <button mat-button (click)="flightsTable.rowDetail.collapseAllRows()">Collapse All</button>
+            <!-- <button mat-mini-fab mat-button color="primary" (click)="rowLimit = 15">+Row</button>
+        <button mat-mini-fab mat-button (click)="rowLimit = 5">-Row</button> -->
+            <mat-form-field>
+                <mat-select [(value)]="rowLimit" placeholder="Rows">
+                    <mat-option value="0">None</mat-option>
+                    <mat-option value="5">5</mat-option>
+                    <mat-option value="10">10</mat-option>
+                    <mat-option value="15">15</mat-option>
+                    <mat-option value="20">20</mat-option>
+                    <mat-option value="25">25</mat-option>
+                    <mat-option value="30">30</mat-option>
+                    <mat-option value="35">35</mat-option>
+                    <mat-option value="35">50</mat-option>
+                    <mat-option value="35">75</mat-option>
+                    <mat-option value="35">100</mat-option>
+                    <mat-option value="35">200</mat-option>
+                    <mat-option value="35">300</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+    </mat-card>
+
+    <ngx-datatable style="margin-bottom:25px" #flightsTable class='material fullscreen' style="top: 2px; width:100%; " [columnMode]="'force'" [limit]="rowLimit" [footerHeight]="40" [headerHeight]="40" [rowHeight]="40" [rows]='flights' [selectionType]="'single'"
         (select)='onSelect($event)' (page)="onPage($event)">
 
         <!-- <ngx-datatable #flightsTable class="material fullscreen" style="top: 52px; width:100%;" [columnMode]="'force'" [headerHeight]="50" [footerHeight]="0" [rowHeight]="50" [scrollbarV]="true" [scrollbarH]="true" [rows]="flights" [selectionType]="'single'"
@@ -77,4 +97,10 @@
         </ngx-datatable-column>
 
     </ngx-datatable>
+</div>
+
+
+<div class="myProgressSpinner" *ngIf="flights === null">
+    <mat-progress-spinner [color]="color" [mode]="mode" [value]="value">
+    </mat-progress-spinner>
 </div>
