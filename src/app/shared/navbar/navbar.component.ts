@@ -12,4 +12,9 @@ export class NavbarComponent implements OnInit {
   ngOnInit() {
   }
 
+
+  clickedSlideMenu(event) {
+    // emit event
+
+  }
 }

@@ -7,7 +7,7 @@
         </small>
     </div>
 
-    <ngx-datatable style="margin-bottom:25px" #flightsTable class='material fullscreen' style="top: 2px; width:100%; " [columnMode]="'force'" [limit]="12" [footerHeight]="40" [headerHeight]="40" [rowHeight]="40" [rows]='flights' [selectionType]="'single'"
+    <ngx-datatable style="margin-bottom:25px" #flightsTable class='material striped fullscreen' style="top: 2px; width:100%; " [columnMode]="'force'" [limit]="12" [footerHeight]="40" [headerHeight]="40" [rowHeight]="40" [rows]='flights' [selectionType]="'single'"
         (select)='onSelect($event)' (page)="onPage($event)">
 
         <!-- <ngx-datatable #flightsTable class="material fullscreen" style="top: 52px; width:100%;" [columnMode]="'force'" [headerHeight]="50" [footerHeight]="0" [rowHeight]="50" [scrollbarV]="true" [scrollbarH]="true" [rows]="flights" [selectionType]="'single'"
@@ -68,7 +68,7 @@
             <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
                 <div>{{value}}%</div>
 
-                <mat-progress-bar class="example-margin" [color]="primary" [mode]="determinate" [value]="value" [bufferValue]="75">
+                <mat-progress-bar class="example-margin" [color]="'primary'" [mode]="'determinate'" [value]="value" [bufferValue]="75">
 
                 </mat-progress-bar>
 
