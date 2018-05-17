@@ -39,6 +39,32 @@
     margin-left: -5px;
 }
 
+.headerInset2 {
+    width: 6px;
+    height: 47px;
+    border-right: 5px solid #999;
+    background: #333333;
+    -webkit-transform: skew(-5deg);
+    transform: skew(-5deg);
+    padding-left: 0px;
+    display: inline-block;
+    float: left;
+    margin-left: 2px;
+}
+
+.headerInset3 {
+    width: 6px;
+    height: 47px;
+    border-right: 5px solid #ccc;
+    background: #333333;
+    -webkit-transform: skew(-5deg);
+    transform: skew(-5deg);
+    padding-left: 0px;
+    display: inline-block;
+    float: left;
+    margin-left: 2px;
+}
+
 .zone-header {
     transform: skew(5deg);
 }
@@ -133,8 +159,11 @@ img {
 }
 
 .navBarSlideOverButton {
-    color: white !important;
-    background-color: #666;
+    color: #d2d2d2 !important;
+    background-color: #717171;
+    min-width: 80px !important;
+    padding-left: 14px !important;
+    height: 47px !important;
 }
 
 .myProgressSpinner {

@@ -22,6 +22,7 @@ import { AppMaterialModule } from 'app/app-material/app-material.module';
 import { DialogComponent } from './dialog/dialog.component';
 import { FlightsTableComponent } from './flights-table/flights-table.component';
 import { FlightsService } from "app/flights-table/flights-table.service";
+import { LeftSlideoutComponent } from './left-slideout/left-slideout.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { FlightsService } from "app/flights-table/flights-table.service";
     DataTableComponent,
     HubxDashboardComponent,
     DialogComponent,
-    FlightsTableComponent
+    FlightsTableComponent,
+    LeftSlideoutComponent
     
   ],
   imports: [
