@@ -149,3 +149,7 @@ img {
 .sidenavContainer {
     padding-top: 50px;
 }
+
+.datatable-row-wrapper {
+    border-top: solid 1px #ddd !important;
+}
