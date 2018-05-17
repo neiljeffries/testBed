@@ -26,6 +26,7 @@
     flex: 1 1 auto;
 }
 
+
 .headerInset {
     width: 79px;
     height: 47px;
@@ -132,4 +133,14 @@ img {
     height: 48px;
     z-index: 9999999;
     color: white !important;
+}
+
+.myProgressSpinner {
+    left: 50%;
+    line-height: 200px;
+    margin-top: -100px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+
 }
