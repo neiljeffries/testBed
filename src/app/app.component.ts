@@ -10,7 +10,7 @@ import { Zippy } from './event-emitter-test/event-emitter-test.component';
   ]
 })
 export class AppComponent {
-   @ViewChild('sidenav') sidenav: any;
+  @ViewChild('sidenav') sidenav: any;
   title = 'testBed1';
 
 
@@ -19,8 +19,8 @@ export class AppComponent {
     console.log('boom');
   }
 
-      getNotification(evt) { //from navbar event emitter
-        this.sidenav.toggle();
-    }
+  getNotification(evt) { //from navbar event emitter
+    this.sidenav.toggle();
+  }
 
 }

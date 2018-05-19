@@ -183,6 +183,10 @@ img {
     border-top: solid 1px #ddd !important;
 }
 
+.mat-checkbox-label {
+    font-size: 12px !important;
+}
+
 
 /* Smartphones (portrait and landscape) ----------- */
 

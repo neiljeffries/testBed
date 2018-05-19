@@ -6,15 +6,15 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-@Output() notifyParent: EventEmitter<any> = new EventEmitter();
+  @Output() notifyParent: EventEmitter<any> = new EventEmitter();
   constructor() { }
 
   ngOnInit() {
   }
-    
-    openSideMenu() {
-        this.notifyParent.emit(null);
-    }
+
+  openSideMenu() {
+    this.notifyParent.emit(null);
+  }
 
   clickedSlideMenu(event) {
     // emit event
