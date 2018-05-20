@@ -9,11 +9,14 @@
 
     <mat-sidenav-content>
         <app-navbar (notifyParent)="getNotification($event)"></app-navbar>
-        <router-outlet style="min-height: calc(100vh - 176px);"></router-outlet>
-        <mat-toolbar class="md-medium-tall">
-            <div layout="row" layout-align="center center" flex>
-                <span>FOOTER</span>
-            </div>
+        <router-outlet></router-outlet>
+        <div style="margin-bottom:50px">
+            <!-- bottom space -->
+        </div>
+        <mat-toolbar class="footer1">
+
+            <span>Copyright &copy; 2018  United Parcel Service of America, Inc. All rights reserved</span>
+
         </mat-toolbar>
     </mat-sidenav-content>
 

@@ -12,7 +12,7 @@
 
 </mat-card>
 
-<div style="padding-bottom: 200px;">
+<div style="padding-bottom: 0px;">
 
 
     <div style="margin:auto; height:45px; margin-right: 30px;">
@@ -38,7 +38,7 @@
 
                 <section class="example-section">
                     <mat-form-field class="example-form-field" style="margin-right:18px;">
-                        <input matInput type="text" placeholder="Filter by Flight or Gateway" [(ngModel)]="filterInputValue" (keyup)='updateFilter($event)' />
+                        <input matInput type="text" placeholder="Search: Flight | Gateway" [(ngModel)]="filterInputValue" (keyup)='updateFilter($event)' />
                         <button mat-button *ngIf="filterInputValue" matSuffix mat-icon-button aria-label="Clear" (click)="filterInputValue=''; updateFilter(null)">
                         <mat-icon>close</mat-icon>
                     </button>

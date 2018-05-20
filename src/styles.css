@@ -10,6 +10,18 @@
 
 /*@import '~@swimlane/ngx-datatable/release/assets/app.css';*/
 
+.footer1 {
+    background-color: #d2d2d2;
+    position: fixed;
+    bottom: 0;
+}
+
+.footer1 span {
+    margin-left: 15px;
+    font-weight: normal;
+    font-size: 12px;
+}
+
 .center-page-text {
     left: 0;
     line-height: 200px;
