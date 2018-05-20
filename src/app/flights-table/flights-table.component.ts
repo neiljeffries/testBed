@@ -12,9 +12,9 @@ import { FlightsService } from "app/flights-table/flights-table.service";
 import { Flight } from './flight';
 //import { MatTabsModule } from 'app/app-material/app-material.module'
 import { trigger, transition, style, animate, state, group, keyframes } from '@angular/animations'
-import {BrowserModule} from '@angular/platform-browser'
-//import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
+import { BrowserModule } from '@angular/platform-browser'
 
+//import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
 
 
 // animations: [
@@ -30,25 +30,25 @@ import {BrowserModule} from '@angular/platform-browser'
 
 @Component({
   selector: 'app-data-table-detail',
-animations: [
-  trigger('flyInOut', [
-    state('in', style({transform: 'translateX(0)'})),
-    transition('void => *', [
-      animate(300, keyframes([
-        style({opacity: 0, transform: 'translateX(-100%)', offset: 0}),
-        style({opacity: 1, transform: 'translateX(15px)',  offset: 0.3}),
-        style({opacity: 1, transform: 'translateX(0)',     offset: 1.0})
-      ]))
-    ]),
-    transition('* => void', [
-      animate(300, keyframes([
-        style({opacity: 1, transform: 'translateX(0)',     offset: 0}),
-        style({opacity: 1, transform: 'translateX(-15px)', offset: 0.7}),
-        style({opacity: 0, transform: 'translateX(100%)',  offset: 1.0})
-      ]))
+  animations: [
+    trigger('flyInOut', [
+      state('in', style({ transform: 'translateX(0)' })),
+      transition('void => *', [
+        animate(300, keyframes([
+          style({ opacity: 0, transform: 'translateX(-100%)', offset: 0 }),
+          style({ opacity: 1, transform: 'translateX(15px)', offset: 0.3 }),
+          style({ opacity: 1, transform: 'translateX(0)', offset: 1.0 })
+        ]))
+      ]),
+      transition('* => void', [
+        animate(300, keyframes([
+          style({ opacity: 1, transform: 'translateX(0)', offset: 0 }),
+          style({ opacity: 1, transform: 'translateX(-15px)', offset: 0.7 }),
+          style({ opacity: 0, transform: 'translateX(100%)', offset: 1.0 })
+        ]))
+      ])
     ])
-  ])
-],
+  ],
   templateUrl: './flights-table.component.html',
   styleUrls: ['./flights-table.component.css',
     '../../../node_modules/@swimlane/ngx-datatable/release/assets/icons.css',
@@ -77,7 +77,10 @@ export class FlightsTableComponent {
   showExpanded = true;
   showIndex = true;
   showTableOptions = false;
+  showAlert = false;
+
   constructor(
+   // private bottomSheet: MatBottomSheet,
     private flightsService: FlightsService, public dialog: MatDialog,
   ) {
     this.flightsService.getFlights().subscribe(
@@ -87,6 +90,12 @@ export class FlightsTableComponent {
         console.log(this.errorMessage)
       }
     );
+
+Observable.interval(10000)
+  .subscribe(data => {
+    this.showAlert = !this.showAlert;
+  })
+
   }
 
   onPage(event) {
@@ -139,39 +148,10 @@ export class FlightsTableComponent {
     this.rowsExpanded = !this.rowsExpanded;
   }
 
-  // toggleCol(colName) {
 
 
-
-  //   if (colName == 'name') {
-  //     this.showName = !this.showName
-  //   }
-
-  //   if (colName == 'gender') {
-  //     this.showGender = !this.showGender
-  //   }
-
-  //   if (colName == 'age') {
-  //     this.showAge = !this.showAge
-  //   }
-
-  //   if (colName == 'load') {
-  //     this.showLoad = !this.showLoad
-  //   }
-
-  //   if (colName == 'expanded') {
-  //     this.showExpanded = !this.showExpanded
-  //   }
-
-  //   if (colName == 'Index') {
-  //     this.showIndex= !this.showIndex
-  //   }
-
-
-  // }
-
-  toggleTableOptions(){
-    this.showTableOptions= !this.showTableOptions;
+  toggleTableOptions() {
+    this.showTableOptions = !this.showTableOptions;
   }
 
 }

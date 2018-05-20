@@ -1,7 +1,21 @@
+<mat-card style="padding:0;margin:auto; text-align:center; width:400px; background-color:papayawhip;" *ngIf="showAlert" [@flyInOut]>
+
+
+    <!-- <button mat-button (click)="flightsTable.rowDetail.expandAllRows()">Expand All</button>
+            <button mat-button (click)="flightsTable.rowDetail.collapseAllRows()">Collapse All</button> -->
+    <!-- <button mat-mini-fab mat-button color="primary" (click)="rowLimit = 15">+Row</button> -->
+
+    <section>
+        Alert Message about flight delay!
+    </section>
+
+
+</mat-card>
+
 <div style="padding-bottom: 200px;">
     <div style="margin:auto; text-align:center;">
         <!-- <button mat-mini-fab color="primary" (click)="toggleTableOptions()"><mat-icon aria-label="">settings</mat-icon></button> -->
-
+        <button mat-raised-button (click)="openBottomSheet()">Open Bottom</button>
         <button mat-icon-button color="primary" (click)="toggleTableOptions()">
     <mat-icon>settings</mat-icon>
   </button>
@@ -24,6 +38,8 @@
             </section>
         </div>
     </mat-card>
+
+
 
     <!-- <mat-tab-group>
         <mat-tab label="Inbound Flights"> -->
