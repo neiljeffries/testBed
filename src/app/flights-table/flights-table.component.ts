@@ -60,15 +60,18 @@ import { BrowserModule } from '@angular/platform-browser'
 export class FlightsTableComponent {
 
   @ViewChild('flightsTable') flightsTable: any;
+  temp = [];
+  temp2 = [];
   flights: Flight[] = null;
   expanded: any;
   timeout: any;
   errorMessage: String;
   selectedRow: Flight[] = [];
-  color = 'primary';
-  mode = 'indeterminate';
-  rowLimit = 12;
-  value = 50;
+  progressSpinnerColor = 'primary';
+  progressSpinnerMode = 'indeterminate';
+  rowLimit = 15;
+  progressSpinnerValue = 50;
+  filterInputValue = '';
   rowsExpanded = false;
   showName = true;
   showGender = true;
@@ -80,21 +83,24 @@ export class FlightsTableComponent {
   showAlert = false;
 
   constructor(
-   // private bottomSheet: MatBottomSheet,
+    // private bottomSheet: MatBottomSheet,
     private flightsService: FlightsService, public dialog: MatDialog,
   ) {
     this.flightsService.getFlights().subscribe(
-      flights => this.flights = <Flight[]>flights,
+      flights => {
+        this.flights = <Flight[]>flights;
+        this.temp = [...flights]
+      },
       error => {
         this.errorMessage = <any>error;
         console.log(this.errorMessage)
       }
     );
 
-Observable.interval(10000)
-  .subscribe(data => {
-    this.showAlert = !this.showAlert;
-  })
+    // Observable.interval(10000)
+    //   .subscribe(data => {
+    //     this.showAlert = !this.showAlert;
+    //   });
 
   }
 
@@ -154,4 +160,28 @@ Observable.interval(10000)
     this.showTableOptions = !this.showTableOptions;
   }
 
+
+  // Flight table search filter
+  updateFilter(event) {
+    let val;
+    if (event == null) {
+      val = '';
+    } else {
+      val = event.target.value.toLowerCase();
+    }
+    // Name Filter Array
+    const temp = this.temp.filter(function (x) {
+      return x.name.toLowerCase().indexOf(val) !== -1 || !val;
+    });
+    // Age Filter Array
+    const temp2 = this.temp.filter(function (d) {
+      return d.age.toString().toLowerCase().indexOf(val) !== -1 || !val;
+    });
+
+    // updates the rows
+    this.flights = temp;
+    this.flights = this.flights.concat(temp2)
+    // Whenever the filter changes, always go back to the first page
+    this.flightsTable.offset = 0;
+  }
 }
