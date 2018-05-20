@@ -81,6 +81,7 @@ export class FlightsTableComponent {
   showIndex = true;
   showTableOptions = false;
   showAlert = false;
+  expandCollapseRowsText = 'Expand';
 
   constructor(
     // private bottomSheet: MatBottomSheet,
@@ -148,8 +149,10 @@ export class FlightsTableComponent {
 
     if (this.rowsExpanded) {
       this.flightsTable.rowDetail.collapseAllRows();
+      this.expandCollapseRowsText = 'Expand';
     } else {
       this.flightsTable.rowDetail.expandAllRows();
+      this.expandCollapseRowsText = 'Collapse';
     }
     this.rowsExpanded = !this.rowsExpanded;
   }
@@ -183,5 +186,11 @@ export class FlightsTableComponent {
     this.flights = this.flights.concat(temp2)
     // Whenever the filter changes, always go back to the first page
     this.flightsTable.offset = 0;
+  }
+
+    getSettingsClickNotification(event){
+    //perform settings click here!
+    //toggleTableOptions();
+    console.log("settings icon clicked and detected in flights-table.component")
   }
 }
