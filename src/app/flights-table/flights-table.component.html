@@ -22,7 +22,7 @@
 
 
 
-        <div style="float:right; margin:0; margin-left: 30px;" class="example-tooltip-host" matTooltip="Table Options" [matTooltipPosition]="'before'">
+        <div style="float:right; margin:0; margin-left: 30px;" matTooltip="Options">
             <button mat-icon-button color="primary" (click)="toggleTableOptions()">
                 <mat-icon>settings</mat-icon>
             </button>
@@ -37,11 +37,13 @@
                 <!-- <button mat-mini-fab mat-button color="primary" (click)="rowLimit = 15">+Row</button> -->
 
                 <section class="example-section">
-                    <mat-form-field class="example-form-field" style="margin-right:18px;">
-                        <input matInput type="text" placeholder="Search: Flight | Gateway" [(ngModel)]="filterInputValue" (keyup)='updateFilter($event)' />
+                    <mat-form-field class="example-form-field" style="margin-right:18px; width: 260px;">
+                        <input matInput type="text" placeholder="Search: Flight | Gateway" #searchInput maxlength="256" [(ngModel)]="filterInputValue" (keyup)='updateFilter($event)' />
                         <button mat-button *ngIf="filterInputValue" matSuffix mat-icon-button aria-label="Clear" (click)="filterInputValue=''; updateFilter(null)">
                         <mat-icon>close</mat-icon>
                     </button>
+                        <!-- <mat-hint align="start"><strong>Don't disclose personal info</strong> </mat-hint> -->
+                        <!-- <mat-hint align="end">{{searchInput.value.length}} / 256</mat-hint> -->
                     </mat-form-field>
 
                     <mat-checkbox class="example-margin" color="primary" [(ngModel)]="showIndex">Index</mat-checkbox>
