@@ -63,6 +63,7 @@ export class FlightsTableComponent {
   temp = [];
   temp2 = [];
   flights: Flight[] = null;
+  flights_original: Flight[] = null;
   expanded: any;
   timeout: any;
   errorMessage: String;
@@ -90,6 +91,7 @@ export class FlightsTableComponent {
     this.flightsService.getFlights().subscribe(
       flights => {
         this.flights = <Flight[]>flights;
+        this.flights_original = <Flight[]>flights;
         this.temp = [...flights]
       },
       error => {
@@ -167,23 +169,31 @@ export class FlightsTableComponent {
   // Flight table search filter
   updateFilter(event) {
     let val;
-    if (event == null) {
+//console.log(event.target.value);
+    if (event == null || (event !== null && event.target.value == '')) {
       val = '';
     } else {
       val = event.target.value.toLowerCase();
     }
+
     // Name Filter Array
     const temp = this.temp.filter(function (x) {
       return x.name.toLowerCase().indexOf(val) !== -1 || !val;
     });
+
     // Age Filter Array
     const temp2 = this.temp.filter(function (d) {
       return d.age.toString().toLowerCase().indexOf(val) !== -1 || !val;
     });
 
-    // updates the rows
-    this.flights = temp;
-    this.flights = this.flights.concat(temp2)
+    if (event == null || (event !== null && event.target.value == '')) {
+      this.flights = this.flights_original;
+    }else{
+      // updates the rows
+      this.flights = temp;
+      this.flights = this.flights.concat(temp2)
+    }
+
     // Whenever the filter changes, always go back to the first page
     this.flightsTable.offset = 0;
   }

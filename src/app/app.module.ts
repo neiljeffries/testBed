@@ -1,8 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, Component } from '@angular/core';
 import { FormsModule} from '@angular/forms';
+
 import { HttpModule } from '@angular/http';
 
+//import { HttpClientModule, HttpClient } from "@angular/common/http";
 import { AppComponent } from './app.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ProfileService } from './profile/profile.service';
@@ -24,6 +26,8 @@ import { FlightsTableComponent } from './flights-table/flights-table.component';
 import { FlightsService } from "app/flights-table/flights-table.service";
 import { LeftSlideoutComponent } from './left-slideout/left-slideout.component';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,13 +41,16 @@ import { LeftSlideoutComponent } from './left-slideout/left-slideout.component';
     HubxDashboardComponent,
     DialogComponent,
     FlightsTableComponent,
-    LeftSlideoutComponent
+    LeftSlideoutComponent,
+    //HttpClient
     
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
+    //HttpClientModule,
+    //HttpClient,
     AppRoutingModule,
     NgxDatatableModule,
     BrowserAnimationsModule,
