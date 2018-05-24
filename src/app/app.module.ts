@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, Component } from '@angular/core';
 import { FormsModule} from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { HttpModule, JsonpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { ProfileComponent } from './profile/profile.component';
@@ -21,7 +21,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppMaterialModule } from 'app/app-material/app-material.module';
 import { DialogComponent } from './dialog/dialog.component';
 import { FlightsTableComponent } from './flights-table/flights-table.component';
-import { FlightsService } from "app/flights-table/flights-table.service";
+import { FlightsService } from 'app/flights-table/flights-table.service';
 import { LeftSlideoutComponent } from './left-slideout/left-slideout.component';
 
 @NgModule({
@@ -38,7 +38,6 @@ import { LeftSlideoutComponent } from './left-slideout/left-slideout.component';
     DialogComponent,
     FlightsTableComponent,
     LeftSlideoutComponent
-    
   ],
   imports: [
     BrowserModule,
@@ -47,7 +46,8 @@ import { LeftSlideoutComponent } from './left-slideout/left-slideout.component';
     AppRoutingModule,
     NgxDatatableModule,
     BrowserAnimationsModule,
-    AppMaterialModule
+    AppMaterialModule,
+    JsonpModule
   ],
   entryComponents: [
     DialogComponent

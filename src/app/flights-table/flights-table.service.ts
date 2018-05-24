@@ -3,19 +3,24 @@
 2. Declare FlightsTableComponent in your app.module!
 3. Add DataTableDetailService to providers in your app.module!
 */
-import { Http, Response } from "@angular/http";
-import { Observable } from "rxjs";
+import { Http, Response, Jsonp, JsonpModule } from '@angular/http';
+import { Observable } from 'rxjs/Observable';
 import { Injectable } from '@angular/core';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch'
 import { Flight } from './flight';
+import { FidsData } from '../classes/fids-data';
 
 @Injectable()
 export class FlightsService {
 
-  private url = "assets/data/100k.json";
-  constructor(private http:Http) { }
-  
+  private url = 'assets/data/100k.json';
+  // tslint:disable-next-line:max-line-length
+  // private url2 = 'https://localhost:7002/fids-service/api/aodsFlights/allFlights/sdf/10/120?showAlerts=true&ts=null&callback=JSONP_CALLBACK';
+  private url2 = 'assets/data/fids-json-data.json';
+  constructor(private http: Http,
+  private jsonp: Jsonp) { }
+
   getFlights(): Observable<Flight[]> {
     return this.http.get(this.url)
       .map(this.extractData)
@@ -23,8 +28,16 @@ export class FlightsService {
   }
 
   private extractData(res: Response) {
-    let body = res.json();
+    const body = res.json();
     return body;
+  }
+
+
+  getFlightsJsonp(): Observable<FidsData> {
+   // return this.jsonp.request(this.url2)
+    return this.http.get(this.url2)
+      .map(this.extractData)
+      .catch(this.handleErrorObservable);
   }
 
   private handleErrorObservable(error: Response | any) {

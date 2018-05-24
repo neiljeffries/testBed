@@ -9,10 +9,10 @@ import { Profile } from './profile';
 })
 
 export class ProfileComponent implements OnInit {
-  constructor(private profileService: ProfileService){}
-  profile:Profile;
+  profile: Profile;
   showId = false;
   termsearch = '';
+  constructor(private profileService: ProfileService) {}
 
   loadUser(searchVal): void {
     this.profileService.nameterm = searchVal;
@@ -21,11 +21,11 @@ export class ProfileComponent implements OnInit {
      .subscribe(
         profile => {
           this.profile = this.profileService.jsonObjToProfileObj(profile);
-          //this.profile = new Profile;
+          // this.profile = new Profile;
           this.profile.username = profile.username;
           console.log(this.profile);
           console.log('this.profile.username=' + this.profile.username);
-        }, //Bind to view
+        }, // Bind to view
         err => {
         console.log(err);
      });
