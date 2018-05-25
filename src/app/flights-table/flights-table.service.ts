@@ -1,13 +1,16 @@
+
+import {throwError as observableThrowError,  Observable } from 'rxjs';
+
+import {map, catchError} from 'rxjs/operators';
 /*
 1. Install ngx-datatable: "npm i @swimlane/ngx-datatable --save"
 2. Declare FlightsTableComponent in your app.module!
 3. Add DataTableDetailService to providers in your app.module!
 */
 import { Http, Response, Jsonp, JsonpModule } from '@angular/http';
-import { Observable } from 'rxjs/Observable';
 import { Injectable } from '@angular/core';
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/catch'
+
+
 import { Flight } from './flight';
 import { FidsData } from '../classes/fids-data';
 
@@ -22,9 +25,9 @@ export class FlightsService {
   private jsonp: Jsonp) { }
 
   getFlights(): Observable<Flight[]> {
-    return this.http.get(this.url)
-      .map(this.extractData)
-      .catch(this.handleErrorObservable);
+    return this.http.get(this.url).pipe(
+      map(this.extractData),
+      catchError(this.handleErrorObservable),);
   }
 
   private extractData(res: Response) {
@@ -35,13 +38,13 @@ export class FlightsService {
 
   getFlightsJsonp(): Observable<FidsData> {
    // return this.jsonp.request(this.url2)
-    return this.http.get(this.url2)
-      .map(this.extractData)
-      .catch(this.handleErrorObservable);
+    return this.http.get(this.url2).pipe(
+      map(this.extractData),
+      catchError(this.handleErrorObservable),);
   }
 
   private handleErrorObservable(error: Response | any) {
     console.error(error.message || error);
-    return Observable.throw(error.message || error);
+    return observableThrowError(error.message || error);
   }
 }

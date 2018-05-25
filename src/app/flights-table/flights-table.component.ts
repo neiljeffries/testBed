@@ -10,7 +10,7 @@ import { MatDialog, MatFormField, MatSelect, MatTabsModule, MatProgressSpinner, 
 
 import { DialogComponent } from 'app/dialog/dialog.component';
 import { Http, Response } from '@angular/http';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 import { FlightsService } from 'app/flights-table/flights-table.service';
 import { Flight } from './flight';
 // import { MatTabsModule } from 'app/app-material/app-material.module'
