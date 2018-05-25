@@ -19,6 +19,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FidsData } from '../classes/fids-data';
 import { FidsFlight } from '../classes/fids-flight';
 import { FidsAlert } from '../classes/fids-alert';
+import { DatePipe } from '@angular/common';
 
 
 // import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
@@ -219,4 +220,9 @@ export class FlightsTableComponent {
     // toggleTableOptions();
     console.log('settings icon clicked and detected in flights-table.component');
   }
+
+
+
+
+
 }

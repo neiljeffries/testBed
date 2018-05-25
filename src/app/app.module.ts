@@ -8,7 +8,6 @@ import { ProfileComponent } from './profile/profile.component';
 import { ProfileService } from './profile/profile.service';
 import { CrewmembersComponent } from './crewmembers/crewmembers.component';
 import { CrewmembersService} from './crewmembers/crewmembers.service';
-import { CrewmemberSearchComponent } from './crewmember-search/crewmember-search.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { Zippy } from './event-emitter-test/event-emitter-test.component';
 import { FrogDashboardComponent } from './frog-dashboard/frog-dashboard.component';
@@ -29,7 +28,6 @@ import { LeftSlideoutComponent } from './left-slideout/left-slideout.component';
     AppComponent,
     ProfileComponent,
     CrewmembersComponent,
-    CrewmemberSearchComponent,
     NavbarComponent,
     Zippy,
     FrogDashboardComponent,

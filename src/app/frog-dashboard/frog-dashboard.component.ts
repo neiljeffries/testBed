@@ -58,7 +58,12 @@ export class FrogDashboardComponent implements OnInit {
 
 
 
-  addEvent(type: string, event: MatDatepickerInputEvent<Date>) {
+  addStartEvent(type: string, event: MatDatepickerInputEvent<Date>) {
+    this.events.push(`${type}: ${event.value}`);
+    console.log(`${type}: ${event.value}`);
+  }
+
+  addEndEvent(type: string, event: MatDatepickerInputEvent<Date>) {
     this.events.push(`${type}: ${event.value}`);
     console.log(`${type}: ${event.value}`);
   }
@@ -97,7 +102,16 @@ export class FrogDashboardComponent implements OnInit {
     console.log(e.checked ? 'on' : 'off');
   }
 
+  filterDates(startDate, endDate) {
+    console.log(startDate);
+    console.log(endDate);
+    if (startDate === null || startDate === '' || endDate === null || endDate === '') {
+      alert('need both dates!!!')
+    } else {
+      // choice???
+    }
 
+  }
 
 }
 
