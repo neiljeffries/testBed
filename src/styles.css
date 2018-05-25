@@ -8,6 +8,9 @@
 @import 'https://fonts.googleapis.com/icon?family=Material+Icons';
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
+/* @import "~bootstrap/dist/css/bootstrap.css"; */
+
+
 /*@import '~@swimlane/ngx-datatable/release/assets/app.css';*/
 
 .footer1 {
@@ -91,7 +94,8 @@
 .navbar-brand {
     float: left;
     height: 48px;
-    padding: 15px 15px;
+    padding-top: 15px !important;
+    padding-bottom: 0px !important;
     font-size: 18px;
     /* line-height: 34px; */
 }
@@ -188,7 +192,7 @@ img {
 }
 
 .sidenavContainer {
-    padding-top: 50px;
+    /* padding-top: 50px; */
 }
 
 .datatable-row-wrapper {

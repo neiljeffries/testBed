@@ -6,6 +6,7 @@ import { ProfileComponent } from 'app/profile/profile.component';
 import { DataTableComponent } from 'app/data-table/data-table.component';
 import { HubxDashboardComponent } from 'app/hubx-dashboard/hubx-dashboard.component';
 import { FlightsTableComponent } from 'app/flights-table/flights-table.component';
+import { MyDashboardComponent } from "app/my-dashboard/my-dashboard.component";
 
 const routes: Routes = [
   { path: 'frogs', component: FrogDashboardComponent },
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'profile', component: ProfileComponent },
   { path: 'datatable', component: DataTableComponent },
   { path: 'hubx', component: HubxDashboardComponent },
+  { path: 'dashboard', component: MyDashboardComponent },
   { path: 'flights', component: FlightsTableComponent }
 ];
 

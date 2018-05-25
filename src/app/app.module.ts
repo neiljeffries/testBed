@@ -25,6 +25,8 @@ import { DialogComponent } from './dialog/dialog.component';
 import { FlightsTableComponent } from './flights-table/flights-table.component';
 import { FlightsService } from "app/flights-table/flights-table.service";
 import { LeftSlideoutComponent } from './left-slideout/left-slideout.component';
+import { MyDashboardComponent } from './my-dashboard/my-dashboard.component';
+import { MatGridListModule, MatCardModule, MatMenuModule, MatIconModule, MatButtonModule } from '@angular/material';
 
 
 
@@ -42,6 +44,7 @@ import { LeftSlideoutComponent } from './left-slideout/left-slideout.component';
     DialogComponent,
     FlightsTableComponent,
     LeftSlideoutComponent,
+    MyDashboardComponent,
     //HttpClient
     
   ],
@@ -54,7 +57,12 @@ import { LeftSlideoutComponent } from './left-slideout/left-slideout.component';
     AppRoutingModule,
     NgxDatatableModule,
     BrowserAnimationsModule,
-    AppMaterialModule
+    AppMaterialModule,
+    MatGridListModule,
+    MatCardModule,
+    MatMenuModule,
+    MatIconModule,
+    MatButtonModule
   ],
   entryComponents: [
     DialogComponent
