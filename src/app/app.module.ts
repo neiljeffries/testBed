@@ -1,16 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, Component } from '@angular/core';
 import { FormsModule} from '@angular/forms';
-
-import { HttpModule } from '@angular/http';
-
-//import { HttpClientModule, HttpClient } from "@angular/common/http";
+import { HttpModule, JsonpModule } from '@angular/http';
+// import { HttpClientModule, HttpClient, JsonpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ProfileService } from './profile/profile.service';
 import { CrewmembersComponent } from './crewmembers/crewmembers.component';
 import { CrewmembersService} from './crewmembers/crewmembers.service';
-import { CrewmemberSearchComponent } from './crewmember-search/crewmember-search.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { Zippy } from './event-emitter-test/event-emitter-test.component';
 import { FrogDashboardComponent } from './frog-dashboard/frog-dashboard.component';
@@ -23,7 +20,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppMaterialModule } from 'app/app-material/app-material.module';
 import { DialogComponent } from './dialog/dialog.component';
 import { FlightsTableComponent } from './flights-table/flights-table.component';
-import { FlightsService } from "app/flights-table/flights-table.service";
+import { FlightsService } from 'app/flights-table/flights-table.service';
 import { LeftSlideoutComponent } from './left-slideout/left-slideout.component';
 
 
@@ -33,7 +30,6 @@ import { LeftSlideoutComponent } from './left-slideout/left-slideout.component';
     AppComponent,
     ProfileComponent,
     CrewmembersComponent,
-    CrewmemberSearchComponent,
     NavbarComponent,
     Zippy,
     FrogDashboardComponent,
@@ -41,20 +37,18 @@ import { LeftSlideoutComponent } from './left-slideout/left-slideout.component';
     HubxDashboardComponent,
     DialogComponent,
     FlightsTableComponent,
-    LeftSlideoutComponent,
-    //HttpClient
-    
+    LeftSlideoutComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    //HttpClientModule,
-    //HttpClient,
+    // HttpClientModule,
     AppRoutingModule,
     NgxDatatableModule,
     BrowserAnimationsModule,
-    AppMaterialModule
+    AppMaterialModule,
+    JsonpModule
   ],
   entryComponents: [
     DialogComponent

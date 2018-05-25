@@ -1,13 +1,12 @@
+
+import {throwError as observableThrowError,  Observable } from 'rxjs';
+
+import {catchError, map} from 'rxjs/operators';
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/toPromise';
-import 'rxjs/add/operator/catch';
-import { Crewmember } from './crewmember';
 
-//import { Observable } from 'rxjs/Observable';
-import { Observable, Subject, asapScheduler, pipe, of, from, interval, merge, fromEvent } from 'rxjs';
-//import { map, filter, scan } from 'rxjs/operators';
+
+import { Crewmember } from './crewmember';
 
 @Injectable()
 export class CrewmembersService {
@@ -15,9 +14,9 @@ export class CrewmembersService {
     private crewmembersUrl = '../assets/MOCK_DATA.json';
 
     getCrewmembers(): Observable<Crewmember[]> {
-        return this.http.get(this.crewmembersUrl)
-            .map((response: Response) => response.json())
-            .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
+        return this.http.get(this.crewmembersUrl).pipe(
+            map((response: Response) => response.json()),
+            catchError((error: any) => observableThrowError(error.json().error || 'Server error')),);
     }
 
     

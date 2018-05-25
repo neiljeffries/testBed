@@ -64,7 +64,15 @@
 
 
 
-    <ngx-datatable style="margin-bottom:25px" #flightsTable class='material fullscreen' style="top: 2px; width:100%; " [columnMode]="'force'" [limit]="rowLimit" [footerHeight]="40" [headerHeight]="40" [rowHeight]="40" [rows]='flights' [selectionType]="'single'"
+    <ngx-datatable style="margin-bottom:25px" #flightsTable 
+    class='material fullscreen' style="top: 2px; width:100%; " 
+    [columnMode]="'force'" 
+    [limit]="rowLimit" 
+    [footerHeight]="40" 
+    [headerHeight]="40" 
+    [rowHeight]="40" 
+    [rows]='flights' 
+    [selectionType]="'single'"
         (select)='onSelect($event)' (page)="onPage($event)">
 
         <!-- <ngx-datatable #flightsTable class="material fullscreen" style="top: 52px; width:100%;" [columnMode]="'force'" [headerHeight]="50" [footerHeight]="0" [rowHeight]="50" [scrollbarV]="true" [scrollbarH]="true" [rows]="flights" [selectionType]="'single'"
@@ -135,6 +143,48 @@
 
     </ngx-datatable>
 
+
+    <br>
+
+    <ngx-datatable
+    style="top: 2px; width:100%; "
+    class="material fullscreen"
+    [rows]="fidsDepartingFlights"
+    [headerHeight]="40"
+    [footerHeight]="40"
+    [rowHeight]="'auto'"
+    [limit]="10"
+    columnMode="force">
+    <ngx-datatable-column name="Flight" [prop]="'flightRouteWithNumber'" [width]="150"></ngx-datatable-column>
+    <ngx-datatable-column name="Tail" [prop]="'flightTailNumber'" [width]="70"></ngx-datatable-column>  
+    <ngx-datatable-column name="Parking" [prop]="'flightParkingPosition'" [width]="60"></ngx-datatable-column>
+    <ngx-datatable-column name="Captain" [prop]="'flightCaptain'" [width]="150"></ngx-datatable-column>
+    <ngx-datatable-column name="Est Dep (z)" [prop]="'flightEstTime'" [width]="70"></ngx-datatable-column>
+    <ngx-datatable-column name="Status" [prop]="'flightStatus'" [width]="140"></ngx-datatable-column> 
+
+    <!-- <ngx-datatable-column name="Type" [prop]="'flightAircraftType'" [width]="50">
+        <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+            <div>{{value}}</div>
+        </ng-template>
+    </ngx-datatable-column>
+   
+    <ngx-datatable-column name="Comments" [prop]="'flightComments'" [width]="100"></ngx-datatable-column>
+    <ngx-datatable-column name="Date" [prop]="'flightDate'" [width]="130"></ngx-datatable-column>
+    <ngx-datatable-column name="DEST" [prop]="'flightDestination'" [width]="50"></ngx-datatable-column>
+    <ngx-datatable-column name="In/Out" [prop]="'flightDirection'" [width]="80"></ngx-datatable-column>
+    <ngx-datatable-column name="+/-" [prop]="'flightEstTimeDiff'" [width]="40"></ngx-datatable-column>
+    <ngx-datatable-column name="Est Status" [prop]="'flightEstTimeStatus'" [width]="90"></ngx-datatable-column>
+    <ngx-datatable-column name="Last Uld" [prop]="'flightLastUldTs'" [width]="100"></ngx-datatable-column>
+    <ngx-datatable-column name="Load Est" [prop]="'flightLoadEstimate'" [width]="90"></ngx-datatable-column>
+    <ngx-datatable-column name="Flt Num" [prop]="'flightNumber'" [width]="100"></ngx-datatable-column>
+    <ngx-datatable-column name="Flt Gtwy" [prop]="'flightOrientationGateway'" [width]="100"></ngx-datatable-column>
+    <ngx-datatable-column name="Origin" [prop]="'flightOrigin'" [width]="50"></ngx-datatable-column>
+    <ngx-datatable-column name="Sch Time" [prop]="'flightSchedTime'" [width]="90"></ngx-datatable-column> 
+    <ngx-datatable-column name="State" [prop]="'flightState'" [width]="100"></ngx-datatable-column>  -->
+    
+
+</ngx-datatable>
+
     <!-- </mat-tab>
         <mat-tab label="Outbound Flights">Content 2</mat-tab>
     </mat-tab-group> -->
@@ -142,7 +192,7 @@
 </div>
 
 
-<div class="myProgressSpinner" *ngIf="flights === null">
+<div class="myProgressSpinner" *ngIf="flights === null || fidsDepartingFlights === null">
     <mat-progress-spinner [color]="progressSpinnerColor" [mode]="progressSpinnerMode" [value]="progressSpinnerValue">
     </mat-progress-spinner>
 </div>

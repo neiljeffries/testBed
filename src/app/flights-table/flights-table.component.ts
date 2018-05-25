@@ -4,17 +4,25 @@
 3. Add DataTableDetailService to providers in your app.module!
 */
 import { Component, ViewEncapsulation, ViewChild } from '@angular/core';
-import { MatDialog, MatFormField, MatSelect, MatTabsModule, MatProgressSpinner, MatDatepickerInputEvent, MatAccordion, MatSnackBar, MatProgressBar, MatMenu, MatSidenav, MatSidenavContainer, MatSidenavContent, MatSidenavModule } from '@angular/material';
-import { DialogComponent } from 'app/dialog/dialog.component';
-import { Http, Response } from "@angular/http";
-import { Observable } from "rxjs";
-import { FlightsService } from "app/flights-table/flights-table.service";
-import { Flight } from './flight';
-//import { MatTabsModule } from 'app/app-material/app-material.module'
-import { trigger, transition, style, animate, state, group, keyframes } from '@angular/animations'
-import { BrowserModule } from '@angular/platform-browser'
+import { MatDialog, MatFormField, MatSelect, MatTabsModule, MatProgressSpinner, MatDatepickerInputEvent,
+  MatAccordion, MatSnackBar, MatProgressBar, MatMenu, MatSidenav, MatSidenavContainer, MatSidenavContent,
+  MatSidenavModule } from '@angular/material';
 
-//import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
+import { DialogComponent } from 'app/dialog/dialog.component';
+import { Http, Response } from '@angular/http';
+import { Observable } from 'rxjs';
+import { FlightsService } from 'app/flights-table/flights-table.service';
+import { Flight } from './flight';
+// import { MatTabsModule } from 'app/app-material/app-material.module'
+import { trigger, transition, style, animate, state, group, keyframes } from '@angular/animations';
+import { BrowserModule } from '@angular/platform-browser';
+import { FidsData } from '../classes/fids-data';
+import { FidsFlight } from '../classes/fids-flight';
+import { FidsAlert } from '../classes/fids-alert';
+import { DatePipe } from '@angular/common';
+
+
+// import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
 
 
 // animations: [
@@ -59,6 +67,10 @@ import { BrowserModule } from '@angular/platform-browser'
 
 export class FlightsTableComponent {
 
+  fidsData: FidsData = null;
+  fidsArrivingFlights: FidsFlight = null;
+  fidsDepartingFlights: FidsFlight = null;
+  fidsAlerts: FidsAlert = null;
   @ViewChild('flightsTable') flightsTable: any;
   temp = [];
   temp2 = [];
@@ -93,6 +105,21 @@ export class FlightsTableComponent {
         this.flights = <Flight[]>flights;
         this.flights_original = <Flight[]>flights;
         this.temp = [...flights]
+      },
+      error => {
+        this.errorMessage = <any>error;
+        console.log(this.errorMessage)
+      }
+    );
+
+    this.flightsService.getFlightsJsonp().subscribe(
+      res => {
+        this.fidsData = <FidsData>res;
+        this.fidsArrivingFlights = <FidsFlight>this.fidsData.fidsArrivingFlights;
+        this.fidsDepartingFlights = <FidsFlight>this.fidsData.fidsDepartingFlights;
+        this.fidsAlerts = <FidsAlert>this.fidsData.fidsAlerts;
+        // this.flights = <Flight[]>flights;
+        // this.temp = [...flights]
       },
       error => {
         this.errorMessage = <any>error;
@@ -198,9 +225,14 @@ export class FlightsTableComponent {
     this.flightsTable.offset = 0;
   }
 
-    getSettingsClickNotification(event){
-    //perform settings click here!
-    //toggleTableOptions();
-    console.log("settings icon clicked and detected in flights-table.component")
+    getSettingsClickNotification(event) {
+    // perform settings click here!
+    // toggleTableOptions();
+    console.log('settings icon clicked and detected in flights-table.component');
   }
+
+
+
+
+
 }

@@ -1,6 +1,9 @@
+
+import {throwError as observableThrowError,  ReplaySubject, BehaviorSubject, Observable } from 'rxjs';
+
+import {catchError, map} from 'rxjs/operators';
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
-import { ReplaySubject, BehaviorSubject, Observable } from 'rxjs';
 import { Frog } from 'app/frog-dashboard/frog'
 
 @Injectable()
@@ -18,12 +21,12 @@ export class FrogsService {
       res => this.activeProject.next(res.json())
     );    
 
-    let request = this.http.get('http://time.jsontest.com/')
-    .map(res => {
+    let request = this.http.get('http://time.jsontest.com/').pipe(
+    map(res => {
       res = res.json()
             console.log(res)
     
-    }).catch(res => Observable.throw(res.json()));
+    }),catchError(res => observableThrowError(res.json())),);
 
 
  
