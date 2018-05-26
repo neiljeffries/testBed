@@ -6,15 +6,18 @@ import { ProfileComponent } from 'app/profile/profile.component';
 import { DataTableComponent } from 'app/data-table/data-table.component';
 import { HubxDashboardComponent } from 'app/hubx-dashboard/hubx-dashboard.component';
 import { FlightsTableComponent } from 'app/flights-table/flights-table.component';
+import { FidsDashboardComponent } from "app/fids-dashboard/fids-dashboard.component";
 
 const routes: Routes = [
-  { path: 'frogs', component: FrogDashboardComponent },
+  { path: 'alerts', component: FrogDashboardComponent },
   { path: 'crew', component: CrewmembersComponent },
-  { path: '', redirectTo: '/flights', pathMatch: 'full' },
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+  { path: '*', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: 'profile', component: ProfileComponent },
   { path: 'datatable', component: DataTableComponent },
   { path: 'hubx', component: HubxDashboardComponent },
-  { path: 'flights', component: FlightsTableComponent }
+  { path: 'flights', component: FlightsTableComponent },
+  { path: 'dashboard', component: FidsDashboardComponent }
 ];
 
 

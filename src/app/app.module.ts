@@ -22,6 +22,8 @@ import { DialogComponent } from './dialog/dialog.component';
 import { FlightsTableComponent } from './flights-table/flights-table.component';
 import { FlightsService } from 'app/flights-table/flights-table.service';
 import { LeftSlideoutComponent } from './left-slideout/left-slideout.component';
+import { FidsDashboardComponent } from './fids-dashboard/fids-dashboard.component';
+import { MatGridListModule, MatCardModule, MatMenuModule, MatIconModule, MatButtonModule } from '@angular/material';
 
 
 
@@ -37,7 +39,8 @@ import { LeftSlideoutComponent } from './left-slideout/left-slideout.component';
     HubxDashboardComponent,
     DialogComponent,
     FlightsTableComponent,
-    LeftSlideoutComponent
+    LeftSlideoutComponent,
+    FidsDashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +51,12 @@ import { LeftSlideoutComponent } from './left-slideout/left-slideout.component';
     NgxDatatableModule,
     BrowserAnimationsModule,
     AppMaterialModule,
-    JsonpModule
+    JsonpModule,
+    MatGridListModule,
+    MatCardModule,
+    MatMenuModule,
+    MatIconModule,
+    MatButtonModule
   ],
   entryComponents: [
     DialogComponent
