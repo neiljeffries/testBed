@@ -5,7 +5,7 @@
 */
 import { Component, ViewEncapsulation, ViewChild } from '@angular/core';
 import { MatDialog, MatFormField, MatSelect, MatTabsModule, MatProgressSpinner, MatDatepickerInputEvent,
-  MatAccordion, MatSnackBar, MatProgressBar, MatMenu, MatSidenav, MatSidenavContainer, MatSidenavContent,
+  MatAccordion, MatSnackBar, MatProgressBar, MatMenu, MatSidenav, MatSidenavContainer, MatSidenavContent, MatGridListModule,
   MatSidenavModule } from '@angular/material';
 
 import { DialogComponent } from 'app/dialog/dialog.component';
@@ -86,12 +86,12 @@ export class FlightsTableComponent {
   progressSpinnerValue = 50;
   filterInputValue = '';
   rowsExpanded = false;
-  showName = true;
-  showGender = true;
-  showAge = true;
-  showLoad = true;
-  showExpanded = true;
-  showIndex = true;
+  showParking = true;
+  showCaptain = true;
+  showEstTime = true;
+  showStatus = true;
+  showTail = true;
+  showFlight = true;
   showTableOptions = false;
   showAlert = false;
   expandCollapseRowsText = 'Expand';
@@ -196,8 +196,8 @@ export class FlightsTableComponent {
   // Flight table search filter
   updateFilter(event) {
     let val;
-//console.log(event.target.value);
-    if (event == null || (event !== null && event.target.value == '')) {
+// console.log(event.target.value);
+    if (event == null || (event !== null && event.target.value === '')) {
       val = '';
     } else {
       val = event.target.value.toLowerCase();
@@ -213,9 +213,9 @@ export class FlightsTableComponent {
       return d.age.toString().toLowerCase().indexOf(val) !== -1 || !val;
     });
 
-    if (event == null || (event !== null && event.target.value == '')) {
+    if (event == null || (event !== null && event.target.value === '')) {
       this.flights = this.flights_original;
-    }else{
+    } else {
       // updates the rows
       this.flights = temp;
       this.flights = this.flights.concat(temp2)

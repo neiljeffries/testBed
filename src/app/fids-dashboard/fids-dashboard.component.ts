@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'fids-dashboard',
+  selector: 'app-fids-dashboard',
   templateUrl: './fids-dashboard.component.html',
   styleUrls: ['./fids-dashboard.component.css']
 })

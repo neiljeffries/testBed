@@ -10,6 +10,12 @@
 
 /*@import '~@swimlane/ngx-datatable/release/assets/app.css';*/
 
+.myMatList li{
+
+    font-size: 16px;
+
+}
+
 .mat-bottom-sheet-container {
     background-color: #ec9f0b !important;
 }
