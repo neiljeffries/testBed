@@ -80,46 +80,50 @@
 
                     <div class="grid-container">
                         <mat-card style="width: 800px; margin: auto;">
-                            <div><h1 style="font-size:50px; text-align:center;">{{row.flightNumber}} - 
+                            <div><h1 style="font-size:40px; text-align:center;">{{row.flightNumber}} - 
                                 {{row.flightOrigin}} <i class="material-icons">
                                         arrow_forward
                                         </i> {{row.flightDestination}}</h1>
                             </div>
-                            <mat-grid-list cols="2" rowHeight="350px">
+                            <mat-grid-list cols="2" rowHeight="304px">
                                 <mat-grid-tile [colspan]="1" [rowspan]="1">
-                                    <mat-card class="dashboard-card" style="width: 350px; height: 320px; margin: auto;">
+                                    <mat-card class="dashboard-card" style="width: 350px; height: 274px; margin: auto;">
                                         <ul class="myMatList">
-                                            <li>Aircracf Type: {{row.flightAircraftType}} </li>
-                                            <li>Date: {{row.flightDate}} </li>
-                                            <li>Direction: {{row.flightDirection}} </li>
-                                            <li>Destination: {{row.flightDestination}} </li>
-                                            <li>Est Time: {{row.flightEstTime}} </li>
-                                            <li>Est Time Diff: {{row.flightEstTimeDiff}} </li>
-                                            <li>Est Time Status: {{row.flightEstTimeStatus}} </li>
-                                            <li>LTP Data: {{row.flightLTPData}} </li>
+                                                
+                                                 <li>Flight Date: {{row.flightDate}} </li>
+                                            <!-- <li>Direction: {{row.flightDirection}} </li> -->
+                                            <!-- <li>Destination: {{row.flightDestination}} </li> -->
+                                            <li>Sched Time: {{row.flightSchedTime}} </li>
+                                            <li>Est Time: {{row.flightEstTime}} {{row.flightEstTimeDiff}} </li>
+                                            <!-- <li>Est Time Diff: {{row.flightEstTimeDiff}} </li> -->
+                                            <li>Est Time Status: {{row.flightEstTimeStatus}} </li>                                            
+                                            <li>Est Load Time: {{row.flightLoadEstimate}} </li>
                                             <li>Last ULD Time: {{row.flightLastUldTs}} </li>
+                                            <li> State: {{row.flightState}} </li>
+                                            <li> Status: {{row.flightStatus}} </li>
+                                            
 
                                         </ul>
                                     </mat-card>
                                 </mat-grid-tile>
                                 <mat-grid-tile [colspan]="1" [rowspan]="1">
-                                    <mat-card style="width: 350px; margin: auto; height: 320px;">
-                                        <ul class="myMatList">
-                                            <li>Load Est: {{row.flightLoadEstimate}} </li>
-                                            <li> Orientation Gtwy:  {{row.flightOrientationGateway}} </li>
-                                            <li> Origin: {{row.flightOrigin}} </li>
-                                            <li> Parking Position: {{row.flightParkingPosition}} </li>
-                                            <li> Route With Number: {{row.flightRouteWithNumber}} </li>
-                                            <li> Sched Time: {{row.flightSchedTime}} </li>
-                                            <li> State: {{row.flightState}} </li>
-                                            <li> Status: {{row.flightStatus}} </li>
-                                            <li> Tail Number: {{row.flightTailNumber}} </li>
-
-                                        </ul>
+                                    <mat-card style="width: 350px; margin: auto; height: 274px;">
+                                         <span style="font-size:16px">Tail:</span>
+                                         <h1 style="margin-top:5px;">{{row.flightTailNumber}}</h1>
+                                            <!-- <li> Orientation Gtwy:  {{row.flightOrientationGateway}} </li> -->
+                                            <!-- <li> Origin: {{row.flightOrigin}} </li> -->
+                                            <span style="font-size:16px">Ramp:</span>
+                                            <h1>{{row.flightParkingPosition}} </h1>
+                                            <!-- <li> Route With Number: {{row.flightRouteWithNumber}} </li>  -->
+                                            
+                                            <!-- <li> LTP Data: {{row.flightLTPData}} </li> -->
+                                            <br>
+                                            <button mat-raised-button (click)="openDialog('favoriteAnimal')">View More</button>
+                                        
                                     </mat-card>
                                 </mat-grid-tile>
                             </mat-grid-list>
-                            <button mat-raised-button (click)="openDialog('favoriteAnimal')">View More</button>
+                            
                         </mat-card>
                     </div>
 
