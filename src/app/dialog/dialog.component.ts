@@ -10,6 +10,7 @@ export class DialogComponent implements OnInit {
 
 animal: string;
 dialogId: string;
+flightDetail:any = [];
 
   constructor(
     public dialogRef: MatDialogRef<DialogComponent>,
@@ -24,6 +25,7 @@ dialogId: string;
 
   ngOnInit() {
     console.log(this.data);
+    //console.log(this.data.flightDetail.flightDetail[0]);
     console.log(this.dialogRef.id);
 
       this.dialogRef.afterOpen().subscribe(() => {

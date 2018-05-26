@@ -144,6 +144,8 @@ export class FlightsTableComponent {
 
   onSelect({ selected }) {
 
+    this.openDialog('flightDetail',selected);
+
     this.flightsTable.rowDetail.collapseAllRows(); // close all detail rows
     this.flightsTable.rowDetail.toggleExpandRow(selected[0]); // expand selected detail row
     console.log(selected);
@@ -155,13 +157,13 @@ export class FlightsTableComponent {
     }
   }
 
-  openDialog(dialogId): void {
+  openDialog(dialogId, selected): void {
 
-    console.log(this.selectedRow);
+    console.log(selected);
     const dialogRef = this.dialog.open(DialogComponent, {
-      width: '250px',
-      data: { name: this.selectedRow[0].name, animal: this.selectedRow[0].gender },
-      id: dialogId
+      width: 'auto',
+      // data: { name: this.selectedRow[0].name, animal: this.selectedRow[0].gender },
+      data: {fightDetail: selected}
     });
 
     dialogRef.afterClosed().subscribe(result => {

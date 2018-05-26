@@ -1,6 +1,6 @@
 {{dialogId}}
 
-<div [hidden]="dialogId != 'favoriteAnimal'">
+<div *ngIf="dialogId === 'favoriteAnimal'">
 
     <h1>hello! {{data.name}}</h1>
 
@@ -17,7 +17,63 @@
 </div>
 
 
-<div [hidden]="dialogId != 'test1'">
+<div *ngIf="dialogId === 'flightDetail'">
 
-    <h1>test1</h1>
+    <div style="margin:auto;">
+
+
+        <div class="grid-container">
+            <mat-card style="width: 621px; margin: auto;">
+                <div>
+                    <h1 style="font-size:40px; text-align:center;">{{data.flightDetail[0].flightNumber}} - {{data.flightDetail[0].flightOrigin}} <i class="material-icons">
+                                        arrow_forward
+                                        </i> {{data.flightDetail[0].flightDestination}}</h1>
+                </div>
+                <mat-grid-list cols="2" rowHeight="304px">
+                    <mat-grid-tile [colspan]="1" [rowspan]="1">
+                        <mat-card class="dashboard-card" style="width: 268px; height: 274px; margin: auto;">
+                            <ul class="myMatList">
+
+                                <li>Flight Date: {{data.flightDetail[0].flightDate}} </li>
+                                <!-- <li>Direction: {{data.flightDetail[0].flightDirection}} </li> -->
+                                <!-- <li>Destination: {{data.flightDetail[0].flightDestination}} </li> -->
+                                <li>Sched Time: {{data.flightDetail[0].flightSchedTime}} </li>
+                                <li>Est Time: {{data.flightDetail[0].flightEstTime}} {{data.flightDetail[0].flightEstTimeDiff}} </li>
+                                <!-- <li>Est Time Diff: {{data.flightDetail[0].flightEstTimeDiff}} </li> -->
+                                <li>Est Time Status: {{data.flightDetail[0].flightEstTimeStatus}} </li>
+                                <li>Est Load Time: {{data.flightDetail[0].flightLoadEstimate}} </li>
+                                <li>Last ULD Time: {{data.flightDetail[0].flightLastUldTs}} </li>
+                                <li> State: {{data.flightDetail[0].flightState}} </li>
+                                <li> Status: {{data.flightDetail[0].flightStatus}} </li>
+
+
+                            </ul>
+                        </mat-card>
+                    </mat-grid-tile>
+                    <mat-grid-tile [colspan]="1" [rowspan]="1">
+                        <mat-card style="width: 225px; margin: auto; height: 274px;">
+                            <span style="font-size:16px">Tail:</span>
+                            <h1 style="margin-top:5px;">{{data.flightDetail[0].flightTailNumber}}</h1>
+                            <!-- <li> Orientation Gtwy:  {{data.flightDetail[0].flightOrientationGateway}} </li> -->
+                            <!-- <li> Origin: {{data.flightDetail[0].flightOrigin}} </li> -->
+                            <mat-divider></mat-divider>
+                            <br>
+                            <span style="font-size:16px">Ramp:</span>
+                            <h1 style="margin-top:5px;">{{data.flightDetail[0].flightParkingPosition}} </h1>
+                            <!-- <li> Route With Number: {{data.flightDetail[0].flightRouteWithNumber}} </li>  -->
+
+                            <!-- <li> LTP Data: {{data.flightDetail[0].flightLTPData}} </li> -->
+                            <!-- <mat-divider></mat-divider> -->
+                            <br>
+                            <button style="float:right" mat-raised-button (click)="openDialog('favoriteAnimal')">View More</button>
+
+                        </mat-card>
+                    </mat-grid-tile>
+                </mat-grid-list>
+
+            </mat-card>
+        </div>
+
+
+    </div>
 </div>
