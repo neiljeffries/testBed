@@ -37,7 +37,7 @@ import { DatePipe } from '@angular/common';
 
 
 @Component({
-  selector: 'app-data-table-detail',
+  selector: 'app-flights-table',
   animations: [
     trigger('flyInOut', [
       state('in', style({ transform: 'translateX(0)' })),

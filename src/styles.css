@@ -10,6 +10,10 @@
 
 /*@import '~@swimlane/ngx-datatable/release/assets/app.css';*/
 
+.mat-bottom-sheet-container {
+    background-color: #ec9f0b !important;
+}
+
 .footer1 {
     background-color: #d2d2d2;
     position: fixed;

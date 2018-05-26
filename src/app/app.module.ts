@@ -23,7 +23,8 @@ import { FlightsTableComponent } from './flights-table/flights-table.component';
 import { FlightsService } from 'app/flights-table/flights-table.service';
 import { LeftSlideoutComponent } from './left-slideout/left-slideout.component';
 import { FidsDashboardComponent } from './fids-dashboard/fids-dashboard.component';
-import { MatGridListModule, MatCardModule, MatMenuModule, MatIconModule, MatButtonModule } from '@angular/material';
+import { MatGridListModule, MatCardModule, MatMenuModule, MatIconModule, MatButtonModule, MatBottomSheet, MatBottomSheetContainer, MatBottomSheetModule } from '@angular/material';
+import { BottomSheetComponent } from './bottom-sheet/bottom-sheet.component';
 
 
 
@@ -40,7 +41,8 @@ import { MatGridListModule, MatCardModule, MatMenuModule, MatIconModule, MatButt
     DialogComponent,
     FlightsTableComponent,
     LeftSlideoutComponent,
-    FidsDashboardComponent
+    FidsDashboardComponent,
+    BottomSheetComponent,
   ],
   imports: [
     BrowserModule,
@@ -56,10 +58,13 @@ import { MatGridListModule, MatCardModule, MatMenuModule, MatIconModule, MatButt
     MatCardModule,
     MatMenuModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    MatBottomSheetModule
   ],
   entryComponents: [
-    DialogComponent
+    DialogComponent,
+    BottomSheetComponent
+    
   ],
   providers: [ProfileService, CrewmembersService, FrogsService, FlightsService],
   bootstrap: [AppComponent]
