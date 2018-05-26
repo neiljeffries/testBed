@@ -38,8 +38,7 @@
 
                 <section class="example-section">
                     <mat-form-field class="example-form-field" style="margin-right:18px; width: 260px;">
-                        <input matInput type="text" placeholder="Search: Flight | Gateway" #searchInput maxlength="256" [(ngModel)]="filterInputValue"
-                            (keyup)='updateFilter($event)' />
+                        <input matInput type="text" placeholder="Search: Flight | Gateway" #searchInput maxlength="256" [(ngModel)]="filterInputValue" (keyup)='updateFilter($event)' />
                         <button mat-button *ngIf="filterInputValue" matSuffix mat-icon-button aria-label="Clear" (click)="filterInputValue=''; updateFilter(null)">
                             <mat-icon>close</mat-icon>
                         </button>
@@ -65,8 +64,7 @@
 
 
 
-    <ngx-datatable style="margin-bottom:25px" #flightsTable class='material fullscreen' style="top: 2px; width:100%; " [columnMode]="'force'"
-        [limit]="rowLimit" [footerHeight]="40" [headerHeight]="40" [rowHeight]="40" [rows]='fidsDepartingFlights' [selectionType]="'single'"
+    <ngx-datatable style="margin-bottom:25px" #flightsTable class='material fullscreen' style="top: 2px; width:100%; " [columnMode]="'force'" [limit]="rowLimit" [footerHeight]="40" [headerHeight]="40" [rowHeight]="40" [rows]='fidsDepartingFlights' [selectionType]="'single'"
         (select)='onSelect($event)' (page)="onPage($event)">
 
         <!-- <ngx-datatable #flightsTable class="material fullscreen" style="top: 52px; width:100%;" [columnMode]="'force'" [headerHeight]="50" [footerHeight]="0" [rowHeight]="50" [scrollbarV]="true" [scrollbarH]="true" [rows]="flights" [selectionType]="'single'"
@@ -79,51 +77,54 @@
 
 
                     <div class="grid-container">
-                        <mat-card style="width: 800px; margin: auto;">
-                            <div><h1 style="font-size:40px; text-align:center;">{{row.flightNumber}} - 
-                                {{row.flightOrigin}} <i class="material-icons">
+                        <mat-card style="width: 621px; margin: auto;">
+                            <div>
+                                <h1 style="font-size:40px; text-align:center;">{{row.flightNumber}} - {{row.flightOrigin}} <i class="material-icons">
                                         arrow_forward
                                         </i> {{row.flightDestination}}</h1>
                             </div>
                             <mat-grid-list cols="2" rowHeight="304px">
                                 <mat-grid-tile [colspan]="1" [rowspan]="1">
-                                    <mat-card class="dashboard-card" style="width: 350px; height: 274px; margin: auto;">
+                                    <mat-card class="dashboard-card" style="width: 268px; height: 274px; margin: auto;">
                                         <ul class="myMatList">
-                                                
-                                                 <li>Flight Date: {{row.flightDate}} </li>
+
+                                            <li>Flight Date: {{row.flightDate}} </li>
                                             <!-- <li>Direction: {{row.flightDirection}} </li> -->
                                             <!-- <li>Destination: {{row.flightDestination}} </li> -->
                                             <li>Sched Time: {{row.flightSchedTime}} </li>
                                             <li>Est Time: {{row.flightEstTime}} {{row.flightEstTimeDiff}} </li>
                                             <!-- <li>Est Time Diff: {{row.flightEstTimeDiff}} </li> -->
-                                            <li>Est Time Status: {{row.flightEstTimeStatus}} </li>                                            
+                                            <li>Est Time Status: {{row.flightEstTimeStatus}} </li>
                                             <li>Est Load Time: {{row.flightLoadEstimate}} </li>
                                             <li>Last ULD Time: {{row.flightLastUldTs}} </li>
                                             <li> State: {{row.flightState}} </li>
                                             <li> Status: {{row.flightStatus}} </li>
-                                            
+
 
                                         </ul>
                                     </mat-card>
                                 </mat-grid-tile>
                                 <mat-grid-tile [colspan]="1" [rowspan]="1">
-                                    <mat-card style="width: 350px; margin: auto; height: 274px;">
-                                         <span style="font-size:16px">Tail:</span>
-                                         <h1 style="margin-top:5px;">{{row.flightTailNumber}}</h1>
-                                            <!-- <li> Orientation Gtwy:  {{row.flightOrientationGateway}} </li> -->
-                                            <!-- <li> Origin: {{row.flightOrigin}} </li> -->
-                                            <span style="font-size:16px">Ramp:</span>
-                                            <h1>{{row.flightParkingPosition}} </h1>
-                                            <!-- <li> Route With Number: {{row.flightRouteWithNumber}} </li>  -->
-                                            
-                                            <!-- <li> LTP Data: {{row.flightLTPData}} </li> -->
-                                            <br>
-                                            <button mat-raised-button (click)="openDialog('favoriteAnimal')">View More</button>
-                                        
+                                    <mat-card style="width: 225px; margin: auto; height: 274px;">
+                                        <span style="font-size:16px">Tail:</span>
+                                        <h1 style="margin-top:5px;">{{row.flightTailNumber}}</h1>
+                                        <!-- <li> Orientation Gtwy:  {{row.flightOrientationGateway}} </li> -->
+                                        <!-- <li> Origin: {{row.flightOrigin}} </li> -->
+                                        <mat-divider></mat-divider>
+                                        <br>
+                                        <span style="font-size:16px">Ramp:</span>
+                                        <h1 style="margin-top:5px;">{{row.flightParkingPosition}} </h1>
+                                        <!-- <li> Route With Number: {{row.flightRouteWithNumber}} </li>  -->
+
+                                        <!-- <li> LTP Data: {{row.flightLTPData}} </li> -->
+                                        <!-- <mat-divider></mat-divider> -->
+                                        <br>
+                                        <button style="float:right" mat-raised-button (click)="openDialog('favoriteAnimal')">View More</button>
+
                                     </mat-card>
                                 </mat-grid-tile>
                             </mat-grid-list>
-                            
+
                         </mat-card>
                     </div>
 
@@ -157,15 +158,15 @@
         <!-- Name Column  -->
         <ngx-datatable-column name="Flight" [prop]="'flightRouteWithNumber'" [width]="180" *ngIf="showFlight == true">
             <ng-template let-value="value" ngx-datatable-cell-template>
-                <strong>{{value}}</strong>
+                {{value}}
             </ng-template>
         </ngx-datatable-column>
 
         <!-- Gender Column  -->
-        <ngx-datatable-column name="Tail" [prop]="'flightTailNumber'" [width]="225" *ngIf="showTail == true">
+        <ngx-datatable-column name="Tail" [prop]="'flightTailNumber'" [width]="85" *ngIf="showTail == true">
             <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
                 <!-- <i [innerHTML]="row['flightRouteWithNumber']"></i> and -->
-                <i>{{value}}</i>
+                {{value}}
             </ng-template>
         </ngx-datatable-column>
 
@@ -178,19 +179,19 @@
 
         <ngx-datatable-column name="Captain" [prop]="'flightCaptain'" *ngIf="showCaptain == true">
             <ng-template let-value="value" ngx-datatable-cell-template>
-                <strong>{{value}}</strong>
+                {{value}}
             </ng-template>
         </ngx-datatable-column>
 
         <ngx-datatable-column name="Est Dep (z)" [prop]="'flightEstTime'" *ngIf="showEstTime == true">
             <ng-template let-value="value" ngx-datatable-cell-template>
-                <strong>{{value}}</strong>
+                {{value}}
             </ng-template>
         </ngx-datatable-column>
 
         <ngx-datatable-column name="Status" [prop]="'flightStatus'" *ngIf="showStatus == true">
             <ng-template let-value="value" ngx-datatable-cell-template>
-                <strong>{{value}}</strong>
+                {{value}}
             </ng-template>
         </ngx-datatable-column>
 
