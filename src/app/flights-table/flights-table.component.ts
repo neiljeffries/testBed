@@ -100,17 +100,17 @@ export class FlightsTableComponent {
     // private bottomSheet: MatBottomSheet,
     private flightsService: FlightsService, public dialog: MatDialog,
   ) {
-    this.flightsService.getFlights().subscribe(
-      flights => {
-        this.flights = <Flight[]>flights;
-        this.flights_original = <Flight[]>flights;
-        this.temp = [...flights]
-      },
-      error => {
-        this.errorMessage = <any>error;
-        console.log(this.errorMessage)
-      }
-    );
+    // this.flightsService.getFlights().subscribe(
+    //   flights => {
+    //     this.flights = <Flight[]>flights;
+    //     this.flights_original = <Flight[]>flights;
+    //     this.temp = [...flights]
+    //   },
+    //   error => {
+    //     this.errorMessage = <any>error;
+    //     console.log(this.errorMessage)
+    //   }
+    // );
 
     this.flightsService.getFlightsJsonp().subscribe(
       res => {
@@ -144,24 +144,26 @@ export class FlightsTableComponent {
 
   onSelect({ selected }) {
 
-    this.flightsTable.rowDetail.collapseAllRows(); // close all detail rows
-    this.flightsTable.rowDetail.toggleExpandRow(selected[0]); // expand selected detail row
+    
+
+    //this.flightsTable.rowDetail.collapseAllRows(); // close all detail rows
+    //this.flightsTable.rowDetail.toggleExpandRow(selected[0]); // expand selected detail row
     console.log(selected);
     if (JSON.stringify(selected) === JSON.stringify(this.selectedRow)) { // if they click the same row again...
-      this.flightsTable.rowDetail.collapseAllRows(); // collapse detail
+      //this.flightsTable.rowDetail.collapseAllRows(); // collapse detail
       this.selectedRow = null; // reset selectedRow variable
     } else {
       this.selectedRow = selected; // they clicked a new row
+      this.openDialog('flightDetail');
     }
   }
 
   openDialog(dialogId): void {
-
-    console.log(this.selectedRow);
     const dialogRef = this.dialog.open(DialogComponent, {
-      width: '250px',
-      data: { name: this.selectedRow[0].name, animal: this.selectedRow[0].gender },
-      id: dialogId
+      data: {flightDetail: this.selectedRow},
+      id: dialogId,
+      width: '800px',
+
     });
 
     dialogRef.afterClosed().subscribe(result => {
@@ -174,17 +176,17 @@ export class FlightsTableComponent {
 
   }
 
-  toggleRows() {
+  // toggleRows() {
 
-    if (this.rowsExpanded) {
-      this.flightsTable.rowDetail.collapseAllRows();
-      this.expandCollapseRowsText = 'Expand';
-    } else {
-      this.flightsTable.rowDetail.expandAllRows();
-      this.expandCollapseRowsText = 'Collapse';
-    }
-    this.rowsExpanded = !this.rowsExpanded;
-  }
+  //   if (this.rowsExpanded) {
+  //     this.flightsTable.rowDetail.collapseAllRows();
+  //     this.expandCollapseRowsText = 'Expand';
+  //   } else {
+  //     this.flightsTable.rowDetail.expandAllRows();
+  //     this.expandCollapseRowsText = 'Collapse';
+  //   }
+  //   this.rowsExpanded = !this.rowsExpanded;
+  // }
 
 
 
