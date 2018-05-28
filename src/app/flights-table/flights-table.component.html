@@ -71,68 +71,11 @@
         (select)='onSelect($event)'> -->
 
         <!-- Detail Row Template -->
-        <ngx-datatable-row-detail [rowHeight]="'auto'">
+        <!-- <ngx-datatable-row-detail [rowHeight]="'auto'">
             <ng-template let-row="row" let-expanded="expanded" ngx-datatable-row-detail-template>
-                <div style="margin:auto;">
-
-
-                    <div class="grid-container">
-                        <mat-card style="width: 621px; margin: auto;">
-                            <div>
-                                <h1 style="font-size:40px; text-align:center;">{{row.flightNumber}} - {{row.flightOrigin}} <i class="material-icons">
-                                        arrow_forward
-                                        </i> {{row.flightDestination}}</h1>
-                            </div>
-                            <mat-grid-list cols="2" rowHeight="304px">
-                                <mat-grid-tile [colspan]="1" [rowspan]="1">
-                                    <mat-card class="dashboard-card" style="width: 268px; height: 274px; margin: auto;">
-                                        <ul class="myMatList">
-
-                                            <li>Flight Date: {{row.flightDate}} </li>
-                                            <!-- <li>Direction: {{row.flightDirection}} </li> -->
-                                            <!-- <li>Destination: {{row.flightDestination}} </li> -->
-                                            <li>Sched Time: {{row.flightSchedTime}} </li>
-                                            <li>Est Time: {{row.flightEstTime}} {{row.flightEstTimeDiff}} </li>
-                                            <!-- <li>Est Time Diff: {{row.flightEstTimeDiff}} </li> -->
-                                            <li>Est Time Status: {{row.flightEstTimeStatus}} </li>
-                                            <li>Est Load Time: {{row.flightLoadEstimate}} </li>
-                                            <li>Last ULD Time: {{row.flightLastUldTs}} </li>
-                                            <li> State: {{row.flightState}} </li>
-                                            <li> Status: {{row.flightStatus}} </li>
-
-
-                                        </ul>
-                                    </mat-card>
-                                </mat-grid-tile>
-                                <mat-grid-tile [colspan]="1" [rowspan]="1">
-                                    <mat-card style="width: 225px; margin: auto; height: 274px;">
-                                        <span style="font-size:16px">Tail:</span>
-                                        <h1 style="margin-top:5px;">{{row.flightTailNumber}}</h1>
-                                        <!-- <li> Orientation Gtwy:  {{row.flightOrientationGateway}} </li> -->
-                                        <!-- <li> Origin: {{row.flightOrigin}} </li> -->
-                                        <mat-divider></mat-divider>
-                                        <br>
-                                        <span style="font-size:16px">Ramp:</span>
-                                        <h1 style="margin-top:5px;">{{row.flightParkingPosition}} </h1>
-                                        <!-- <li> Route With Number: {{row.flightRouteWithNumber}} </li>  -->
-
-                                        <!-- <li> LTP Data: {{row.flightLTPData}} </li> -->
-                                        <!-- <mat-divider></mat-divider> -->
-                                        <br>
-                                        <button style="float:right" mat-raised-button (click)="openDialog('favoriteAnimal')">View More</button>
-
-                                    </mat-card>
-                                </mat-grid-tile>
-                            </mat-grid-list>
-
-                        </mat-card>
-                    </div>
-
-
-                </div>
-
+                <div style="margin:auto;"></div>
             </ng-template>
-        </ngx-datatable-row-detail>
+        </ngx-datatable-row-detail> -->
 
         <!-- Arrow Column  -->
         <ngx-datatable-column [width]="50" [resizeable]="false" [sortable]="false" [draggable]="false" [canAutoResize]="false">
@@ -259,7 +202,7 @@
 </div>
 
 
-<div class="myProgressSpinner" *ngIf="flights === null || fidsDepartingFlights === null">
+<div class="myProgressSpinner" *ngIf="fidsDepartingFlights === null">
     <mat-progress-spinner [color]="progressSpinnerColor" [mode]="progressSpinnerMode" [value]="progressSpinnerValue">
     </mat-progress-spinner>
 </div>

@@ -1,5 +1,3 @@
-{{dialogId}}
-
 <div *ngIf="dialogId === 'favoriteAnimal'">
 
     <h1>hello! {{data.name}}</h1>
@@ -19,61 +17,113 @@
 
 <div *ngIf="dialogId === 'flightDetail'">
 
-    <div style="margin:auto;">
-
-
-        <div class="grid-container">
-            <mat-card style="width: 621px; margin: auto;">
-                <div>
-                    <h1 style="font-size:40px; text-align:center;">{{data.flightDetail[0].flightNumber}} - {{data.flightDetail[0].flightOrigin}} <i class="material-icons">
+    <p mat-dialog-title class="my-font-larger">{{data.flightDetail[0].flightNumber}} - {{data.flightDetail[0].flightOrigin}} <i class="material-icons">
                                         arrow_forward
-                                        </i> {{data.flightDetail[0].flightDestination}}</h1>
-                </div>
-                <mat-grid-list cols="2" rowHeight="304px">
-                    <mat-grid-tile [colspan]="1" [rowspan]="1">
-                        <mat-card class="dashboard-card" style="width: 268px; height: 274px; margin: auto;">
-                            <ul class="myMatList">
-
-                                <li>Flight Date: {{data.flightDetail[0].flightDate}} </li>
-                                <!-- <li>Direction: {{data.flightDetail[0].flightDirection}} </li> -->
-                                <!-- <li>Destination: {{data.flightDetail[0].flightDestination}} </li> -->
-                                <li>Sched Time: {{data.flightDetail[0].flightSchedTime}} </li>
-                                <li>Est Time: {{data.flightDetail[0].flightEstTime}} {{data.flightDetail[0].flightEstTimeDiff}} </li>
-                                <!-- <li>Est Time Diff: {{data.flightDetail[0].flightEstTimeDiff}} </li> -->
-                                <li>Est Time Status: {{data.flightDetail[0].flightEstTimeStatus}} </li>
-                                <li>Est Load Time: {{data.flightDetail[0].flightLoadEstimate}} </li>
-                                <li>Last ULD Time: {{data.flightDetail[0].flightLastUldTs}} </li>
-                                <li> State: {{data.flightDetail[0].flightState}} </li>
-                                <li> Status: {{data.flightDetail[0].flightStatus}} </li>
+                                        </i> {{data.flightDetail[0].flightDestination}}
+    </p>
+    <mat-dialog-content style="padding-bottom:2px">
+        <mat-divider></mat-divider>
 
 
-                            </ul>
-                        </mat-card>
-                    </mat-grid-tile>
-                    <mat-grid-tile [colspan]="1" [rowspan]="1">
-                        <mat-card style="width: 225px; margin: auto; height: 274px;">
-                            <span style="font-size:16px">Tail:</span>
-                            <h1 style="margin-top:5px;">{{data.flightDetail[0].flightTailNumber}}</h1>
-                            <!-- <li> Orientation Gtwy:  {{data.flightDetail[0].flightOrientationGateway}} </li> -->
-                            <!-- <li> Origin: {{data.flightDetail[0].flightOrigin}} </li> -->
-                            <mat-divider></mat-divider>
-                            <br>
-                            <span style="font-size:16px">Ramp:</span>
-                            <h1 style="margin-top:5px;">{{data.flightDetail[0].flightParkingPosition}} </h1>
-                            <!-- <li> Route With Number: {{data.flightDetail[0].flightRouteWithNumber}} </li>  -->
+        <mat-grid-list cols="3" gutterSize="10px" rowHeight="200px">
 
-                            <!-- <li> LTP Data: {{data.flightDetail[0].flightLTPData}} </li> -->
-                            <!-- <mat-divider></mat-divider> -->
-                            <br>
-                            <button style="float:right" mat-raised-button (click)="openDialog('favoriteAnimal')">View More</button>
+            <mat-grid-tile>
 
-                        </mat-card>
-                    </mat-grid-tile>
-                </mat-grid-list>
+                <mat-card style="width:240px;">
+                    <p class="my-font-smaller">Captain:</p>
 
-            </mat-card>
-        </div>
+                    <p class="my-font">
+                        <mat-divider></mat-divider>
+                        {{data.flightDetail[0].flightCaptain}}</p>
+                </mat-card>
+            </mat-grid-tile>
+
+            <mat-grid-tile>
+
+                <mat-card>
+                    <p class="my-font-smaller">Tail:</p>
+
+                    <p class="my-font">
+                        <mat-divider></mat-divider>
+                        {{data.flightDetail[0].flightTailNumber}}</p>
+                    <!-- <li> Orientation Gtwy:  {{data.flightDetail[0].flightOrientationGateway}} </li> -->
+                    <!-- <li> Origin: {{data.flightDetail[0].flightOrigin}} </li> -->
+                </mat-card>
+            </mat-grid-tile>
+
+            <mat-grid-tile>
+
+                <mat-card>
+                    <p class="my-font-smaller">Ramp:</p>
+
+                    <p class="my-font">
+                        <mat-divider></mat-divider>
+                        {{data.flightDetail[0].flightParkingPosition}} </p>
+                    <!-- <li> Route With Number: {{data.flightDetail[0].flightRouteWithNumber}} </li>  -->
+
+                    <!-- <li> LTP Data: {{data.flightDetail[0].flightLTPData}} </li> -->
+                    <!-- <mat-divider></mat-divider> -->
+                </mat-card>
+            </mat-grid-tile>
+        </mat-grid-list>
+
+        <mat-card style="float: left;
+    margin: 24px;">
+            <ul class="myMatList">
+
+                <li>Flight Date: {{data.flightDetail[0].flightDate.millis | date:'MM/dd/yyyy'}}
+                </li>
+                <!-- <li>Direction: {{data.flightDetail[0].flightDirection}} </li> -->
+                <!-- <li>Destination: {{data.flightDetail[0].flightDestination}} </li> -->
+                <li>Sched Time: {{data.flightDetail[0].flightSchedTime}} </li>
+                <li>Est Time: {{data.flightDetail[0].flightEstTime}} {{data.flightDetail[0].flightEstTimeDiff}} </li>
+                <!-- <li>Est Time Diff: {{data.flightDetail[0].flightEstTimeDiff}} </li> -->
+                <li>Est Time Status: {{data.flightDetail[0].flightEstTimeStatus}} </li>
+                <li>Est Load Time: {{data.flightDetail[0].flightLoadEstimate}} </li>
+                <li>Last ULD Time: {{data.flightDetail[0].flightLastUldTs}} </li>
+                <li> State: {{data.flightDetail[0].flightState}} </li>
+                <li> Status: {{data.flightDetail[0].flightStatus}} </li>
 
 
-    </div>
+            </ul>
+
+
+
+
+        </mat-card>
+        <mat-card style="float: right;
+    margin-right: 25px;">
+            <mat-grid-list cols="2" rowHeight="25px" gutterSize="1px" style="width:50px" class="topsideContainers">
+                <mat-grid-tile class="containerPosition containerLoaded">1</mat-grid-tile>
+                <mat-grid-tile class="containerPosition containerLoaded">2</mat-grid-tile>
+                <mat-grid-tile class="containerPosition containerLoaded">3</mat-grid-tile>
+                <mat-grid-tile class="containerPosition containerLoaded">4</mat-grid-tile>
+                <mat-grid-tile class="containerPosition containerLoaded">5</mat-grid-tile>
+                <mat-grid-tile class="containerPosition">6</mat-grid-tile>
+                <mat-grid-tile class="containerPosition">7</mat-grid-tile>
+                <mat-grid-tile class="containerPosition">8</mat-grid-tile>
+                <mat-grid-tile class="containerPosition">9</mat-grid-tile>
+                <mat-grid-tile class="containerPosition">10</mat-grid-tile>
+                <mat-grid-tile class="containerPosition">11</mat-grid-tile>
+                <mat-grid-tile class="containerPosition">12</mat-grid-tile>
+                <mat-grid-tile class="containerPosition">13</mat-grid-tile>
+                <mat-grid-tile class="containerPosition">14</mat-grid-tile>
+                <mat-grid-tile class="containerPosition">15</mat-grid-tile>
+                <mat-grid-tile class="containerPosition">16</mat-grid-tile>
+                <mat-grid-tile class="containerPosition">17</mat-grid-tile>
+                <mat-grid-tile class="containerPosition">18</mat-grid-tile>
+                <mat-grid-tile class="containerPosition">19</mat-grid-tile>
+                <mat-grid-tile class="containerPosition">20</mat-grid-tile>
+
+            </mat-grid-list>
+        </mat-card>
+
+
+    </mat-dialog-content>
+    <!-- <mat-dialog-actions>
+        <button mat-button mat-dialog-close>No</button>
+   
+        <button mat-button [mat-dialog-close]="true">Yes</button>
+    </mat-dialog-actions> -->
+
 </div>

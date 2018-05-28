@@ -11,7 +11,7 @@ import { Http, Response, Jsonp, JsonpModule } from '@angular/http';
 import { Injectable } from '@angular/core';
 
 
-import { Flight } from './flight';
+//import { Flight } from './flight';
 import { FidsData } from '../classes/fids-data';
 
 
@@ -25,11 +25,11 @@ export class FlightsService {
   constructor(private http: Http,
   private jsonp: Jsonp) { }
 
-  getFlights(): Observable<Flight[]> {
-    return this.http.get(this.url).pipe(
-      map(this.extractData),
-      catchError(this.handleErrorObservable),);
-  }
+  // getFlights(): Observable<Flight[]> {
+  //   return this.http.get(this.url).pipe(
+  //     map(this.extractData),
+  //     catchError(this.handleErrorObservable),);
+  // }
 
   private extractData(res: Response) {
     const body = res.json();
