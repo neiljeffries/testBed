@@ -223,17 +223,6 @@ img {
     /* font-size: 2vw; */
 }
 
-.myMatList li {
-    font-size: 20px;
-    /* font-size: 1.8vw; */
-}
-
-.myMatList {
-    list-style: none;
-    padding-left: 0;
-    
-}
-
 .topsideContainers .containerPosition {
     max-width: 25px;
     max-height: 25px;
@@ -257,12 +246,27 @@ img {
     border-radius: 3px;
 }
 
+#flightDetailCardGridList .mat-grid-tile .mat-figure {
+    justify-content: left !important;
+}
+
 .mat-divider {
     display: block;
     margin: 0;
     border-top-width: 1px;
     border-top-style: solid;
     border-color: gainsboro;
+}
+
+.uldContainerCard {
+    float: left;
+    width: 260px;
+    margin: auto;
+    margin-left: 14px;
+}
+
+.flightDetailCard {
+    float: left;
 }
 
 
@@ -290,11 +294,30 @@ img {
 
 /* Smartphones (portrait) ----------- */
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 375px) {
     /* Styles */
     .brandingText {
         font-size: 19px;
         margin-left: 10px;
+    }
+    .uldContainerCard {
+        float: left;
+        width: 260px;
+        margin-left: 0px;
+        margin-top: 10px;
+    }
+    .flightDetailCard {
+        float: left;
+        width: 260px;
+    }
+    #flightDetail .mat-dialog-content {
+        padding-left: 20px;
+    }
+    .my-font-larger {
+        font-size: 21px;
+    }
+    .my-font {
+        font-size: 14px;
     }
 }
 

@@ -33,29 +33,43 @@
         <mat-divider></mat-divider>
 
 
-        <mat-grid-list cols="3" gutterSize="10px" rowHeight="200px">
+        <mat-grid-list cols="3" gutterSize="10px" rowHeight="180px">
 
             <mat-grid-tile>
 
                 <mat-card style="width:240px;">
-                    <p class="my-font-smaller">Captain:</p>
+                    <mat-card-header>
 
-                    <p class="my-font">
-                        <mat-divider></mat-divider>
-                        {{data.flightDetail[0].flightCaptain}}</p>
+                        <mat-card-title>
+                            Captain:
+                        </mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content class="dashboard-card-content">
+
+                        <p class="my-font">
+                            <mat-divider></mat-divider>
+                            {{data.flightDetail[0].flightCaptain === null ? '- -' : data.flightDetail[0].flightCaptain}}</p>
+                    </mat-card-content>
                 </mat-card>
             </mat-grid-tile>
 
             <mat-grid-tile>
 
                 <mat-card style="width:240px;">
-                    <p class="my-font-smaller">Tail:</p>
+                    <mat-card-header>
 
-                    <p class="my-font">
-                        <mat-divider></mat-divider>
-                        {{data.flightDetail[0].flightTailNumber}}</p>
-                    <!-- <li> Orientation Gtwy:  {{data.flightDetail[0].flightOrientationGateway}} </li> -->
-                    <!-- <li> Origin: {{data.flightDetail[0].flightOrigin}} </li> -->
+                        <mat-card-title>
+                            Tail:
+                        </mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content class="dashboard-card-content">
+
+                        <p class="my-font">
+                            <mat-divider></mat-divider>
+                            {{data.flightDetail[0].flightTailNumber === null ? '- -' : data.flightDetail[0].flightTailNumber}}</p>
+                        <!-- <li> Orientation Gtwy:  {{data.flightDetail[0].flightOrientationGateway}} </li> -->
+                        <!-- <li> Origin: {{data.flightDetail[0].flightOrigin}} </li> -->
+                    </mat-card-content>
                 </mat-card>
             </mat-grid-tile>
 
@@ -97,33 +111,37 @@
             </mat-grid-tile>
         </mat-grid-list>
 
-        <mat-card style="float: left;">
-            <ul class="myMatList">
+        <mat-card class="flightDetailCard">
 
-                <li>Flight Date: {{data.flightDetail[0].flightDate.millis | date:'MM/dd/yyyy'}}
-                </li>
-                <!-- <li>Direction: {{data.flightDetail[0].flightDirection}} </li> -->
-                <!-- <li>Destination: {{data.flightDetail[0].flightDestination}} </li> -->
-                <li>Sched Time: {{data.flightDetail[0].flightSchedTime}} </li>
-                <li>Est Time: {{data.flightDetail[0].flightEstTime}} {{data.flightDetail[0].flightEstTimeDiff}} </li>
-                <!-- <li>Est Time Diff: {{data.flightDetail[0].flightEstTimeDiff}} </li> -->
-                <li>Est Time Status: {{data.flightDetail[0].flightEstTimeStatus}} </li>
-                <li>Est Load Time: {{data.flightDetail[0].flightLoadEstimate}} </li>
-                <li>Last ULD Time: {{data.flightDetail[0].flightLastUldTs}} </li>
-                <li> State: {{data.flightDetail[0].flightState}} </li>
-                <li> Status: {{data.flightDetail[0].flightStatus}} </li>
+            <mat-grid-list id="flightDetailCardGridList" cols="2" rowHeight="30px" style="width:260px;">
+                <mat-grid-tile>Flight Date:</mat-grid-tile>
+                <mat-grid-tile>{{data.flightDetail[0].flightDate.millis | date:'MM/dd/yyyy'}}</mat-grid-tile>
 
+                <mat-grid-tile>Sched Time: </mat-grid-tile>
+                <mat-grid-tile>{{data.flightDetail[0].flightSchedTime}}</mat-grid-tile>
 
-            </ul>
+                <mat-grid-tile>Est Time: </mat-grid-tile>
+                <mat-grid-tile>{{data.flightDetail[0].flightEstTime === null ? '- -' : data.flightDetail[0].flightEstTime}} {{data.flightDetail[0].flightEstTimeDiff}}</mat-grid-tile>
+
+                <mat-grid-tile>Est Load Time: </mat-grid-tile>
+                <mat-grid-tile>{{data.flightDetail[0].flightLoadEstimate === null ? '- -' : data.flightDetail[0].flightLoadEstimate}} </mat-grid-tile>
+
+                <mat-grid-tile>Last ULD Time: </mat-grid-tile>
+                <mat-grid-tile>{{data.flightDetail[0].flightLastUldTs === null ? '- -' : data.flightDetail[0].flightLastUldTs}} </mat-grid-tile>
+
+                <mat-grid-tile>State:</mat-grid-tile>
+                <mat-grid-tile>{{data.flightDetail[0].flightState === null ? '- -' : data.flightDetail[0].flightState}}</mat-grid-tile>
+
+                <mat-grid-tile>Status:</mat-grid-tile>
+                <mat-grid-tile>{{data.flightDetail[0].flightStatus === null ? '- -' : data.flightDetail[0].flightStatus}}</mat-grid-tile>
+
+            </mat-grid-list>
 
 
 
 
         </mat-card>
-        <mat-card style="float: left;
-        width: 260px;
-        margin: auto;
-        margin-left: 14px;">
+        <mat-card class="uldContainerCard">
             <mat-grid-list cols="2" rowHeight="25px" gutterSize="1px" style="width:50px; float:left" class="topsideContainers">
                 <mat-grid-tile class="containerPosition containerLoaded">1</mat-grid-tile>
                 <mat-grid-tile class="containerPosition containerLoaded">2</mat-grid-tile>
