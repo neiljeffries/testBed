@@ -17,10 +17,18 @@
 
 <div *ngIf="dialogId === 'flightDetail'">
 
-    <p mat-dialog-title class="my-font-larger">{{data.flightDetail[0].flightNumber}} - {{data.flightDetail[0].flightOrigin}} <i class="material-icons">
-                                        arrow_forward
-                                        </i> {{data.flightDetail[0].flightDestination}}
+    <p mat-dialog-title class="my-font-larger">
+
+
+
+        {{data.flightDetail[0].flightNumber}} - {{data.flightDetail[0].flightOrigin}}
+        <!-- <i class="material-icons my-font-larger">arrow_forward</i>  -->
+
+
+        <i *ngIf="data.flightDetail[0].flightDirection === 'Arriving'" class="material-icons my-font-larger" style="float:none">flight_land</i>
+        <i *ngIf="data.flightDetail[0].flightDirection === 'Departing'" class="material-icons my-font-larger" style="float:none">flight_takeoff</i> {{data.flightDetail[0].flightDestination}}
     </p>
+
     <mat-dialog-content style="padding-bottom:2px">
         <mat-divider></mat-divider>
 
@@ -40,7 +48,7 @@
 
             <mat-grid-tile>
 
-                <mat-card>
+                <mat-card style="width:240px;">
                     <p class="my-font-smaller">Tail:</p>
 
                     <p class="my-font">
@@ -53,22 +61,42 @@
 
             <mat-grid-tile>
 
-                <mat-card>
-                    <p class="my-font-smaller">Ramp:</p>
+                <mat-card style="width:240px;">
 
-                    <p class="my-font">
-                        <mat-divider></mat-divider>
-                        {{data.flightDetail[0].flightParkingPosition}} </p>
-                    <!-- <li> Route With Number: {{data.flightDetail[0].flightRouteWithNumber}} </li>  -->
+                    <mat-card-header>
 
-                    <!-- <li> LTP Data: {{data.flightDetail[0].flightLTPData}} </li> -->
-                    <!-- <mat-divider></mat-divider> -->
+                        <mat-card-title>
+
+                            Ramp:
+
+                            <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+                            <mat-icon>more_vert</mat-icon>
+                        </button>
+                            <mat-menu #menu="matMenu" xPosition="before">
+                                <button mat-menu-item>Expand</button>
+                                <button mat-menu-item>Remove</button>
+                            </mat-menu>
+
+                        </mat-card-title>
+
+                    </mat-card-header>
+                    <mat-card-content class="dashboard-card-content">
+                        <!-- <p class="my-font-smaller">Ramp:</p> -->
+
+                        <p class="my-font" style="text-align:center">
+                            <mat-divider></mat-divider>{{data.flightDetail[0].flightParkingPosition === null ? '- -' : data.flightDetail[0].flightParkingPosition}}
+                            <!-- {{data.flightDetail[0].flightParkingPosition}} -->
+                        </p>
+                        <!-- <li> Route With Number: {{data.flightDetail[0].flightRouteWithNumber}} </li>  -->
+
+                        <!-- <li> LTP Data: {{data.flightDetail[0].flightLTPData}} </li> -->
+                        <!-- <mat-divider></mat-divider> -->
+                    </mat-card-content>
                 </mat-card>
             </mat-grid-tile>
         </mat-grid-list>
 
-        <mat-card style="float: left;
-    margin: 24px;">
+        <mat-card style="float: left;">
             <ul class="myMatList">
 
                 <li>Flight Date: {{data.flightDetail[0].flightDate.millis | date:'MM/dd/yyyy'}}
@@ -91,9 +119,8 @@
 
 
         </mat-card>
-        <mat-card style="float: right;
-    margin-right: 25px;">
-            <mat-grid-list cols="2" rowHeight="25px" gutterSize="1px" style="width:50px" class="topsideContainers">
+        <mat-card style="float: right;">
+            <mat-grid-list cols="2" rowHeight="25px" gutterSize="1px" style="width:50px; float:left" class="topsideContainers">
                 <mat-grid-tile class="containerPosition containerLoaded">1</mat-grid-tile>
                 <mat-grid-tile class="containerPosition containerLoaded">2</mat-grid-tile>
                 <mat-grid-tile class="containerPosition containerLoaded">3</mat-grid-tile>
@@ -114,6 +141,29 @@
                 <mat-grid-tile class="containerPosition">18</mat-grid-tile>
                 <mat-grid-tile class="containerPosition">19</mat-grid-tile>
                 <mat-grid-tile class="containerPosition">20</mat-grid-tile>
+
+            </mat-grid-list>
+            <mat-grid-list cols="2" rowHeight="25px" gutterSize="1px" style="width:50px; float:right; margin-left: 10px;" class="pSectionContainers">
+                <mat-grid-tile class="containerPosition containerLoaded psectionContainer">P1</mat-grid-tile>
+                <mat-grid-tile class="containerPosition containerLoaded psectionContainer">P2</mat-grid-tile>
+                <mat-grid-tile class="containerPosition containerLoaded psectionContainer">P3</mat-grid-tile>
+                <mat-grid-tile class="containerPosition psectionContainer">P4</mat-grid-tile>
+                <mat-grid-tile class="containerPosition psectionContainer">P5</mat-grid-tile>
+                <mat-grid-tile class="containerPosition">P6</mat-grid-tile>
+                <mat-grid-tile class="containerPosition">P7</mat-grid-tile>
+
+
+            </mat-grid-list>
+            <mat-grid-list cols="2" rowHeight="25px" gutterSize="1px" style="width:50px; float:right; margin-left: 10px; clear: right;
+    margin-top: 10px;" class="pSectionContainers">
+                <mat-grid-tile class="containerPosition psectionContainer">P8</mat-grid-tile>
+                <mat-grid-tile class="containerPosition psectionContainer">P9</mat-grid-tile>
+                <mat-grid-tile class="containerPosition psectionContainer">P10</mat-grid-tile>
+                <mat-grid-tile class="containerPosition psectionContainer">P11</mat-grid-tile>
+                <mat-grid-tile class="containerPosition psectionContainer">P12</mat-grid-tile>
+                <mat-grid-tile class="containerPosition">P13</mat-grid-tile>
+                <mat-grid-tile class="containerPosition">P14</mat-grid-tile>
+
 
             </mat-grid-list>
         </mat-card>

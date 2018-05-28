@@ -220,7 +220,7 @@ img {
 
 .my-font-smaller {
     font-size: 20px;
-    font-size: 1.6vw;
+    font-size: 2vw;
 }
 
 .myMatList li {
@@ -228,7 +228,16 @@ img {
     font-size: 1.8vw;
 }
 
+.myMatList {
+    list-style: none;
+}
+
 .topsideContainers .containerPosition {
+    max-width: 25px;
+    max-height: 25px;
+}
+
+.pSectionContainers .containerPosition {
     max-width: 25px;
     max-height: 25px;
 }
@@ -237,12 +246,21 @@ img {
 
 .containerPosition {
     border: solid 1px #ccc;
+    font-size: 11px;
 }
 
 .containerLoaded {
     background-color: lightgreen;
     border-color: green;
     border-radius: 3px;
+}
+
+.mat-divider {
+    display: block;
+    margin: 0;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-color: gainsboro;
 }
 
 
