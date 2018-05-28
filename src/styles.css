@@ -269,6 +269,29 @@ img {
     float: left;
 }
 
+.captainCard {
+    width: 350px;
+    height: 140px;
+    float: left;
+    margin-right: 14px;
+    margin-bottom: 14px;
+}
+
+.tailCard {
+    width: 180px;
+    height: 140px;
+    float: left;
+    margin-right: 14px;
+    margin-bottom: 14px;
+}
+
+.rampCard {
+    width: 174px;
+    height: 140px;
+    float: left;
+    margin-bottom: 14px;
+}
+
 
 /* Smartphones (portrait and landscape) ----------- */
 
@@ -294,7 +317,7 @@ img {
 
 /* Smartphones (portrait) ----------- */
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 415px) {
     /* Styles */
     .brandingText {
         font-size: 19px;
@@ -304,7 +327,7 @@ img {
         float: left;
         width: 260px;
         margin-left: 0px;
-        margin-top: 10px;
+        margin-top: 14px;
     }
     .flightDetailCard {
         float: left;
@@ -317,7 +340,36 @@ img {
         font-size: 21px;
     }
     .my-font {
-        font-size: 14px;
+        font-size: 20px;
+    }
+    .captainCard {
+        width: 260px;
+        height: 82px;
+        padding-top: 5px !important;
+        padding-bottom: 5px !important;
+    }
+    .tailCard {
+        width: 120px;
+        height: 82px;
+        padding-top: 5px !important;
+        padding-bottom: 5px !important;
+        margin-left: 4px;
+    }
+    .rampCard {
+        width: 118px;
+        height: 82px;
+        padding-top: 5px !important;
+        padding-bottom: 5px !important;
+    }
+    .flightDetailCard {
+        width: 260px;
+        padding-top: 5px !important;
+        padding-bottom: 5px !important;
+    }
+    .uldContainerCard {
+        width: 260px;
+        padding-top: 5px !important;
+        padding-bottom: 5px !important;
     }
 }
 
