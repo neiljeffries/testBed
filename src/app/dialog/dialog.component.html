@@ -69,13 +69,14 @@
 
                             Ramp:
 
-                            <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+                            <!-- <button mat-icon-button class="more-button" 
+                            [matMenuTriggerFor]="menu" aria-label="Toggle menu">
                             <mat-icon>more_vert</mat-icon>
                         </button>
                             <mat-menu #menu="matMenu" xPosition="before">
                                 <button mat-menu-item>Expand</button>
                                 <button mat-menu-item>Remove</button>
-                            </mat-menu>
+                            </mat-menu> -->
 
                         </mat-card-title>
 
@@ -119,7 +120,10 @@
 
 
         </mat-card>
-        <mat-card style="float: right;">
+        <mat-card style="float: left;
+        width: 260px;
+        margin: auto;
+        margin-left: 14px;">
             <mat-grid-list cols="2" rowHeight="25px" gutterSize="1px" style="width:50px; float:left" class="topsideContainers">
                 <mat-grid-tile class="containerPosition containerLoaded">1</mat-grid-tile>
                 <mat-grid-tile class="containerPosition containerLoaded">2</mat-grid-tile>
@@ -149,8 +153,8 @@
                 <mat-grid-tile class="containerPosition containerLoaded psectionContainer">P3</mat-grid-tile>
                 <mat-grid-tile class="containerPosition psectionContainer">P4</mat-grid-tile>
                 <mat-grid-tile class="containerPosition psectionContainer">P5</mat-grid-tile>
-                <mat-grid-tile class="containerPosition">P6</mat-grid-tile>
-                <mat-grid-tile class="containerPosition">P7</mat-grid-tile>
+                <mat-grid-tile class="containerPosition psectionContainer">P6</mat-grid-tile>
+                <mat-grid-tile class="containerPosition psectionContainer">P7</mat-grid-tile>
 
 
             </mat-grid-list>
@@ -161,8 +165,8 @@
                 <mat-grid-tile class="containerPosition psectionContainer">P10</mat-grid-tile>
                 <mat-grid-tile class="containerPosition psectionContainer">P11</mat-grid-tile>
                 <mat-grid-tile class="containerPosition psectionContainer">P12</mat-grid-tile>
-                <mat-grid-tile class="containerPosition">P13</mat-grid-tile>
-                <mat-grid-tile class="containerPosition">P14</mat-grid-tile>
+                <mat-grid-tile class="containerPosition psectionContainer">P13</mat-grid-tile>
+                <mat-grid-tile class="containerPosition psectionContainer">P14</mat-grid-tile>
 
 
             </mat-grid-list>

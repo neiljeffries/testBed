@@ -11,7 +11,7 @@ import { Http, Response, Jsonp, JsonpModule } from '@angular/http';
 import { Injectable } from '@angular/core';
 
 
-//import { Flight } from './flight';
+// import { Flight } from './flight';
 import { FidsData } from '../classes/fids-data';
 
 
@@ -41,7 +41,7 @@ export class FlightsService {
    // return this.jsonp.request(this.url2)
     return this.http.get(this.url2).pipe(
       map(this.extractData),
-      catchError(this.handleErrorObservable),);
+      catchError(this.handleErrorObservable));
   }
 
   private handleErrorObservable(error: Response | any) {

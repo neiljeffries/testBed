@@ -144,13 +144,12 @@ export class FlightsTableComponent {
 
   onSelect({ selected }) {
 
-    
 
-    //this.flightsTable.rowDetail.collapseAllRows(); // close all detail rows
-    //this.flightsTable.rowDetail.toggleExpandRow(selected[0]); // expand selected detail row
+    // this.flightsTable.rowDetail.collapseAllRows(); // close all detail rows
+    // this.flightsTable.rowDetail.toggleExpandRow(selected[0]); // expand selected detail row
     console.log(selected);
     if (JSON.stringify(selected) === JSON.stringify(this.selectedRow)) { // if they click the same row again...
-      //this.flightsTable.rowDetail.collapseAllRows(); // collapse detail
+      // this.flightsTable.rowDetail.collapseAllRows(); // collapse detail
       this.selectedRow = null; // reset selectedRow variable
     } else {
       this.selectedRow = selected; // they clicked a new row

@@ -209,27 +209,29 @@ img {
 
 .my-font-larger {
     font-size: 35px;
-    font-size: 3.6vw;
+    /* font-size: 3.6vw; */
 }
 
 .my-font {
-    font-size: 30px;
-    font-size: 2.6vw;
+    font-size: 28px;
+    /* font-size: 2.6vw; */
     /* white-space: nowrap; */
 }
 
 .my-font-smaller {
-    font-size: 20px;
-    font-size: 2vw;
+    font-size: 18px;
+    /* font-size: 2vw; */
 }
 
 .myMatList li {
-    font-size: 25px;
-    font-size: 1.8vw;
+    font-size: 20px;
+    /* font-size: 1.8vw; */
 }
 
 .myMatList {
     list-style: none;
+    padding-left: 0;
+    
 }
 
 .topsideContainers .containerPosition {
