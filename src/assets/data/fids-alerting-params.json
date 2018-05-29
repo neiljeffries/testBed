@@ -1,0 +1,26 @@
+{
+    "userId": "nyy6rxa",
+    "alertingParameters": {
+        "userId": "nyy6rxa",
+        "userPhone": "5023595670",
+        "userEmail": "njeffries@ups.com",
+        "gateway": null,
+        "showTailSwaps": false,
+        "showArrivals": false,
+        "showArrivalsReturnToOrigin": false,
+        "showArrivalsLate": false,
+        "showDepartures": false,
+        "showDeparturesLate": false,
+        "showDiversions": true,
+        "showPlaneLoadProgress": false,
+        "showCancels": false,
+        "showCrewChange": false,
+        "showDelayed": true,
+        "showReturnToRamp": true,
+        "planeLoadPercentagePref": 0,
+        "emailAlertsEnabled": true,
+        "phoneAlertsEnabled": true,
+        "active": true
+    },
+    "authorized": true
+}
