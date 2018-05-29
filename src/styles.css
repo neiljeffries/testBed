@@ -373,6 +373,20 @@ img {
     }
 }
 
+@media only screen and (min-width: 667px) and (max-width: 768px) {
+    .uldContainerCard {
+        float: left;
+        width: 308px;
+        margin: auto;
+        margin-left: 0px;
+        margin-top: 14px;
+    }
+    .flightDetailCard {
+        float: left;
+        margin-left: 14px;
+    }
+}
+
 
 /* iPads (portrait and landscape) ----------- */
 
