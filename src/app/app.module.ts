@@ -26,6 +26,12 @@ import { FidsDashboardComponent } from './fids-dashboard/fids-dashboard.componen
 // tslint:disable-next-line:max-line-length
 import { MatGridListModule, MatCardModule, MatMenuModule, MatIconModule, MatButtonModule, MatBottomSheet, MatBottomSheetContainer, MatBottomSheetModule } from '@angular/material';
 import { BottomSheetComponent } from './bottom-sheet/bottom-sheet.component';
+import { B747400Component } from './airplanes/b747400/b747400.component';
+import { B757200Component } from './airplanes/b757200/b757200.component';
+import { B767300Component } from './airplanes/b767300/b767300.component';
+import { A300600Component } from './airplanes/a300600/a300600.component';
+import { MD11Component } from './airplanes/md11/md11.component';
+import { B7478Component } from './airplanes/b7478/b7478.component';
 
 
 
@@ -44,6 +50,12 @@ import { BottomSheetComponent } from './bottom-sheet/bottom-sheet.component';
     LeftSlideoutComponent,
     FidsDashboardComponent,
     BottomSheetComponent,
+    B747400Component,
+    B757200Component,
+    B767300Component,
+    A300600Component,
+    MD11Component,
+    B7478Component,
   ],
   imports: [
     BrowserModule,

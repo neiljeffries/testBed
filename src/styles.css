@@ -292,6 +292,14 @@ img {
     margin-bottom: 14px;
 }
 
+.uld-shape-map {
+    background-color: green;
+}
+
+.uld-shape-map:hover {
+    background-color: red;
+}
+
 
 /* Smartphones (portrait and landscape) ----------- */
 

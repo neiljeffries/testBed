@@ -7,6 +7,7 @@ import { DataTableComponent } from 'app/data-table/data-table.component';
 import { HubxDashboardComponent } from 'app/hubx-dashboard/hubx-dashboard.component';
 import { FlightsTableComponent } from 'app/flights-table/flights-table.component';
 import { FidsDashboardComponent } from "app/fids-dashboard/fids-dashboard.component";
+import { B747400Component } from "app/airplanes/b747400/b747400.component";
 
 const routes: Routes = [
   { path: 'alerts', component: FrogDashboardComponent },
@@ -17,7 +18,8 @@ const routes: Routes = [
   { path: 'datatable', component: DataTableComponent },
   { path: 'hubx', component: HubxDashboardComponent },
   { path: 'flights', component: FlightsTableComponent },
-  { path: 'dashboard', component: FidsDashboardComponent }
+  { path: 'dashboard', component: FidsDashboardComponent },
+  { path: '747400', component: B747400Component }
 ];
 
 
