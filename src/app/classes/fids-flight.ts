@@ -1,3 +1,4 @@
+import { FidsFlightLoadData } from './fids-load-data'
 export class FidsFlight {
 
     flightAircraftType: string;
@@ -5,13 +6,13 @@ export class FidsFlight {
     flightComments: string;
     flightDate: Date;
     flightDestination: string;
-    flightDirection: string;
-    flightEstTime: string;
-    flightEstTimeDiff: string;
-    flightEstTimeStatus: string;
-    flightLTPData: any; // what does this object look like?
+    flightDirection: string; // Departing or Arriving
+    flightEstTime: string; // ex: "14:26"
+    flightEstTimeDiff: string; // ex: "+1:24"
+    flightEstTimeStatus: string; // ex: "late", "ontime"
+    flightLTPData: FidsFlightLoadData;
     flightLastUldTs: Date;
-    flightLoadEstimate: string;
+    flightLoadEstimate: string; // this is the percent complete for loading; 25%, 50%, 75%, 100%
     flightNumber: string;
     flightOrientationGateway: string;
     flightOrigin: string;
