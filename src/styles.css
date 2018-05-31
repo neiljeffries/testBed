@@ -260,34 +260,36 @@ img {
 
 .uldContainerCard {
     float: left;
-    width: 260px;
+    width: 354px;
     margin: auto;
     margin-left: 14px;
 }
 
 .flightDetailCard {
     float: left;
+    clear: left;
+    width: 340px;
 }
 
 .captainCard {
-    width: 350px;
-    height: 140px;
+    width: 340px;
+    height: 130px;
     float: left;
     margin-right: 14px;
     margin-bottom: 14px;
 }
 
 .tailCard {
-    width: 180px;
-    height: 140px;
+    width: 170px;
+    height: 130px;
     float: left;
     margin-right: 14px;
     margin-bottom: 14px;
 }
 
 .rampCard {
-    width: 174px;
-    height: 140px;
+    width: 170px;
+    height: 130px;
     float: left;
     margin-bottom: 14px;
 }
@@ -357,14 +359,13 @@ img {
         padding-bottom: 5px !important;
     }
     .tailCard {
-        width: 120px;
+        width: 123px;
         height: 82px;
         padding-top: 5px !important;
         padding-bottom: 5px !important;
-        margin-left: 4px;
     }
     .rampCard {
-        width: 118px;
+        width: 123px;
         height: 82px;
         padding-top: 5px !important;
         padding-bottom: 5px !important;
@@ -378,6 +379,12 @@ img {
         width: 260px;
         padding-top: 5px !important;
         padding-bottom: 5px !important;
+    }
+    .mat-dialog-content {
+        padding-right: 20px !important;
+    }
+    .datatable-footer-inner {
+        height: 70px !important;
     }
 }
 
