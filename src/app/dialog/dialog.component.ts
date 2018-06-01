@@ -1,6 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { FidsFlight } from '../classes/fids-flight';
+// import { A300600Component } from '../airplanes/a300600/a300600.component';
 
 @Component({
   selector: 'app-dialog',
@@ -12,6 +13,7 @@ export class DialogComponent implements OnInit {
 animal: string;
 dialogId: string;
 flightDetail: FidsFlight = null;
+
 
   constructor(
     public dialogRef: MatDialogRef<DialogComponent>,

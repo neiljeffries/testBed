@@ -1,0 +1,33 @@
+
+  .a300600-leftSide {
+    clear: left;
+  }
+  .a300600-pos11-12-13-wrap, .a300600-pos1-wrap{
+    height:50px;
+    float:left;
+  }
+  .a300600-pos1, .a300600-pos11, .a300600-pos12, .a300600-pos13{
+    margin-top:15px;
+  }
+  .a300600-posP1{
+    margin-left:23px;
+  }
+  .a300600-posP5{
+    margin-left:75px
+  }
+  .a300600-posAb{
+    margin-left:20px;
+  }
+  
+  
+
+
+
+  .uldLoaded{
+      background-color: #28a745;
+      border:solid 1px green;
+      color:white;
+  }
+
+  
+  

@@ -260,7 +260,8 @@ img {
 
 .uldContainerCard {
     float: left;
-    width: 354px;
+    width: 380px;
+    height: 300px;
     margin: auto;
     margin-left: 14px;
 }
@@ -301,6 +302,51 @@ img {
 .uld-shape-map:hover {
     background-color: red;
 }
+
+.float-right{
+    position: absolute !important;
+    right: 2px;
+    top: 3px;
+}
+
+#flightDetail{
+    background-color:#e3e3e3;
+}
+
+#flightDetail .mat-card-header-text{
+    width: 100%;
+}
+
+.small-close-button{
+    float:right !important;
+}
+
+
+  
+.uld {
+    width: 22px;
+    height: 22px;
+    line-height: 22px;
+    background-color: whitesmoke;
+    border: 1px solid #aaa;
+    float: left;
+    font-size: 11px;
+    text-align: center;
+    color: #555;
+    margin: 1px;
+    border-radius: 3px;
+  }
+  .topSideWrap {
+    float:left;
+  }
+  .pSectionWrap{
+    clear:left;
+    height:25px;
+    float:left;
+    margin-top:14px;
+  }
+
+  
 
 
 /* Smartphones (portrait and landscape) ----------- */
@@ -347,36 +393,36 @@ img {
         padding-left: 20px;
     }
     .my-font-larger {
-        font-size: 21px;
+        font-size: 24px;
     }
     .my-font {
         font-size: 20px;
     }
     .captainCard {
-        width: 260px;
+        width: 317px;
         height: 82px;
         padding-top: 5px !important;
         padding-bottom: 5px !important;
     }
     .tailCard {
-        width: 123px;
+        width: 151px;
         height: 82px;
         padding-top: 5px !important;
         padding-bottom: 5px !important;
     }
     .rampCard {
-        width: 123px;
+        width: 151px;
         height: 82px;
         padding-top: 5px !important;
         padding-bottom: 5px !important;
     }
     .flightDetailCard {
-        width: 260px;
+        width: 317px;
         padding-top: 5px !important;
         padding-bottom: 5px !important;
     }
     .uldContainerCard {
-        width: 260px;
+        width: 317px;
         padding-top: 5px !important;
         padding-bottom: 5px !important;
     }
@@ -386,6 +432,32 @@ img {
     .datatable-footer-inner {
         height: 70px !important;
     }
+    .float-right {
+        top: -7px;
+    }
+
+    .cdk-overlay-pane{
+        max-width: 95vw !important;
+    }
+    .small-close-button{
+        width: 30px !important;
+        height: 30px !important;
+        line-height: 20px !important;
+        float: right !important;
+    }
+    .uld {
+        width: 19px;
+        height: 19px;
+        line-height: 19px;
+        background-color: whitesmoke;
+        border: 1px solid #aaa;
+        float: left;
+        font-size: 9px;
+        text-align: center;
+        color: #555;
+        margin: 1px;
+        border-radius: 3px;
+      }
 }
 
 @media only screen and (min-width: 667px) and (max-width: 768px) {
