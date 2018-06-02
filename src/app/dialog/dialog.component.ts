@@ -13,6 +13,8 @@ export class DialogComponent implements OnInit {
 animal: string;
 dialogId: string;
 flightDetail: FidsFlight = null;
+showPositionsLoaded = true;
+removePositionsLoaded = false;
 
 
   constructor(

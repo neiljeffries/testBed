@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-b747400',
@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./b747400.component.css']
 })
 export class B747400Component implements OnInit {
-
+  @Input() flightLTPData: any;
   constructor() { }
 
   ngOnInit() {

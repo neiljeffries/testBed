@@ -27,7 +27,8 @@
 
         <i *ngIf="data.flightDetail[0].flightDirection === 'Arriving'" class="material-icons my-font-larger" style="float:none">flight_land</i>
         <i *ngIf="data.flightDetail[0].flightDirection === 'Departing'" class="material-icons my-font-larger" style="float:none">flight_takeoff</i> {{data.flightDetail[0].flightDestination}}
-        <button mat-icon-button class="more-button small-close-button" aria-label="Toggle menu">
+        
+        <button mat-dialog-close mat-raised-button mat-icon-button class="more-button small-close-button" aria-label="Toggle menu">
             <mat-icon>close</mat-icon>
         </button>
     </div>
@@ -162,7 +163,7 @@
 
 
         </mat-card>
-        <mat-card class="uldContainerCard">
+        <mat-card #uldContainerCard class="uldContainerCard" [class.removePositionsLoaded]="removePositionsLoaded" [class.collapsePositionsLoaded]="!showPositionsLoaded">
             <mat-card-header>
 
                 <mat-card-title>
@@ -171,68 +172,22 @@
                         <mat-icon>more_vert</mat-icon>
                     </button>
                     <mat-menu #menu="matMenu" xPosition="before">
-                        <button mat-menu-item>Expand</button>
-                        <button mat-menu-item>Remove</button>
+                        <button mat-menu-item (click)="showPositionsLoaded = !showPositionsLoaded">{{showPositionsLoaded == false ? 'Expand' : 'Collpase'}}</button>
+                        <button mat-menu-item (click)="removePositionsLoaded = true">Remove</button>
                     </mat-menu>
                     <mat-divider></mat-divider>
                 </mat-card-title>
             </mat-card-header>
 
-            <mat-card-content class="dashboard-card-content">
+            <mat-card-content class="dashboard-card-content" *ngIf="showPositionsLoaded">
 
                 <app-a300600 *ngIf="data.flightDetail[0].flightAircraftType === 'A30'" [flightLTPData]="data.flightDetail[0]"></app-a300600>
-<!-- 
-                <mat-grid-list cols="2" rowHeight="25px" gutterSize="1px" style="width:50px; float:left" class="topsideContainers">
-                    <mat-grid-tile class="containerPosition containerLoaded">1</mat-grid-tile>
-                    <mat-grid-tile class="containerPosition containerLoaded">2</mat-grid-tile>
-                    <mat-grid-tile class="containerPosition containerLoaded">3</mat-grid-tile>
-                    <mat-grid-tile class="containerPosition containerLoaded">4</mat-grid-tile>
-                    <mat-grid-tile class="containerPosition containerLoaded">5</mat-grid-tile>
-                    <mat-grid-tile class="containerPosition">6</mat-grid-tile>
-                    <mat-grid-tile class="containerPosition">7</mat-grid-tile>
-                    <mat-grid-tile class="containerPosition">8</mat-grid-tile>
-                    <mat-grid-tile class="containerPosition">9</mat-grid-tile>
-                    <mat-grid-tile class="containerPosition">10</mat-grid-tile>
-                    <mat-grid-tile class="containerPosition">11</mat-grid-tile>
-                    <mat-grid-tile class="containerPosition">12</mat-grid-tile>
-                    <mat-grid-tile class="containerPosition">13</mat-grid-tile>
-                    <mat-grid-tile class="containerPosition">14</mat-grid-tile>
-                    <mat-grid-tile class="containerPosition">15</mat-grid-tile>
-                    <mat-grid-tile class="containerPosition">16</mat-grid-tile>
-                    <mat-grid-tile class="containerPosition">17</mat-grid-tile>
-                    <mat-grid-tile class="containerPosition">18</mat-grid-tile>
-                    <mat-grid-tile class="containerPosition">19</mat-grid-tile>
-                    <mat-grid-tile class="containerPosition">20</mat-grid-tile>
-
-                </mat-grid-list>
-                <mat-grid-list cols="2" rowHeight="25px" gutterSize="1px" style="width:50px; float:right; margin-left: 10px;" class="pSectionContainers">
-                    <mat-grid-tile class="containerPosition containerLoaded psectionContainer">P1</mat-grid-tile>
-                    <mat-grid-tile class="containerPosition containerLoaded psectionContainer">P2</mat-grid-tile>
-                    <mat-grid-tile class="containerPosition containerLoaded psectionContainer">P3</mat-grid-tile>
-                    <mat-grid-tile class="containerPosition psectionContainer">P4</mat-grid-tile>
-                    <mat-grid-tile class="containerPosition psectionContainer">P5</mat-grid-tile>
-                    <mat-grid-tile class="containerPosition psectionContainer">P6</mat-grid-tile>
-                    <mat-grid-tile class="containerPosition psectionContainer">P7</mat-grid-tile>
-
-
-                </mat-grid-list>
-                <mat-grid-list cols="2" rowHeight="25px" gutterSize="1px" style="width:50px; float:right; margin-left: 10px; clear: right;
-    margin-top: 10px;" class="pSectionContainers">
-                    <mat-grid-tile class="containerPosition psectionContainer">P8</mat-grid-tile>
-                    <mat-grid-tile class="containerPosition psectionContainer">P9</mat-grid-tile>
-                    <mat-grid-tile class="containerPosition psectionContainer">P10</mat-grid-tile>
-                    <mat-grid-tile class="containerPosition psectionContainer">P11</mat-grid-tile>
-                    <mat-grid-tile class="containerPosition psectionContainer">P12</mat-grid-tile>
-                    <mat-grid-tile class="containerPosition psectionContainer">P13</mat-grid-tile>
-                    <mat-grid-tile class="containerPosition psectionContainer">P14</mat-grid-tile>
-
-
-                </mat-grid-list>
-
-
-
- -->
-
+                <app-b7478 *ngIf="data.flightDetail[0].flightAircraftType === '74Y'" [flightLTPData]="data.flightDetail[0]"></app-b7478>
+                <app-b747400 *ngIf="data.flightDetail[0].flightAircraftType === '74P'" [flightLTPData]="data.flightDetail[0]"></app-b747400>
+                <app-b757200 *ngIf="data.flightDetail[0].flightAircraftType === '75P'" [flightLTPData]="data.flightDetail[0]"></app-b757200>
+                <app-b767300 *ngIf="data.flightDetail[0].flightAircraftType === '76P'" [flightLTPData]="data.flightDetail[0]"></app-b767300>
+                <app-md11 *ngIf="data.flightDetail[0].flightAircraftType === 'M1F'" [flightLTPData]="data.flightDetail[0]"></app-md11>
+ 
             </mat-card-content>
         </mat-card>
 

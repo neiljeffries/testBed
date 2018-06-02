@@ -260,7 +260,7 @@ img {
 
 .uldContainerCard {
     float: left;
-    width: 380px;
+    width: 410px;
     height: 300px;
     margin: auto;
     margin-left: 14px;
@@ -269,7 +269,7 @@ img {
 .flightDetailCard {
     float: left;
     clear: left;
-    width: 340px;
+    width: 310px;
 }
 
 .captainCard {
@@ -281,7 +281,7 @@ img {
 }
 
 .tailCard {
-    width: 170px;
+    width: 196px;
     height: 130px;
     float: left;
     margin-right: 14px;
