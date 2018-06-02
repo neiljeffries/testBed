@@ -10,11 +10,12 @@
 
 /*@import '~@swimlane/ngx-datatable/release/assets/app.css';*/
 
-body, .mat-card, .mat-dialog-title, .mat-menu-item{
+body,
+.mat-card,
+.mat-dialog-title,
+.mat-menu-item {
     font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif !important;
 }
-
-
 
 .myMatList li {
     font-size: 16px;
@@ -174,7 +175,6 @@ img {
     border-color: #e7e7e7;
 }
 
-
 .mat-toolbar-row,
 .mat-toolbar-single-row {
     height: 48px !important;
@@ -312,46 +312,49 @@ img {
     background-color: red;
 }
 
-.float-right{
+.float-right {
     position: absolute !important;
     right: 2px;
     top: 3px;
 }
 
-#flightDetail{
-    background-color:#e3e3e3;
+#flightDetail {
+    background-color: #e3e3e3;
 }
 
-#flightDetail .mat-card-header-text{
+#flightDetail .mat-card-header-text {
     width: 100%;
 }
 
-.small-close-button{
-    float:right !important;
+.small-close-button {
+    float: right !important;
 }
 
-.actype{
+.actype {
     margin-bottom: 15px;
 }
 
-.mat-card{
+.mat-card {
     padding-top: 5px !important;
 }
-.mat-card-title{
-    
+
+.mat-card-title {
     font-size: 14px !important;
     font-weight: bold !important;
 }
+
 .mat-card-header-text {
     margin: 0px !important;
 }
-.mat-card-header{
+
+.mat-card-header {
     border-bottom: solid 1px #e3e3e3;
 }
-.mat-card-content{
+
+.mat-card-content {
     margin-top: 10px !important;
 }
-  
+
 .uld {
     width: 40px;
     height: 32px;
@@ -364,18 +367,30 @@ img {
     color: #555;
     margin: 1px;
     border-radius: 3px;
-  }
-  .topSideWrap {
-    float:left;
-  }
-  .pSectionWrap{
-    clear:left;
-    height:25px;
-    float:left;
-    margin-top:14px;
-  }
+}
 
-  
+.pSectionWrap .uld {
+    width: 32px;
+    height: 40px;
+    line-height: 40px;
+}
+
+.deckTitle {
+    clear: both;
+    font-size: 12px;
+    padding-top: 6px;
+}
+
+.topSideWrap {
+    float: left;
+}
+
+.pSectionWrap {
+    clear: left;
+    height: 25px;
+    float: left;
+    margin-top: 2px;
+}
 
 
 /* Smartphones (portrait and landscape) ----------- */
@@ -464,11 +479,10 @@ img {
     .float-right {
         top: -7px;
     }
-
-    .cdk-overlay-pane{
+    .cdk-overlay-pane {
         max-width: 95vw !important;
     }
-    .small-close-button{
+    .small-close-button {
         width: 30px !important;
         height: 30px !important;
         line-height: 20px !important;
@@ -486,7 +500,7 @@ img {
         color: #555;
         margin: 1px;
         border-radius: 3px;
-      }
+    }
 }
 
 @media only screen and (min-width: 667px) and (max-width: 768px) {
