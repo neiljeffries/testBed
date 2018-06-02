@@ -16,7 +16,7 @@ export class DialogComponent implements OnInit {
   showPositionsLoaded = true;
   removePositionsLoaded = false;
   // displayedColumns = ['Flight Date', 'Sched Time', 'Est Time', 'Est Load Time', 'Last ULD Time', 'State', 'Status'];
-  detailDisplayCols = ['flightdate', 'schedtime', 'esttime', 'estloadtime', 'lastuldloadtime', 'state', 'status'];
+  detailDisplayCols = ['flightdate', 'schedtime', 'esttime', 'estloadtime', 'lastuldloadtime', 'state'];
   dataSource = [];
 
 
@@ -42,8 +42,7 @@ export class DialogComponent implements OnInit {
       estTimeDiff: this.data.flightDetail[0].flightEstTimeDiff,
       estloadtime: this.data.flightDetail[0].flightLoadEstimate,
       lastuldloadtime: this.data.flightDetail[0].flightLastUldTs,
-      state: this.data.flightDetail[0].flightState,
-      status: this.data.flightDetail[0].flightStatus
+      state: this.data.flightDetail[0].flightState
     }];
 
     this.dataSource = DETAIL_DATA

@@ -351,6 +351,9 @@ img {
 .mat-card-content{
     margin-top: 10px !important;
 }
+.loading-status-text{
+    margin-bottom: 12px;
+}
   
 .uld {
     width: 40px;

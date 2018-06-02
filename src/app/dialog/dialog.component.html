@@ -89,7 +89,7 @@
 
                 <mat-card-title>
 
-                    Ramp:
+                    Parking:
 
                     <!-- <button mat-icon-button class="more-button" 
                             [matMenuTriggerFor]="menu" aria-label="Toggle menu">
@@ -172,10 +172,10 @@
                         <td mat-cell *matCellDef="let element"> {{element.state}} </td>
                     </ng-container>
 
-                    <ng-container matColumnDef="status">
+                    <!-- <ng-container matColumnDef="status">
                         <th mat-header-cell *matHeaderCellDef> Status: </th>
                         <td mat-cell *matCellDef="let element"> {{element.status}} </td>
-                    </ng-container>
+                    </ng-container> -->
 
                     <tr mat-header-row *matHeaderRowDef="detailDisplayCols"></tr>
                     <tr mat-row *matRowDef="let row; columns: detailDisplayCols;"></tr>
@@ -200,8 +200,8 @@
                     <mat-grid-tile>State:</mat-grid-tile>
                     <mat-grid-tile>{{data.flightDetail[0].flightState === null ? '- -' : data.flightDetail[0].flightState}}</mat-grid-tile>
 
-                    <mat-grid-tile>Status:</mat-grid-tile>
-                    <mat-grid-tile>{{data.flightDetail[0].flightStatus === null ? '- -' : data.flightDetail[0].flightStatus}}</mat-grid-tile>
+                    <!-- <mat-grid-tile>Status:</mat-grid-tile>
+                    <mat-grid-tile>{{data.flightDetail[0].flightStatus === null ? '- -' : data.flightDetail[0].flightStatus}}</mat-grid-tile> -->
                 </mat-grid-list>
 
             </mat-card-content>
@@ -212,7 +212,7 @@
             <mat-card-header>
 
                 <mat-card-title>
-                    Positions Loaded:
+                    Load Status:
                     <button mat-icon-button class="more-button float-right" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
                         <mat-icon>more_vert</mat-icon>
                     </button>
@@ -226,6 +226,7 @@
 
             <mat-card-content class="dashboard-card-content" *ngIf="showPositionsLoaded">
                 <!-- <mat-divider></mat-divider> -->
+                <div class="loading-status-text">{{data.flightDetail[0].flightStatus}}</div>
                 <app-a300600 *ngIf="data.flightDetail[0].flightAircraftType === 'A30'" [flightLTPData]="data.flightDetail[0]"></app-a300600>
                 <app-b7478 *ngIf="data.flightDetail[0].flightAircraftType === '74Y'" [flightLTPData]="data.flightDetail[0]"></app-b7478>
                 <app-b747400 *ngIf="data.flightDetail[0].flightAircraftType === '74P'" [flightLTPData]="data.flightDetail[0]"></app-b747400>
