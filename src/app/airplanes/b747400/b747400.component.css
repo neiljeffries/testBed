@@ -2,23 +2,34 @@
   .b747400-leftSide {
     clear: left;
   }
-  .b747400-pos11-12-13-wrap, .b747400-pos1-wrap{
+  .b747400-pos20-wrap, .b747400-pos1-wrap{
     height:50px;
     float:left;
   }
-  .b747400-pos1, .b747400-pos11, .b747400-pos12, .b747400-pos13{
-    margin-top:15px;
+  .b747400-pos1, .b747400-pos2, .b747400-pos20{
+    margin-top:10px;
   }
   .b747400-posP1{
     margin-left:23px;
   }
-  .b747400-posP5{
-    margin-left:75px
+  .b747400-posP6{
+    margin-left:50px
   }
   .b747400-posAb{
     margin-left:20px;
   }
-  
+  .b747400-pos4L{
+    margin-left:18px;
+  }
+  .b747400-pos18L{
+    margin-left:8px;
+  }
+  .b747400-pos20 {
+    -ms-transform: rotate(30deg); /* IE 9 */
+    -webkit-transform: rotate(30deg); /* Safari */
+    transform: rotate(30deg); /* Standard syntax */
+    margin-left: 2px;
+  }
   
 
 

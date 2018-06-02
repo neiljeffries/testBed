@@ -10,6 +10,12 @@
 
 /*@import '~@swimlane/ngx-datatable/release/assets/app.css';*/
 
+body, .mat-card, .mat-dialog-title, .mat-menu-item{
+    font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif !important;
+}
+
+
+
 .myMatList li {
     font-size: 16px;
 }
@@ -168,6 +174,7 @@ img {
     border-color: #e7e7e7;
 }
 
+
 .mat-toolbar-row,
 .mat-toolbar-single-row {
     height: 48px !important;
@@ -260,16 +267,18 @@ img {
 
 .uldContainerCard {
     float: left;
-    width: 410px;
-    height: 300px;
+    width: 744px;
+    height: 235px;
     margin: auto;
-    margin-left: 14px;
+    margin-top: 14px;
+    clear: left;
 }
 
 .flightDetailCard {
     float: left;
     clear: left;
-    width: 310px;
+    width: 744px;
+    height: 210px;
 }
 
 .captainCard {
@@ -289,7 +298,7 @@ img {
 }
 
 .rampCard {
-    width: 170px;
+    width: 180px;
     height: 130px;
     float: left;
     margin-bottom: 14px;
@@ -321,12 +330,32 @@ img {
     float:right !important;
 }
 
+.actype{
+    margin-bottom: 15px;
+}
 
+.mat-card{
+    padding-top: 5px !important;
+}
+.mat-card-title{
+    
+    font-size: 14px !important;
+    font-weight: bold !important;
+}
+.mat-card-header-text {
+    margin: 0px !important;
+}
+.mat-card-header{
+    border-bottom: solid 1px #e3e3e3;
+}
+.mat-card-content{
+    margin-top: 10px !important;
+}
   
 .uld {
-    width: 22px;
-    height: 22px;
-    line-height: 22px;
+    width: 40px;
+    height: 32px;
+    line-height: 32px;
     background-color: whitesmoke;
     border: 1px solid #aaa;
     float: left;

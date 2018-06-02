@@ -143,25 +143,29 @@ export class FlightsTableComponent {
 
 
   onSelect({ selected }) {
+    this.selectedRow = selected;
+    this.openDialog('flightDetail');
 
-
+/*
     // this.flightsTable.rowDetail.collapseAllRows(); // close all detail rows
     // this.flightsTable.rowDetail.toggleExpandRow(selected[0]); // expand selected detail row
     console.log(selected);
     if (JSON.stringify(selected) === JSON.stringify(this.selectedRow)) { // if they click the same row again...
       // this.flightsTable.rowDetail.collapseAllRows(); // collapse detail
-      this.selectedRow = null; // reset selectedRow variable
+      this.selectedRow = null;
     } else {
-      this.selectedRow = selected; // they clicked a new row
+      this.selectedRow = selected;
       this.openDialog('flightDetail');
     }
+
+    */
   }
 
   openDialog(dialogId): void {
     const dialogRef = this.dialog.open(DialogComponent, {
       data: {flightDetail: this.selectedRow},
       id: dialogId,
-      width: '800px',
+      // width: '800px',
 
     });
 

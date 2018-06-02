@@ -64,7 +64,7 @@
 
 
 
-    <ngx-datatable #flightsTable style="margin-bottom:25px" class='material fullscreen' style="top: 2px; width:100%;" [columnMode]="'standard'" [limit]="rowLimit" [footerHeight]="40" [headerHeight]="40" [rowHeight]="40" [rows]='fidsDepartingFlights' [selectionType]="'single'"
+    <ngx-datatable #flightsTable style="margin-bottom:25px" class='material fullscreen' style="top: 2px; width:100%;" [columnMode]="'force'" [limit]="rowLimit" [footerHeight]="40" [headerHeight]="40" [rowHeight]="40" [rows]='fidsDepartingFlights' [selectionType]="'single'"
         (select)='onSelect($event)' (page)="onPage($event)">
 
         <!-- <ngx-datatable #flightsTable class="material fullscreen" style="top: 52px; width:100%;" [columnMode]="'force'" [headerHeight]="50" [footerHeight]="0" [rowHeight]="50" [scrollbarV]="true" [scrollbarH]="true" [rows]="flights" [selectionType]="'single'"

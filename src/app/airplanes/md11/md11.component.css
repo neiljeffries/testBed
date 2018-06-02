@@ -2,23 +2,24 @@
   .md11-leftSide {
     clear: left;
   }
-  .md11-pos11-12-13-wrap, .md11-pos1-wrap{
+  .md11-pos13-14-wrap{
     height:50px;
     float:left;
   }
-  .md11-pos1, .md11-pos11, .md11-pos12, .md11-pos13{
-    margin-top:15px;
+  .md11-pos13, .md11-pos14{
+    margin-top:17px;
   }
   .md11-posP1{
-    margin-left:23px;
+    margin-left:0px;
   }
-  .md11-posP5{
-    margin-left:75px
-  }
+
   .md11-posAb{
-    margin-left:20px;
+    margin-left:18px;
   }
   
+  .md11-posP7{
+    margin-left:18px;
+  }
   
 
 
