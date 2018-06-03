@@ -464,6 +464,7 @@ img {
         width: 317px;
         padding-top: 5px !important;
         padding-bottom: 5px !important;
+        height: 280px !important;
     }
     .uldContainerCard {
         width: 317px;
@@ -489,9 +490,9 @@ img {
         float: right !important;
     }
     .uld {
-        width: 19px;
+        width: 17px;
         height: 19px;
-        line-height: 19px;
+        line-height: 18px;
         background-color: whitesmoke;
         border: 1px solid #aaa;
         float: left;
@@ -500,6 +501,32 @@ img {
         color: #555;
         margin: 1px;
         border-radius: 3px;
+    }
+    .pSectionWrap .uld {
+        width: 17px;
+        height: 19px;
+        line-height: 18px;
+    }
+    .b757200-pos34 {
+        margin-left: 94px !important;
+    }
+    .b767300-pos13 {
+        margin-top: 12px !important;
+    }
+    .md11-posAb {
+        margin-left: 4px !important;
+    }
+    .md11-posP7 {
+        margin-left: 12px !important;
+    }
+    .b757200-pos31 {
+        margin-left: 78px !important;
+    }
+    #flightDetailCardGridList {
+        display: block !important;
+    }
+    #flightDetailCardTable {
+        display: none !important;
     }
 }
 

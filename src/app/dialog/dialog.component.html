@@ -181,7 +181,7 @@
                     <tr mat-row *matRowDef="let row; columns: detailDisplayCols;"></tr>
                 </table>
 
-                <mat-grid-list id="flightDetailCardGridList" cols="2" rowHeight="30px" style="width:260px;">
+                <mat-grid-list id="flightDetailCardGridList" cols="2" rowHeight="30px" style="width:260px; display:none">
                     <mat-grid-tile>Flight Date:</mat-grid-tile>
                     <mat-grid-tile>{{data.flightDetail[0].flightDate.millis | date:'MM/dd/yyyy'}}</mat-grid-tile>
 
