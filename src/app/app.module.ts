@@ -32,6 +32,10 @@ import { B767300Component } from './airplanes/b767300/b767300.component';
 import { A300600Component } from './airplanes/a300600/a300600.component';
 import { MD11Component } from './airplanes/md11/md11.component';
 import { B7478Component } from './airplanes/b7478/b7478.component';
+import { LoadPositionTopComponent } from './airplanes/load-position-top/load-position-top.component';
+import { LoadPositionPsectionComponent } from './airplanes/load-position-psection/load-position-psection.component';
+import { LoadPositionBellyComponent } from './airplanes/load-position-belly/load-position-belly.component';
+import { LoadPositionAbComponent } from './airplanes/load-position-ab/load-position-ab.component';
 
 
 
@@ -56,6 +60,10 @@ import { B7478Component } from './airplanes/b7478/b7478.component';
     A300600Component,
     MD11Component,
     B7478Component,
+    LoadPositionTopComponent,
+    LoadPositionPsectionComponent,
+    LoadPositionBellyComponent,
+    LoadPositionAbComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,6 @@
+<div class="uld" [class.uld-loaded]="positionStatus === 'FILLED' && positionStatus === 'FILLED'"
+[class.uld-void]="positionStatus === 'VOID'">
+  <div class="pos-label">{{positionLabel}}</div>
+  <div class="pos-weight">{{positionWeight | number}}</div>
+  <!-- <div class="pos-uld-number">{{positionUldNumber}}</div> -->
+</div>
