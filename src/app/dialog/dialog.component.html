@@ -212,7 +212,14 @@
             <mat-card-header>
 
                 <mat-card-title>
-                    Load Status:
+                    Load Status: <span class="loading-status-text">{{data.flightDetail[0].flightStatus}}</span>                    
+                    <div class="ac-type" *ngIf="data.flightDetail[0].flightAircraftType === 'A30'">A300-600</div>
+                    <div class="ac-type" *ngIf="data.flightDetail[0].flightAircraftType === '74Y'">747-8</div>
+                    <div class="ac-type" *ngIf="data.flightDetail[0].flightAircraftType === '74P'">747-400</div>
+                    <div class="ac-type" *ngIf="data.flightDetail[0].flightAircraftType === '75P'">757-200</div>
+                    <div class="ac-type" *ngIf="data.flightDetail[0].flightAircraftType === '76P'">B767-300</div>
+                    <div class="ac-type" *ngIf="data.flightDetail[0].flightAircraftType === 'M1F'">MD-11</div>
+                    
                     <button mat-icon-button class="more-button float-right" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
                         <mat-icon>more_vert</mat-icon>
                     </button>
@@ -226,7 +233,7 @@
 
             <mat-card-content class="dashboard-card-content" *ngIf="showPositionsLoaded">
                 <!-- <mat-divider></mat-divider> -->
-                <div class="loading-status-text">{{data.flightDetail[0].flightStatus}}</div>
+                
                 <app-a300600 *ngIf="data.flightDetail[0].flightAircraftType === 'A30'" [flightLTPData]="data.flightDetail[0]"></app-a300600>
                 <app-b7478 *ngIf="data.flightDetail[0].flightAircraftType === '74Y'" [flightLTPData]="data.flightDetail[0]"></app-b7478>
                 <app-b747400 *ngIf="data.flightDetail[0].flightAircraftType === '74P'" [flightLTPData]="data.flightDetail[0]"></app-b747400>
