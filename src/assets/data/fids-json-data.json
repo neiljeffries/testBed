@@ -4437,7 +4437,153 @@
         "flightLastUldTs": null,
         "flightLoadEstimate": null,
         "flightAircraftType": "76P",
-        "flightLTPData": null
+        "flightLTPData": {
+            "position": [{
+                "positionLabel": "AB",
+                "unitLoadingDevice": "BELLY",
+                "weight": "25",
+                "positionLock": "Y",
+                "positionStatus": "FILLED"
+            }, {
+                "positionLabel": "AB",
+                "unitLoadingDevice": "BELLY",
+                "weight": "1",
+                "positionLock": "Y",
+                "positionStatus": "FILLED"
+            }, {
+                "positionLabel": "2R",
+                "unitLoadingDevice": "AAD14752UPS",
+                "weight": "3820",
+                "positionLock": "Y",
+                "positionStatus": "FILLED"
+            }, {
+                "positionLabel": "1",
+                "unitLoadingDevice": "AAY42018UPS",
+                "weight": "3180",
+                "positionLock": "Y",
+                "positionStatus": "FILLED"
+            }, {
+                "positionLabel": "2L",
+                "unitLoadingDevice": "AAD15358UPS",
+                "weight": "3360",
+                "positionLock": "Y",
+                "positionStatus": "FILLED"
+            }, {
+                "positionLabel": "3C",
+                "unitLoadingDevice": "AMJ62239UPS",
+                "weight": "578",
+                "positionLock": "Y",
+                "positionStatus": "FILLED"
+            }, {
+                "positionLabel": "P5",
+                "unitLoadingDevice": "*** VOID ***",
+                "weight": "0",
+                "positionLock": "Y",
+                "positionStatus": "VOID"
+            }, {
+                "positionLabel": "P3",
+                "unitLoadingDevice": "*** VOID ***",
+                "weight": "0",
+                "positionLock": "Y",
+                "positionStatus": "VOID"
+            }, {
+                "positionLabel": "P4",
+                "unitLoadingDevice": "*** VOID ***",
+                "weight": "0",
+                "positionLock": "Y",
+                "positionStatus": "VOID"
+            }, {
+                "positionLabel": "P6",
+                "unitLoadingDevice": "*** VOID ***",
+                "weight": "0",
+                "positionLock": "Y",
+                "positionStatus": "VOID"
+            }, {
+                "positionLabel": "P2",
+                "unitLoadingDevice": "*** VOID ***",
+                "weight": "0",
+                "positionLock": "Y",
+                "positionStatus": "VOID"
+            }, {
+                "positionLabel": "P7",
+                "unitLoadingDevice": "*** VOID ***",
+                "weight": "0",
+                "positionLock": "Y",
+                "positionStatus": "VOID"
+            }, {
+                "positionLabel": "P1",
+                "unitLoadingDevice": "*** VOID ***",
+                "weight": "0",
+                "positionLock": "Y",
+                "positionStatus": "VOID"
+            }, {
+                "positionLabel": "4C",
+                "unitLoadingDevice": "AMJ59103UPS",
+                "weight": "591",
+                "positionLock": "Y",
+                "positionStatus": "FILLED"
+            }, {
+                "positionLabel": "12R",
+                "unitLoadingDevice": "PAH39543UPS",
+                "weight": "1785",
+                "positionLock": "Y",
+                "positionStatus": "FILLED"
+            }, {
+                "positionLabel": "13",
+                "unitLoadingDevice": "AAY42011UPS",
+                "weight": "3351",
+                "positionLock": "Y",
+                "positionStatus": "FILLED"
+            }, {
+                "positionLabel": "12L",
+                "unitLoadingDevice": "AAD15511UPS",
+                "weight": "2995",
+                "positionLock": "Y",
+                "positionStatus": "FILLED"
+            }, {
+                "positionLabel": "10C",
+                "unitLoadingDevice": "AMJ59028UPS",
+                "weight": "591",
+                "positionLock": "Y",
+                "positionStatus": "FILLED"
+            }, {
+                "positionLabel": "11C",
+                "unitLoadingDevice": "AMJ61712UPS",
+                "weight": "578",
+                "positionLock": "Y",
+                "positionStatus": "FILLED"
+            }, {
+                "positionLabel": "9C",
+                "unitLoadingDevice": "AMJ61700UPS",
+                "weight": "578",
+                "positionLock": "Y",
+                "positionStatus": "FILLED"
+            }, {
+                "positionLabel": "5C",
+                "unitLoadingDevice": "AMJ60316UPS",
+                "weight": "578",
+                "positionLock": "Y",
+                "positionStatus": "FILLED"
+            }, {
+                "positionLabel": "8C",
+                "unitLoadingDevice": "AMJ52233UPS",
+                "weight": "585",
+                "positionLock": "Y",
+                "positionStatus": "FILLED"
+            }, {
+                "positionLabel": "6C",
+                "unitLoadingDevice": "AMJ52596UPS",
+                "weight": "585",
+                "positionLock": "Y",
+                "positionStatus": "FILLED"
+            }, {
+                "positionLabel": "7C",
+                "unitLoadingDevice": "AMJ61639UPS",
+                "weight": "578",
+                "positionLock": "Y",
+                "positionStatus": "FILLED"
+            }]
+        }
     }, {
         "flightOrientationGateway": null,
         "flightDirection": "Departing",
