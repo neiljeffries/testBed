@@ -10,6 +10,7 @@ export class B767300Component implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    console.log(this.flightLTPData);
   }
 
 }

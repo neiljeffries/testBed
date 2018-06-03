@@ -354,6 +354,7 @@ img {
 .mat-card-content {
     margin-top: 10px !important;
 }
+
 .uld {
     width: 40px;
     height: 32px;
@@ -371,7 +372,9 @@ img {
 .pSectionWrap .uld {
     width: 32px;
     height: 40px;
-    line-height: 40px;
+    line-height: 11px;
+    padding: 0;
+    padding-top: 9px;
 }
 
 .deckTitle {
@@ -398,6 +401,17 @@ img {
 .ac-type{
     
 }
+
+.uld-void {
+    background-color: grey;
+    border-color: #444;
+    color: #333;
+}
+
+.pos-weight {
+    font-size: 7px;
+}
+
 
 /* Smartphones (portrait and landscape) ----------- */
 

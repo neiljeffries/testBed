@@ -1,18 +1,18 @@
 <div class="loadingContainer">
 
     <!-- <div class="actype">B767-300</div> -->
-    <div class="deckTitle">Upper Deck</div>
+    <div class="deckTitle">Upper Deck </div>
     <div class="topSideOuterWrap">
 
         <div class="b767300-pos1-wrap">
-            <div class="uld b767300-pos1 uld-loaded">1</div>
+            <div [class.uld-loaded]="flightLTPData.position[3].positionStatus === 'FILLED'" [class.uld-void]="flightLTPData.position[3].positionStatus === 'VOID'" class="uld b767300-pos1">1</div>
         </div>
 
         <div class="topSideWrap">
             <div class="b767300-rightSide">
-                <div class="uld uld-loaded">2R</div>
-                <div class="uld uld-loaded">3R</div>
-                <div class="uld uld-loaded">4R</div>
+                <div [class.uld-loaded]="flightLTPData.position[2].positionStatus === 'FILLED'" [class.uld-void]="flightLTPData.position[2].positionStatus === 'VOID'" class="uld">2R</div>
+                <div class="uld">3R</div>
+                <div class="uld">4R</div>
                 <div class="uld">5R</div>
                 <div class="uld">6R</div>
                 <div class="uld">7R</div>
@@ -24,8 +24,8 @@
             </div>
             <!-- end uld right side -->
             <div class="b767300-leftSide">
-                <div class="uld uld-loaded">2L</div>
-                <div class="uld uld-loaded">3L</div>
+                <div class="uld">2L</div>
+                <div class="uld">3L</div>
                 <div class="uld">4L</div>
                 <div class="uld">5L</div>
                 <div class="uld">6L</div>
@@ -56,7 +56,14 @@
         <div class="uld b767300-posP5">P5</div>
         <div class="uld b767300-posP6">P6</div>
         <div class="uld b767300-posP7">P7</div>
-        <div class="uld b767300-posAb uld-loaded">AB</div>
+        <div class="uld b767300-posAb" [class.uld-loaded]="flightLTPData.position[0].positionStatus === 'FILLED' && 
+                                flightLTPData.position[1].positionStatus === 'FILLED'">
+            {{flightLTPData.position[0].positionLabel}}
+            <br>
+            <span class="pos-weight">
+                {{flightLTPData.position[0].weight + flightLTPData.position[1].weight}}
+            </span>
+        </div>
     </div>
 
 
