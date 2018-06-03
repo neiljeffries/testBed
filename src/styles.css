@@ -10,11 +10,12 @@
 
 /*@import '~@swimlane/ngx-datatable/release/assets/app.css';*/
 
-body, .mat-card, .mat-dialog-title, .mat-menu-item{
+body,
+.mat-card,
+.mat-dialog-title,
+.mat-menu-item {
     font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif !important;
 }
-
-
 
 .myMatList li {
     font-size: 16px;
@@ -174,7 +175,6 @@ img {
     border-color: #e7e7e7;
 }
 
-
 .mat-toolbar-row,
 .mat-toolbar-single-row {
     height: 48px !important;
@@ -312,49 +312,48 @@ img {
     background-color: red;
 }
 
-.float-right{
+.float-right {
     position: absolute !important;
     right: 2px;
     top: 3px;
 }
 
-#flightDetail{
-    background-color:#e3e3e3;
+#flightDetail {
+    background-color: #e3e3e3;
 }
 
-#flightDetail .mat-card-header-text{
+#flightDetail .mat-card-header-text {
     width: 100%;
 }
 
-.small-close-button{
-    float:right !important;
+.small-close-button {
+    float: right !important;
 }
 
-.actype{
+.actype {
     margin-bottom: 15px;
 }
 
-.mat-card{
+.mat-card {
     padding-top: 5px !important;
 }
-.mat-card-title{
-    
+
+.mat-card-title {
     font-size: 14px !important;
     font-weight: bold !important;
 }
+
 .mat-card-header-text {
     margin: 0px !important;
 }
-.mat-card-header{
+
+.mat-card-header {
     border-bottom: solid 1px #e3e3e3;
 }
-.mat-card-content{
+
+.mat-card-content {
     margin-top: 10px !important;
 }
-.loading-status-text{
-    margin-bottom: 12px;
-}
-  
 .uld {
     width: 40px;
     height: 32px;
@@ -367,18 +366,30 @@ img {
     color: #555;
     margin: 1px;
     border-radius: 3px;
-  }
-  .topSideWrap {
-    float:left;
-  }
-  .pSectionWrap{
-    clear:left;
-    height:25px;
-    float:left;
-    margin-top:14px;
-  }
+}
 
-  
+.pSectionWrap .uld {
+    width: 32px;
+    height: 40px;
+    line-height: 40px;
+}
+
+.deckTitle {
+    clear: both;
+    font-size: 12px;
+    padding-top: 6px;
+}
+
+.topSideWrap {
+    float: left;
+}
+
+.pSectionWrap {
+    clear: left;
+    height: 25px;
+    float: left;
+    margin-top: 2px;
+}
 
 
 /* Smartphones (portrait and landscape) ----------- */
@@ -452,6 +463,7 @@ img {
         width: 317px;
         padding-top: 5px !important;
         padding-bottom: 5px !important;
+        height: 280px !important;
     }
     .uldContainerCard {
         width: 317px;
@@ -467,20 +479,19 @@ img {
     .float-right {
         top: -7px;
     }
-
-    .cdk-overlay-pane{
+    .cdk-overlay-pane {
         max-width: 95vw !important;
     }
-    .small-close-button{
+    .small-close-button {
         width: 30px !important;
         height: 30px !important;
         line-height: 20px !important;
         float: right !important;
     }
     .uld {
-        width: 19px;
+        width: 17px;
         height: 19px;
-        line-height: 19px;
+        line-height: 18px;
         background-color: whitesmoke;
         border: 1px solid #aaa;
         float: left;
@@ -489,7 +500,33 @@ img {
         color: #555;
         margin: 1px;
         border-radius: 3px;
-      }
+    }
+    .pSectionWrap .uld {
+        width: 17px;
+        height: 19px;
+        line-height: 18px;
+    }
+    .b757200-pos34 {
+        margin-left: 94px !important;
+    }
+    .b767300-pos13 {
+        margin-top: 12px !important;
+    }
+    .md11-posAb {
+        margin-left: 4px !important;
+    }
+    .md11-posP7 {
+        margin-left: 12px !important;
+    }
+    .b757200-pos31 {
+        margin-left: 78px !important;
+    }
+    #flightDetailCardGridList {
+        display: block !important;
+    }
+    #flightDetailCardTable {
+        display: none !important;
+    }
 }
 
 @media only screen and (min-width: 667px) and (max-width: 768px) {

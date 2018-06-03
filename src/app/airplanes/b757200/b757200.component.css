@@ -1,41 +1,44 @@
-
-  .b757200-leftSide {
+.b757200-leftSide {
     clear: left;
-  }
-  .b757200-pos11-12-13-wrap, .b757200-pos1-wrap{
-    height:25px;
-    float:left;
-  }
-  /* .b757200-pos1, .b757200-pos11, .b757200-pos12, .b757200-pos13{
+}
+
+.b757200-pos11-12-13-wrap,
+.b757200-pos1-wrap {
+    height: 25px;
+    float: left;
+}
+
+
+/* .b757200-pos1, .b757200-pos11, .b757200-pos12, .b757200-pos13{
     margin-top:15px;
   } */
-  .b757200-posP1{
-    margin-left:23px;
-  }
-  .b757200-posP5{
-    margin-left:75px
-  }
-  .b757200-posAb{
-    margin-left:20px;
-  }
 
-  .b757200-pos31{
-    margin-left:84px;
-  }
+.b757200-posP1 {
+    margin-left: 23px;
+}
 
-  .b757200-pos34{
+.b757200-posP5 {
+    margin-left: 75px
+}
+
+.b757200-posAb {
+    margin-left: 20px;
+}
+
+.b757200-pos31 {
+    margin-left: 92px;
+}
+
+.b757200-pos34 {
     margin-left: 380px;
-  }
-  
-  
+}
 
+.uld-loaded {
+    background-color: #28a745;
+    border: solid 1px green;
+    color: white;
+}
 
-
-  .uld-loaded{
-      background-color: #28a745;
-      border:solid 1px green;
-      color:white;
-  }
-
-  
-  
+.pSectionWrap {
+    margin-top: 14px;
+}
