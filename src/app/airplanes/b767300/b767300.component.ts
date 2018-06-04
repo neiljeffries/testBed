@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { FidsFlightLoadPosition } from 'app/classes/fids-load-position';
+import { FidsFlightLoadData } from "app/classes/fids-load-data";
 
 @Component({
   selector: 'app-b767300',
@@ -7,7 +8,7 @@ import { FidsFlightLoadPosition } from 'app/classes/fids-load-position';
   styleUrls: ['./b767300.component.css']
 })
 export class B767300Component implements OnInit {
-  @Input() flightLTPData: any;
+  @Input() flightLTPData: FidsFlightLoadData;
   pos1: Array<FidsFlightLoadPosition> = [];
   pos2C: Array<FidsFlightLoadPosition> = [];
   pos2R: Array<FidsFlightLoadPosition> = [];
