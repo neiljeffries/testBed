@@ -5,15 +5,15 @@
     <div class="topSideOuterWrap">
 
         <div class="b767300-pos1-wrap">
-            <app-load-position-top class="uld b767300-pos1" [position]="flightLTPData.position[3]"></app-load-position-top>
+            <app-load-position-top class="uld b767300-pos1" [position]="pos1"></app-load-position-top>
             <!-- <div class="uld b767300-pos1" [class.uld-loaded]="flightLTPData.position[3].positionStatus === 'FILLED'" [class.uld-void]="flightLTPData.position[3].positionStatus === 'VOID'" class="uld b767300-pos1">1</div> -->
         </div>
 
         <div class="topSideWrap">
             <div class="b767300-rightSide">
                 <!-- <div [class.uld-loaded]="flightLTPData.position[2].positionStatus === 'FILLED'" [class.uld-void]="flightLTPData.position[2].positionStatus === 'VOID'" class="uld">2R</div> -->
-                <app-load-position-top class="uld b767300-pos2R" [position]="flightLTPData.position[2]"></app-load-position-top>
-                <div class="uld">3R</div>
+                <app-load-position-top class="uld b767300-pos2R" [position]="pos2R"></app-load-position-top>
+                <app-load-position-top class="uld b767300-pos3R" [position]="pos3R"></app-load-position-top>
                 <div class="uld">4R</div>
                 <div class="uld">5R</div>
                 <div class="uld">6R</div>
@@ -26,7 +26,7 @@
             </div>
             <!-- end uld right side -->
             <div class="b767300-leftSide">
-                <div class="uld">2L</div>
+                <app-load-position-top class="uld b767300-pos2L" [position]="pos2L"></app-load-position-top>
                 <div class="uld">3L</div>
                 <div class="uld">4L</div>
                 <div class="uld">5L</div>

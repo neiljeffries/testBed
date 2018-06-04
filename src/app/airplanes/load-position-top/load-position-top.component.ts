@@ -15,11 +15,13 @@ export class LoadPositionTopComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    if (this.position) {
     this.positionStatus = this.position.positionStatus;
     this.positionLabel = this.position.positionLabel.trim();
     this.positionWeight = this.position.weight;
     this.positionUldNumber = this.position.unitLoadingDevice;
     this.positionLock = this.position.positionLock;
+    }
   }
 
 }
