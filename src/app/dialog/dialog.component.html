@@ -140,7 +140,7 @@
             <mat-card-content class="dashboard-card-content">
 
 
-                <table id="flightDetailCardTable" style="width:100%" mat-table [dataSource]="dataSource" class="mat-elevation-z1">
+                <!-- <table id="flightDetailCardTable" style="width:100%" mat-table [dataSource]="dataSource" class="mat-elevation-z1">
 
                     <ng-container matColumnDef="flightdate">
                         <th mat-header-cell *matHeaderCellDef> Flight Date </th>
@@ -172,16 +172,11 @@
                         <td mat-cell *matCellDef="let element"> {{element.state}} </td>
                     </ng-container>
 
-                    <!-- <ng-container matColumnDef="status">
-                        <th mat-header-cell *matHeaderCellDef> Status: </th>
-                        <td mat-cell *matCellDef="let element"> {{element.status}} </td>
-                    </ng-container> -->
-
                     <tr mat-header-row *matHeaderRowDef="detailDisplayCols"></tr>
                     <tr mat-row *matRowDef="let row; columns: detailDisplayCols;"></tr>
-                </table>
+                </table> -->
 
-                <mat-grid-list id="flightDetailCardGridList" cols="2" rowHeight="30px" style="width:260px; display:none">
+                <mat-grid-list id="flightDetailCardGridList" rows="4" cols="3" rowHeight="30px">
                     <mat-grid-tile>Flight Date:</mat-grid-tile>
                     <mat-grid-tile>{{data.flightDetail[0].flightDate.millis | date:'MM/dd/yyyy'}}</mat-grid-tile>
 
@@ -190,7 +185,7 @@
 
                     <mat-grid-tile>Est Time: </mat-grid-tile>
                     <mat-grid-tile>{{data.flightDetail[0].flightEstTime === null ? '- -' : data.flightDetail[0].flightEstTime}} {{data.flightDetail[0].flightEstTimeDiff}}</mat-grid-tile>
-
+                   
                     <mat-grid-tile>Est Load Time: </mat-grid-tile>
                     <mat-grid-tile>{{data.flightDetail[0].flightLoadEstimate === null ? '- -' : data.flightDetail[0].flightLoadEstimate}}</mat-grid-tile>
 

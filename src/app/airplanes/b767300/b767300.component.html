@@ -14,36 +14,36 @@
                 <!-- <div [class.uld-loaded]="flightLTPData.position[2].positionStatus === 'FILLED'" [class.uld-void]="flightLTPData.position[2].positionStatus === 'VOID'" class="uld">2R</div> -->
                 <app-load-position-top class="uld b767300-pos2R" [position]="pos2R"></app-load-position-top>
                 <app-load-position-top class="uld b767300-pos3R" [position]="pos3R"></app-load-position-top>
-                <div class="uld">4R</div>
-                <div class="uld">5R</div>
-                <div class="uld">6R</div>
-                <div class="uld">7R</div>
-                <div class="uld">8R</div>
-                <div class="uld">9R</div>
-                <div class="uld">10R</div>
-                <div class="uld">11R</div>
-                <div class="uld">12R</div>
+                <app-load-position-top class="uld b767300-pos4R" [position]="pos4R"></app-load-position-top>
+                <app-load-position-top class="uld b767300-pos5R" [position]="pos5R"></app-load-position-top>
+                <app-load-position-top class="uld b767300-pos6R" [position]="pos6R"></app-load-position-top>
+                <app-load-position-top class="uld b767300-pos7R" [position]="pos7R"></app-load-position-top>
+                <app-load-position-top class="uld b767300-pos8R" [position]="pos8R"></app-load-position-top>
+                <app-load-position-top class="uld b767300-pos9R" [position]="pos9R"></app-load-position-top>
+                <app-load-position-top class="uld b767300-pos10R" [position]="pos10R"></app-load-position-top>
+                <app-load-position-top class="uld b767300-pos11R" [position]="pos11R"></app-load-position-top>
+                <app-load-position-top class="uld b767300-pos12R" [position]="pos12R"></app-load-position-top>
             </div>
             <!-- end uld right side -->
             <div class="b767300-leftSide">
                 <app-load-position-top class="uld b767300-pos2L" [position]="pos2L"></app-load-position-top>
-                <div class="uld">3L</div>
-                <div class="uld">4L</div>
-                <div class="uld">5L</div>
-                <div class="uld">6L</div>
-                <div class="uld">7L</div>
-                <div class="uld">8L</div>
-                <div class="uld">9L</div>
-                <div class="uld">10L</div>
-                <div class="uld">11L</div>
-                <div class="uld">12L</div>
+                <app-load-position-top class="uld b767300-pos3L" [position]="pos3L"></app-load-position-top>
+                <app-load-position-top class="uld b767300-pos4L" [position]="pos4L"></app-load-position-top>
+                <app-load-position-top class="uld b767300-pos5L" [position]="pos5L"></app-load-position-top>
+                <app-load-position-top class="uld b767300-pos6L" [position]="pos6L"></app-load-position-top>
+                <app-load-position-top class="uld b767300-pos7L" [position]="pos7L"></app-load-position-top>
+                <app-load-position-top class="uld b767300-pos8L" [position]="pos8L"></app-load-position-top>
+                <app-load-position-top class="uld b767300-pos9L" [position]="pos9L"></app-load-position-top>
+                <app-load-position-top class="uld b767300-pos10L" [position]="pos10L"></app-load-position-top>
+                <app-load-position-top class="uld b767300-pos11L" [position]="pos11L"></app-load-position-top>
+                <app-load-position-top class="uld b767300-pos12L" [position]="pos12L"></app-load-position-top>
             </div>
             <!-- end left side -->
         </div>
         <!-- topSideWrap end -->
 
         <div class="b767300-pos11-12-13-wrap">
-            <div class="uld b767300-pos13">13</div>
+            <app-load-position-top class="uld b767300-pos13" [position]="pos13"></app-load-position-top>
         </div>
 
     </div>
@@ -58,7 +58,7 @@
         <div class="uld b767300-posP5">P5</div>
         <div class="uld b767300-posP6">P6</div>
         <div class="uld b767300-posP7">P7</div>
-        <app-load-position-ab class="b767300-posAb" [ab1]="flightLTPData.position[0]" [ab2]="flightLTPData.position[1]"></app-load-position-ab>
+        <app-load-position-ab class="b767300-posAb" [ab1]="posAb1" [ab2]="posAb2"></app-load-position-ab>
     </div>
 
 

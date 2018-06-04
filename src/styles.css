@@ -283,7 +283,7 @@ img {
 
 .captainCard {
     width: 340px;
-    height: 130px;
+    height: 114px;
     float: left;
     margin-right: 14px;
     margin-bottom: 14px;
@@ -291,7 +291,7 @@ img {
 
 .tailCard {
     width: 196px;
-    height: 130px;
+    height: 114px;
     float: left;
     margin-right: 14px;
     margin-bottom: 14px;
@@ -299,7 +299,7 @@ img {
 
 .rampCard {
     width: 180px;
-    height: 130px;
+    height: 114px;
     float: left;
     margin-bottom: 14px;
 }
