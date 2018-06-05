@@ -357,7 +357,7 @@ img {
 
 .uld {
     width: 40px;
-    height: 32px;
+    height: 46px;
     line-height: 14px;
     background-color: whitesmoke;
     border: 1px solid #aaa;
@@ -419,14 +419,14 @@ img {
   }
   .posCenter{
     clear:left;
-    margin-top:19px;
+    margin-top:25px;
   }
   .posLeft{
     clear:left;
     /* display:none; */
   }
   .v-uld-wrap{
-    height:72px;
+    height:98px;
     width:44px;
     float:left;
     border:solid 1px #e3e3e3;
@@ -434,6 +434,12 @@ img {
   .v-uld-wrap-outerWrap{
     
   }
+  .pos-uld-number{
+      font-size:10px;
+  }
+  .pos-label{
+      font-size:12px;
+  } 
   /* new vertical position layout */
 
 

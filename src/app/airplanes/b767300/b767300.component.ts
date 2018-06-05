@@ -68,111 +68,97 @@ export class B767300Component implements OnInit {
 
   constructor() { }
 
-
-
-  getByPosition(arr, value) {
+  /* Loop over all positions and extract the correct position data for each instance variable */
+  setPositions(arr) {
     for (let i = 0, iLen = arr.length; i < iLen; i++) {
-      if (arr[i].positionLabel === value) {
-        return arr[i]
+
+      switch (arr[i].positionLabel) {
+        case '1': { this.pos1 = arr[i]; break; }
+        case '2C': { this.pos2C = arr[i]; break; }
+        case '2R': { this.pos2R = arr[i]; break; }
+        case '2L': { this.pos2L = arr[i]; break; }
+        case '3C': { this.pos3C = arr[i]; break; }
+        case '3R': { this.pos3R = arr[i]; break; }
+        case '3L': { this.pos3L = arr[i]; break; }
+        case '4C': { this.pos4C = arr[i]; break; }
+        case '4R': { this.pos4R = arr[i]; break; }
+        case '4L': { this.pos4L = arr[i]; break; }
+        case '5C': { this.pos5C = arr[i]; break; }
+        case '5R': { this.pos5R = arr[i]; break; }
+        case '5L': { this.pos5L = arr[i]; break; }
+        case '6C': { this.pos6C = arr[i]; break; }
+        case '6R': { this.pos6R = arr[i]; break; }
+        case '6L': { this.pos6L = arr[i]; break; }
+        case '7C': { this.pos7C = arr[i]; break; }
+        case '7R': { this.pos7R = arr[i]; break; }
+        case '7L': { this.pos7L = arr[i]; break; }
+        case '8C': { this.pos8C = arr[i]; break; }
+        case '8R': { this.pos8R = arr[i]; break; }
+        case '8L': { this.pos8L = arr[i]; break; }
+        case '9C': { this.pos9C = arr[i]; break; }
+        case '9R': { this.pos9R = arr[i]; break; }
+        case '9L': { this.pos9L = arr[i]; break; }
+        case '10C': { this.pos10C = arr[i]; break; }
+        case '10R': { this.pos10R = arr[i]; break; }
+        case '10L': { this.pos10L = arr[i]; break; }
+        case '11C': { this.pos11C = arr[i]; break; }
+        case '11R': { this.pos11R = arr[i]; break; }
+        case '11L': { this.pos11L = arr[i]; break; }
+        case '12C': { this.pos12C = arr[i]; break; }
+        case '12R': { this.pos12R = arr[i]; break; }
+        case '12L': { this.pos12L = arr[i]; break; }
+        case '13': { this.pos13 = arr[i]; break; }
+        case 'P1': { this.posP1 = arr[i]; break; }
+        case 'P2': { this.posP2 = arr[i]; break; }
+        case 'P3': { this.posP3 = arr[i]; break; }
+        case 'P4': { this.posP4 = arr[i]; break; }
+        case 'P5': { this.posP5 = arr[i]; break; }
+        case 'P6': { this.posP6 = arr[i]; break; }
+        case 'P7': { this.posP7 = arr[i]; break; }
+        default: { /*default stuff*/ break; }
       }
     }
+
+    /* There are 2 AB positions with the name name, this will allow us to get both */
+    this.posAb1 = this.getABPosition(this.flightLTPData.position, 'AB')[0]; // gets AB1
+    this.posAb2 = this.getABPosition(this.flightLTPData.position, 'AB')[1]; // gets AB2
+
+    /* Logic to toggle the display of the center uld position vs the left/right uld configuration */
+    if (this.pos2C.length !== 0) { this.show2C = true; }
+    if (this.pos3C.length !== 0) { this.show3C = true; }
+    if (this.pos4C.length !== 0) { this.show4C = true; }
+    if (this.pos5C.length !== 0) { this.show5C = true; }
+    if (this.pos6C.length !== 0) { this.show6C = true; }
+    if (this.pos7C.length !== 0) { this.show7C = true; }
+    if (this.pos8C.length !== 0) { this.show8C = true; }
+    if (this.pos9C.length !== 0) { this.show9C = true; }
+    if (this.pos10C.length !== 0) { this.show10C = true; }
+    if (this.pos11C.length !== 0) { this.show11C = true; }
+    if (this.pos12C.length !== 0) { this.show12C = true; }
+
   }
 
+  // getByPosition(arr, value) {
+  //   for (let i = 0, iLen = arr.length; i < iLen; i++) {
+  //     if (arr[i].positionLabel === '1') { this.pos1 = arr[i]; }
+  //   }
+  // }
+
+  /* There are 2 AB positions with the name name, this will allow us to get both */
   getABPosition(arr, value) {
-    const testArr = []
+    const AbPositionsArray = []
     for (let i = 0, iLen = arr.length; i < iLen; i++) {
       if (arr[i].positionLabel === value) {
-        testArr.push(arr[i]);
+        AbPositionsArray.push(arr[i]);
       }
     }
-    return testArr;
+    return AbPositionsArray;
   }
 
 
   ngOnInit() {
     console.log(this.flightLTPData);
-    this.pos1 = this.getByPosition(this.flightLTPData.position, '1');
-    this.pos2C = this.getByPosition(this.flightLTPData.position, '2C');
-    this.pos2R = this.getByPosition(this.flightLTPData.position, '2R');
-    this.pos2L = this.getByPosition(this.flightLTPData.position, '2L');
-    this.pos3C = this.getByPosition(this.flightLTPData.position, '3C');
-    this.pos3R = this.getByPosition(this.flightLTPData.position, '3R');
-    this.pos3L = this.getByPosition(this.flightLTPData.position, '3L');
-    this.pos4C = this.getByPosition(this.flightLTPData.position, '4C');
-    this.pos4R = this.getByPosition(this.flightLTPData.position, '4R');
-    this.pos4L = this.getByPosition(this.flightLTPData.position, '4L');
-    this.pos5C = this.getByPosition(this.flightLTPData.position, '5C');
-    this.pos5R = this.getByPosition(this.flightLTPData.position, '5R');
-    this.pos5L = this.getByPosition(this.flightLTPData.position, '5L');
-    this.pos6C = this.getByPosition(this.flightLTPData.position, '6C');
-    this.pos6R = this.getByPosition(this.flightLTPData.position, '6R');
-    this.pos6L = this.getByPosition(this.flightLTPData.position, '6L');
-    this.pos7C = this.getByPosition(this.flightLTPData.position, '7C');
-    this.pos7R = this.getByPosition(this.flightLTPData.position, '7R');
-    this.pos7L = this.getByPosition(this.flightLTPData.position, '7L');
-    this.pos8C = this.getByPosition(this.flightLTPData.position, '8C');
-    this.pos8R = this.getByPosition(this.flightLTPData.position, '8R');
-    this.pos8L = this.getByPosition(this.flightLTPData.position, '8L');
-    this.pos9C = this.getByPosition(this.flightLTPData.position, '9C');
-    this.pos9R = this.getByPosition(this.flightLTPData.position, '9R');
-    this.pos9L = this.getByPosition(this.flightLTPData.position, '9L');
-    this.pos10C = this.getByPosition(this.flightLTPData.position, '10C');
-    this.pos10R = this.getByPosition(this.flightLTPData.position, '10R');
-    this.pos10L = this.getByPosition(this.flightLTPData.position, '10L');
-    this.pos11C = this.getByPosition(this.flightLTPData.position, '11C');
-    this.pos11R = this.getByPosition(this.flightLTPData.position, '11R');
-    this.pos11L = this.getByPosition(this.flightLTPData.position, '11L');
-    this.pos12C = this.getByPosition(this.flightLTPData.position, '12C');
-    this.pos12R = this.getByPosition(this.flightLTPData.position, '12R');
-    this.pos12L = this.getByPosition(this.flightLTPData.position, '12L');
-    this.pos13 = this.getByPosition(this.flightLTPData.position, '13');
-    this.posP1 = this.getByPosition(this.flightLTPData.position, 'P1');
-    this.posP2 = this.getByPosition(this.flightLTPData.position, 'P2');
-    this.posP3 = this.getByPosition(this.flightLTPData.position, 'P3');
-    this.posP4 = this.getByPosition(this.flightLTPData.position, 'P4');
-    this.posP5 = this.getByPosition(this.flightLTPData.position, 'P5');
-    this.posP6 = this.getByPosition(this.flightLTPData.position, 'P6');
-    this.posP7 = this.getByPosition(this.flightLTPData.position, 'P7');
-    this.posAb1 = this.getABPosition(this.flightLTPData.position, 'AB')[0]; // gets AB1
-    this.posAb2 = this.getABPosition(this.flightLTPData.position, 'AB')[1]; // gets AB2
-
-    console.log(typeof (this.pos6C) !== 'undefined');
-
-    if (typeof (this.pos2C) !== 'undefined') {
-      this.show2C = true;
-    }
-    if (typeof (this.pos3C) !== 'undefined') {
-      this.show3C = true;
-    }
-    if (typeof (this.pos4C) !== 'undefined') {
-      this.show4C = true;
-    }
-    if (typeof (this.pos5C) !== 'undefined') {
-      this.show5C = true;
-    }
-    if (typeof (this.pos6C) !== 'undefined') {
-      this.show6C = true;
-    }
-    if (typeof (this.pos7C) !== 'undefined') {
-      this.show7C = true;
-    }
-    if (typeof (this.pos8C) !== 'undefined') {
-      this.show8C = true;
-    }
-    if (typeof (this.pos9C) !== 'undefined') {
-      this.show9C = true;
-    }
-    if (typeof (this.pos10C) !== 'undefined') {
-      this.show10C = true;
-    }
-    if (typeof (this.pos11C) !== 'undefined') {
-      this.show11C = true;
-    }
-    if (typeof (this.pos12C) !== 'undefined') {
-      this.show12C = true;
-    }
-
+    this.setPositions(this.flightLTPData.position);
   }
 
-
-
+}

@@ -1,4 +1,4 @@
-<div class="uld" [class.uld-loaded]="positionStatus === 'FILLED' && positionStatus === 'FILLED'"
+<div class="uld" [class.uld-loaded]="positionStatus === 'FILLED' && positionStatus === 'FILLED'" matTooltip="{{positionUldNumber}}"
 [class.uld-void]="positionStatus === 'VOID'">
   <div class="pos-label">{{positionLabel}}</div>
   <div class="pos-weight">{{positionWeight | number}}</div>

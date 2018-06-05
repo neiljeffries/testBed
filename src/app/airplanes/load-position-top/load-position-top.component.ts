@@ -17,7 +17,7 @@ export class LoadPositionTopComponent implements OnInit {
   ngOnInit() {
     if (this.position) {
     this.positionStatus = this.position.positionStatus;
-    this.positionLabel = this.position.positionLabel.trim();
+    this.positionLabel = this.position.positionLabel;
     this.positionWeight = this.position.weight;
     this.positionUldNumber = this.position.unitLoadingDevice;
     this.positionLock = this.position.positionLock;
