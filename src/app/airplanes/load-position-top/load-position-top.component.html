@@ -1,5 +1,9 @@
 <div [class.uld-loaded]="positionStatus === 'FILLED'" [class.uld-void]="positionStatus === 'VOID'">
-  <div class="pos-label">{{positionLabel}}</div>
-  <div class="pos-weight">{{positionWeight | number }}</div>
-  <div class="pos-uld-number">{{ positionUldNumber | onlyNumbers }}</div>
+    <div class="pos-label">{{positionLabel}}
+        <div class="pos-lock" *ngIf="positionLock === 'Y'">
+            <i class="material-icons">lock</i>
+        </div>
+    </div>
+    <div class="pos-weight">{{positionWeight | number }}</div>
+    <div class="pos-uld-number">{{ positionUldNumber | onlyNumbers }}</div>
 </div>
