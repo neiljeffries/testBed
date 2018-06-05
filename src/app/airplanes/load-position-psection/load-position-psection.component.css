@@ -1,11 +1,11 @@
-.uld-loaded{
+.uld-loaded {
     background-color: #28a745;
-    border:solid 1px green;
-    color:white;
+    border: solid 1px green;
+    color: white;
 }
 
 .uld-void {
-    background-color: grey;
-    border-color: #444;
-    color: #333;
+    background-color: silver;
+    border-color: #888;
+    color: #555;
 }
