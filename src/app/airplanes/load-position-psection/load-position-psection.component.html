@@ -1,9 +1,5 @@
-<!-- <div class="uld b767300-posAb" 
-  [class.uld-loaded]="positionStatus === 'FILLED' && 
-                        positionStatus === 'FILLED'">
-    {{positionLabel}}
-    <br>
-    <span class="pos-weight">
-      {positionWeight}}
-    </span>
-</div> -->
+<div [class.uld-loaded]="positionStatus === 'FILLED'" [class.uld-void]="positionStatus === 'VOID'">
+    <div class="pos-label">{{positionLabel}}</div>
+    <div class="pos-weight">{{positionWeight | number }}</div>
+    <div class="pos-uld-number" style="font-size:9px">{{positionUldNumber}}</div>
+</div>

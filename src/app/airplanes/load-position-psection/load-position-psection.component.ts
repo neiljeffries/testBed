@@ -10,15 +10,19 @@ export class LoadPositionPsectionComponent implements OnInit {
     positionStatus: string;
     positionLabel: string;
     positionWeight: string;
-    @Input() flightLTPData: any;
+    positionUldNumber: string;
+    positionLock: string;
+    @Input() position: any;
 
     constructor() { }
 
 
   ngOnInit() {
-    this.positionStatus = this.flightLTPData.positionStatus;
-    this.positionLabel = this.flightLTPData.positionStatus;
-    this.positionWeight = this.flightLTPData.positionStatus;
+    this.positionStatus = this.position.positionStatus;
+    this.positionLabel = this.position.positionLabel;
+    this.positionWeight = this.position.weight;
+    this.positionUldNumber = this.position.unitLoadingDevice;
+    this.positionLock = this.position.positionLock;
 
   }
 
