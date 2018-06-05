@@ -413,6 +413,31 @@ img {
     font-size: 9px;
 }
 
+/* new vertical position layout */
+.posRight{
+    /* display:none; */
+  }
+  .posCenter{
+    clear:left;
+    margin-top:19px;
+  }
+  .posLeft{
+    clear:left;
+    /* display:none; */
+  }
+  .v-uld-wrap{
+    height:72px;
+    width:44px;
+    float:left;
+    border:solid 1px #e3e3e3;
+  }
+  .v-uld-wrap-outerWrap{
+    
+  }
+  /* new vertical position layout */
+
+
+
 
 /* Smartphones (portrait and landscape) ----------- */
 

@@ -11,16 +11,16 @@ export class LoadPositionAbComponent implements OnInit {
   positionWeight: string;
   positionUldNumber: string;
   positionLock: string;
-  @Input() ab1: any;
-  @Input() ab2: any;
+  @Input() ab: any;
+ // @Input() ab: any;
   constructor() { }
 
   ngOnInit() {
-    this.positionStatus = this.ab1.positionStatus;
-    this.positionLabel = this.ab1.positionLabel.trim();
-    this.positionWeight = this.ab1.weight + this.ab2.weight;
-    this.positionUldNumber = this.ab1.unitLoadingDevice;
-    this.positionLock = this.ab1.positionLock;
+    this.positionStatus = this.ab.positionStatus;
+    this.positionLabel = this.ab.positionLabel.trim();
+    this.positionWeight = this.ab.weight;
+    this.positionUldNumber = this.ab.unitLoadingDevice;
+    this.positionLock = this.ab.positionLock;
 
   }
 

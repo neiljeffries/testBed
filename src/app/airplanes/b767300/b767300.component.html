@@ -1,17 +1,101 @@
 <div class="loadingContainer" *ngIf="flightLTPData; else noFlightLTPData">
 
-    <!-- <div class="actype">B767-300</div> -->
-    <div class="deckTitle">Upper Deck </div>
-    <div class="topSideOuterWrap">
 
-        <div class="b767300-pos1-wrap">
-            <app-load-position-top class="uld b767300-pos1" [position]="pos1"></app-load-position-top>
-            <!-- <div class="uld b767300-pos1" [class.uld-loaded]="flightLTPData.position[3].positionStatus === 'FILLED'" [class.uld-void]="flightLTPData.position[3].positionStatus === 'VOID'" class="uld b767300-pos1">1</div> -->
+
+    <div class="v-uld-outerWrap">
+
+        <div class="v-uld-wrap">
+            <app-load-position-top class="uld posCenter" [position]="pos1"></app-load-position-top>
         </div>
 
+        <div class="v-uld-wrap">
+            <app-load-position-top class="uld posRight" [position]="pos2R" *ngIf="!show2C"></app-load-position-top>
+            <app-load-position-top class="uld posCenter" [position]="pos2C" *ngIf="show2C"></app-load-position-top>
+            <app-load-position-top class="uld posLeft" [position]="pos2L" *ngIf="!show2C"></app-load-position-top>
+        </div>
+
+        <div class="v-uld-wrap">
+                <app-load-position-top class="uld posRight" [position]="pos3R" *ngIf="!show3C"></app-load-position-top>
+                <app-load-position-top class="uld posCenter" [position]="pos3C" *ngIf="show3C"></app-load-position-top>
+                <app-load-position-top class="uld posLeft" [position]="pos3L" *ngIf="!show3C"></app-load-position-top>
+        </div>
+
+        <div class="v-uld-wrap">
+                <app-load-position-top class="uld posRight" [position]="pos4R" *ngIf="!show4C"></app-load-position-top>
+                <app-load-position-top class="uld posCenter" [position]="pos4C" *ngIf="show4C"></app-load-position-top>
+                <app-load-position-top class="uld posLeft" [position]="pos4L" *ngIf="!show4C"></app-load-position-top>
+        </div>
+
+        <div class="v-uld-wrap">
+                <app-load-position-top class="uld posRight" [position]="pos5R" *ngIf="!show5C"></app-load-position-top>
+                <app-load-position-top class="uld posCenter" [position]="pos5C" *ngIf="show5C"></app-load-position-top>
+                <app-load-position-top class="uld posLeft" [position]="pos5L" *ngIf="!show5C"></app-load-position-top>
+        </div>
+
+        <div class="v-uld-wrap">
+                <app-load-position-top class="uld posRight" [position]="pos6R" *ngIf="!show6C"></app-load-position-top>
+                <app-load-position-top class="uld posCenter" [position]="pos6C" *ngIf="show6C"></app-load-position-top>
+                <app-load-position-top class="uld posLeft" [position]="pos6L" *ngIf="!show6C"></app-load-position-top>
+        </div>
+
+        <div class="v-uld-wrap">
+                <app-load-position-top class="uld posRight" [position]="pos7R" *ngIf="!show7C"></app-load-position-top>
+                <app-load-position-top class="uld posCenter" [position]="pos7C" *ngIf="show7C"></app-load-position-top>
+                <app-load-position-top class="uld posLeft" [position]="pos7L" *ngIf="!show7C"></app-load-position-top>
+        </div>
+
+        <div class="v-uld-wrap">
+                <app-load-position-top class="uld posRight" [position]="pos8R" *ngIf="!show8C"></app-load-position-top>
+                <app-load-position-top class="uld posCenter" [position]="pos8C" *ngIf="show8C"></app-load-position-top>
+                <app-load-position-top class="uld posLeft" [position]="pos8L" *ngIf="!show8C"></app-load-position-top>
+        </div>
+
+        <div class="v-uld-wrap">
+                <app-load-position-top class="uld posRight" [position]="pos9R" *ngIf="!show9C"></app-load-position-top>
+                <app-load-position-top class="uld posCenter" [position]="pos9C" *ngIf="show9C"></app-load-position-top>
+                <app-load-position-top class="uld posLeft" [position]="pos9L" *ngIf="!show9C"></app-load-position-top>
+        </div>
+
+        <div class="v-uld-wrap">
+                <app-load-position-top class="uld posRight" [position]="pos10R" *ngIf="!show10C"></app-load-position-top>
+                <app-load-position-top class="uld posCenter" [position]="pos10C" *ngIf="show10C"></app-load-position-top>
+                <app-load-position-top class="uld posLeft" [position]="pos10L" *ngIf="!show10C"></app-load-position-top>
+        </div>
+
+
+        <div class="v-uld-wrap">
+                <app-load-position-top class="uld posRight" [position]="pos11R" *ngIf="!show11C"></app-load-position-top>
+                <app-load-position-top class="uld posCenter" [position]="pos11C" *ngIf="show11C"></app-load-position-top>
+                <app-load-position-top class="uld posLeft" [position]="pos11L" *ngIf="!show11C"></app-load-position-top>
+        </div>
+
+        <div class="v-uld-wrap">
+                <app-load-position-top class="uld posRight" [position]="pos12R" *ngIf="!show12C"></app-load-position-top>
+                <app-load-position-top class="uld posCenter" [position]="pos12C" *ngIf="show12C"></app-load-position-top>
+                <app-load-position-top class="uld posLeft" [position]="pos12L" *ngIf="!show12C"></app-load-position-top>
+        </div>
+
+        <div class="v-uld-wrap">
+                <app-load-position-top class="uld posCenter" [position]="pos13"></app-load-position-top>
+        </div>
+
+    </div>
+
+
+
+
+
+
+    <!-- 
+
+
+    <div class="deckTitle">Upper Deck </div>
+    <div class="topSideOuterWrap">
+        <div class="b767300-pos1-wrap">
+            <app-load-position-top class="uld b767300-pos1" [position]="pos1"></app-load-position-top>
+        </div>
         <div class="topSideWrap">
             <div class="b767300-rightSide">
-                <!-- <div [class.uld-loaded]="flightLTPData.position[2].positionStatus === 'FILLED'" [class.uld-void]="flightLTPData.position[2].positionStatus === 'VOID'" class="uld">2R</div> -->
                 <app-load-position-top class="uld b767300-pos2R" [position]="pos2R"></app-load-position-top>
                 <app-load-position-top class="uld b767300-pos3R" [position]="pos3R"></app-load-position-top>
                 <app-load-position-top class="uld b767300-pos4R" [position]="pos4R"></app-load-position-top>
@@ -24,7 +108,6 @@
                 <app-load-position-top class="uld b767300-pos11R" [position]="pos11R"></app-load-position-top>
                 <app-load-position-top class="uld b767300-pos12R" [position]="pos12R"></app-load-position-top>
             </div>
-            <!-- end uld right side -->
             <div class="b767300-leftSide">
                 <app-load-position-top class="uld b767300-pos2L" [position]="pos2L"></app-load-position-top>
                 <app-load-position-top class="uld b767300-pos3L" [position]="pos3L"></app-load-position-top>
@@ -38,17 +121,12 @@
                 <app-load-position-top class="uld b767300-pos11L" [position]="pos11L"></app-load-position-top>
                 <app-load-position-top class="uld b767300-pos12L" [position]="pos12L"></app-load-position-top>
             </div>
-            <!-- end left side -->
         </div>
-        <!-- topSideWrap end -->
-
         <div class="b767300-pos11-12-13-wrap">
             <app-load-position-top class="uld b767300-pos13" [position]="pos13"></app-load-position-top>
         </div>
-
     </div>
-    <!-- end topSideOuterWrap -->
-
+ -->
     <div class="deckTitle">Lower Deck</div>
     <div class="pSectionWrap">
         <div class="uld b767300-posP1">P1</div>
@@ -58,11 +136,10 @@
         <div class="uld b767300-posP5">P5</div>
         <div class="uld b767300-posP6">P6</div>
         <div class="uld b767300-posP7">P7</div>
-        <app-load-position-ab class="b767300-posAb" [ab1]="posAb1" [ab2]="posAb2"></app-load-position-ab>
+        <app-load-position-ab class="b767300-posAb" [ab]="posAb1"></app-load-position-ab>
+        <app-load-position-ab class="b767300-posAb" [ab]="posAb2"></app-load-position-ab>
     </div>
 
 
 </div>
-<!-- loading container end -->
-
 <ng-template class="loadingContainer" #noFlightLTPData>No Load Data Available...</ng-template>

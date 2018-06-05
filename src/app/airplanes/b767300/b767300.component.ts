@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { FidsFlightLoadPosition } from 'app/classes/fids-load-position';
-import { FidsFlightLoadData } from "app/classes/fids-load-data";
+import { FidsFlightLoadData } from 'app/classes/fids-load-data';
 
 @Component({
   selector: 'app-b767300',
@@ -53,6 +53,19 @@ export class B767300Component implements OnInit {
   posP7: Array<FidsFlightLoadPosition> = [];
   posAb1: Array<FidsFlightLoadPosition> = [];
   posAb2: Array<FidsFlightLoadPosition> = [];
+
+  show2C = false;
+  show3C = false;
+  show4C = false;
+  show5C = false;
+  show6C = false;
+  show7C = false;
+  show8C = false;
+  show9C = false;
+  show10C = false;
+  show11C = false;
+  show12C = false;
+
   constructor() { }
 
 
@@ -122,10 +135,44 @@ export class B767300Component implements OnInit {
     this.posP7 = this.getByPosition(this.flightLTPData.position, 'P7');
     this.posAb1 = this.getABPosition(this.flightLTPData.position, 'AB')[0]; // gets AB1
     this.posAb2 = this.getABPosition(this.flightLTPData.position, 'AB')[1]; // gets AB2
+
+    console.log(typeof (this.pos6C) !== 'undefined');
+
+    if (typeof (this.pos2C) !== 'undefined') {
+      this.show2C = true;
+    }
+    if (typeof (this.pos3C) !== 'undefined') {
+      this.show3C = true;
+    }
+    if (typeof (this.pos4C) !== 'undefined') {
+      this.show4C = true;
+    }
+    if (typeof (this.pos5C) !== 'undefined') {
+      this.show5C = true;
+    }
+    if (typeof (this.pos6C) !== 'undefined') {
+      this.show6C = true;
+    }
+    if (typeof (this.pos7C) !== 'undefined') {
+      this.show7C = true;
+    }
+    if (typeof (this.pos8C) !== 'undefined') {
+      this.show8C = true;
+    }
+    if (typeof (this.pos9C) !== 'undefined') {
+      this.show9C = true;
+    }
+    if (typeof (this.pos10C) !== 'undefined') {
+      this.show10C = true;
+    }
+    if (typeof (this.pos11C) !== 'undefined') {
+      this.show11C = true;
+    }
+    if (typeof (this.pos12C) !== 'undefined') {
+      this.show12C = true;
+    }
+
   }
-
-
-}
 
 
 
