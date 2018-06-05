@@ -12,6 +12,7 @@ export class LoadPositionPsectionComponent implements OnInit {
     positionWeight: string;
     positionUldNumber: string;
     positionLock: string;
+    @Input() pRightMargin: boolean;
     @Input() position: any;
 
     constructor() { }
@@ -19,7 +20,7 @@ export class LoadPositionPsectionComponent implements OnInit {
 
   ngOnInit() {
     this.positionStatus = this.position.positionStatus;
-    this.positionLabel = this.position.positionLabel;
+    this.positionLabel = this.position.positionLabel.trim();
     this.positionWeight = this.position.weight;
     this.positionUldNumber = this.position.unitLoadingDevice;
     this.positionLock = this.position.positionLock;

@@ -95,6 +95,7 @@ export class FlightsTableComponent {
   showTableOptions = false;
   showAlert = false;
   expandCollapseRowsText = 'Expand';
+  loadingIndicator: boolean = true;
 
   constructor(
     // private bottomSheet: MatBottomSheet,
@@ -111,7 +112,7 @@ export class FlightsTableComponent {
     //     console.log(this.errorMessage)
     //   }
     // );
-
+    setTimeout(() => { this.loadingIndicator = false; }, 1500);
     this.flightsService.getFlightsJsonp().subscribe(
       res => {
         this.fidsData = <FidsData>res;

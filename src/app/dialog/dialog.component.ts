@@ -9,14 +9,10 @@ import { FidsFlight } from '../classes/fids-flight';
 })
 export class DialogComponent implements OnInit {
 
-  animal: string;
   dialogId: string;
   flightDetail: FidsFlight = null;
   showPositionsLoaded = true;
   removePositionsLoaded = false;
- // detailDisplayCols = ['flightdate', 'schedtime', 'esttime', 'estloadtime', 'lastuldloadtime', 'state'];
- // dataSource = [];
-
 
   constructor(
     public dialogRef: MatDialogRef<DialogComponent>,
@@ -32,18 +28,6 @@ export class DialogComponent implements OnInit {
   }
 
   ngOnInit() {
-
-    // const DETAIL_DATA = [{
-    //   flightdate: this.data.flightDetail[0].flightDate.millis,
-    //   schedtime: this.data.flightDetail[0].flightSchedTime,
-    //   esttime: this.data.flightDetail[0].flightEstTime,
-    //   estTimeDiff: this.data.flightDetail[0].flightEstTimeDiff,
-    //   estloadtime: this.data.flightDetail[0].flightLoadEstimate,
-    //   lastuldloadtime: this.data.flightDetail[0].flightLastUldTs,
-    //   state: this.data.flightDetail[0].flightState
-    // }];
-
-    // this.dataSource = DETAIL_DATA
 
     this.dialogRef.afterOpen().subscribe(() => {
       console.log('after open fired');

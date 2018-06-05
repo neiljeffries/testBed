@@ -61,7 +61,7 @@ body,
     -webkit-transform: skew(-5deg);
     transform: skew(-5deg);
     padding-left: 0px;
-    display: inline-block;
+    /* display: inline-block; */
     float: left;
     margin-left: -5px;
 }
@@ -74,7 +74,7 @@ body,
     -webkit-transform: skew(-5deg);
     transform: skew(-5deg);
     padding-left: 0px;
-    display: inline-block;
+    /* display: inline-block; */
     float: left;
     margin-left: 2px;
 }
@@ -87,7 +87,7 @@ body,
     -webkit-transform: skew(-5deg);
     transform: skew(-5deg);
     padding-left: 0px;
-    display: inline-block;
+    /* display: inline-block; */
     float: left;
     margin-left: 2px;
 }
@@ -146,7 +146,7 @@ img {
 }
 
 .brandingText {
-    display: inline-block;
+    /* display: inline-block; */
     float: left;
     color: #FFF;
     margin-top: 16px;
@@ -240,7 +240,7 @@ img {
     max-height: 25px;
 }
 
-.psectionContainer {}
+/* .psectionContainer {} */
 
 .containerPosition {
     border: solid 1px #ccc;
@@ -253,8 +253,13 @@ img {
     border-radius: 3px;
 }
 
-#flightDetailCardGridList .mat-grid-tile .mat-figure {
-    justify-content: left !important;
+#flightDetailCardGridList, #flightDetailCardGridList2 {
+    float: left;
+    width: 250px;
+}
+#flightDetailCardGridList tr td, #flightDetailCardGridList2 tr td{
+height:28px;
+justify-content: left !important;
 }
 
 .mat-divider {
@@ -267,7 +272,7 @@ img {
 
 .uldContainerCard {
     float: left;
-    width: 744px;
+    width: 727px;
     height: 252px;
     margin: auto;
     margin-top: 14px;
@@ -277,21 +282,21 @@ img {
 .flightDetailCard {
     float: left;
     clear: left;
-    width: 744px;
-    height: 182px !important;
+    width: 727px;
+    height: 149px !important;
 }
 
 .captainCard {
     width: 340px;
-    height: 114px;
+    height: 105px;
     float: left;
     margin-right: 14px;
     margin-bottom: 14px;
 }
 
 .tailCard {
-    width: 196px;
-    height: 114px;
+    width: 179px;
+    height: 105px;
     float: left;
     margin-right: 14px;
     margin-bottom: 14px;
@@ -299,7 +304,7 @@ img {
 
 .rampCard {
     width: 180px;
-    height: 114px;
+    height: 105px;
     float: left;
     margin-bottom: 14px;
 }
@@ -352,7 +357,7 @@ img {
 }
 
 .mat-card-content {
-    margin-top: 10px !important;
+    margin-top: 5px !important;
 }
 
 .uld {
@@ -367,6 +372,7 @@ img {
     color: #555;
     margin: 1px;
     border-radius: 3px;
+    padding-top: 2px;
 }
 
 .pSectionWrap .uld {
@@ -375,6 +381,40 @@ img {
     line-height: 14px;
     padding: 0;
     padding-top: 6px;
+}
+
+.p-uld {
+    width: 40px;
+    height: 46px;
+    line-height: 14px;
+    /* padding: 0;
+    padding-top: 6px; */
+    background-color: whitesmoke;
+    border: 1px solid #aaa;
+    float: left;
+    font-size: 14px;
+    text-align: center;
+    color: #555;
+    margin: 1px;
+    border-radius: 3px;
+    padding-top: 2px;
+}
+
+.ab-uld{
+    width: 40px;
+    height: 46px;
+    line-height: 14px;
+    /* padding: 0;
+    padding-top: 6px; */
+    background-color: whitesmoke;
+    border: 1px solid #aaa;
+    float: left;
+    font-size: 14px;
+    text-align: center;
+    color: #555;
+    margin: 1px;
+    border-radius: 3px;
+    padding-top: 2px;  
 }
 
 .deckTitle {
@@ -391,7 +431,7 @@ img {
     clear: left;
     height: 25px;
     float: left;
-    margin-top: 2px;
+    margin-top: 10px;
 }
 
 .loading-status-text {
@@ -406,9 +446,9 @@ img {
 }
 
 .uld-void {
-    background-color: grey;
-    border-color: #444;
-    color: #333;
+    background-color: #e3e3e3 !important;
+    border-color: #888;
+    color: #555;
 }
 
 .pos-weight {
@@ -418,9 +458,9 @@ img {
 
 /* new vertical position layout */
 
-.posRight {
-    /* display:none; */
-}
+/* .posRight {
+    display:none;
+} */
 
 .posCenter {
     clear: left;
@@ -439,7 +479,7 @@ img {
     border: solid 1px #e3e3e3;
 }
 
-.v-uld-wrap-outerWrap {}
+/* .v-uld-wrap-outerWrap {} */
 
 .pos-uld-number {
     font-size: 10px;
@@ -453,10 +493,16 @@ img {
     width: 10px;
     height: 10px;
     float: right;
+    margin-right: 2px;
 }
 
 .pos-lock i {
     font-size: 11px;
+}
+/* .posPsection{} */
+
+.pRightMargin{
+    margin-right:56px;
 }
 
 
@@ -593,12 +639,12 @@ img {
     .b757200-pos31 {
         margin-left: 78px !important;
     }
-    #flightDetailCardGridList {
+    /* #flightDetailCardGridList, #flightDetailCardGridList2 {
         display: block !important;
-    }
-    #flightDetailCardTable {
+    } */
+    /* #flightDetailCardTable {
         display: none !important;
-    }
+    } */
 }
 
 @media only screen and (min-width: 667px) and (max-width: 768px) {

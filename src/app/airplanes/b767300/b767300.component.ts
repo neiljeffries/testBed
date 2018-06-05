@@ -138,14 +138,9 @@ export class B767300Component implements OnInit {
 
   }
 
-  // getByPosition(arr, value) {
-  //   for (let i = 0, iLen = arr.length; i < iLen; i++) {
-  //     if (arr[i].positionLabel === '1') { this.pos1 = arr[i]; }
-  //   }
-  // }
 
   /* There are 2 AB positions with the name name, this will allow us to get both */
-  getABPosition(arr, value) {
+  getABPosition(arr, value): Array<any> {
     const AbPositionsArray = []
     for (let i = 0, iLen = arr.length; i < iLen; i++) {
       if (arr[i].positionLabel === value) {

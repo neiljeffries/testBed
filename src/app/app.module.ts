@@ -37,6 +37,8 @@ import { LoadPositionPsectionComponent } from './airplanes/load-position-psectio
 import { LoadPositionBellyComponent } from './airplanes/load-position-belly/load-position-belly.component';
 import { LoadPositionAbComponent } from './airplanes/load-position-ab/load-position-ab.component';
 import { OnlyNumbersPipe } from 'app/pipes/only-numbers.pipe';
+import { OnlyLettersPipe } from './pipes/only-letters.pipe';
+import { AcTypePipe } from './pipes/ac-type.pipe';
 
 
 
@@ -66,6 +68,8 @@ import { OnlyNumbersPipe } from 'app/pipes/only-numbers.pipe';
     LoadPositionBellyComponent,
     LoadPositionAbComponent,
     OnlyNumbersPipe,
+    OnlyLettersPipe,
+    AcTypePipe,
   ],
   imports: [
     BrowserModule,

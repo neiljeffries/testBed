@@ -11,13 +11,14 @@ export class LoadPositionTopComponent implements OnInit {
   positionWeight: string;
   positionUldNumber: string;
   positionLock: string;
+  @Input() posClass: string;
   @Input() position: any;
   constructor() { }
 
   ngOnInit() {
     if (this.position) {
     this.positionStatus = this.position.positionStatus;
-    this.positionLabel = this.position.positionLabel;
+    this.positionLabel = this.position.positionLabel.trim();
     this.positionWeight = this.position.weight;
     this.positionUldNumber = this.position.unitLoadingDevice;
     this.positionLock = this.position.positionLock;

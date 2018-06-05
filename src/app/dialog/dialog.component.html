@@ -139,88 +139,53 @@
 
             <mat-card-content class="dashboard-card-content">
 
+                <table id="flightDetailCardGridList">
+                    <tr>
+                        <td>Flight Date:</td>
+                        <td>{{data.flightDetail[0].flightDate.millis | date:'MM/dd/yyyy'}}</td>
+                    </tr>
+                    <tr>
+                        <td>Sched Time: </td>
+                        <td>{{data.flightDetail[0].flightSchedTime}}</td>
+                    </tr>
+                    <tr>
+                        <td>Est Time: </td>
+                        <td>{{data.flightDetail[0].flightEstTime === null ? '- -' : data.flightDetail[0].flightEstTime}} {{data.flightDetail[0].flightEstTimeDiff}}</td>
+                    </tr>
+                </table>
 
-                <!-- <table id="flightDetailCardTable" style="width:100%" mat-table [dataSource]="dataSource" class="mat-elevation-z1">
-
-                    <ng-container matColumnDef="flightdate">
-                        <th mat-header-cell *matHeaderCellDef> Flight Date </th>
-                        <td mat-cell *matCellDef="let element"> {{element.flightdate | date:'MM/dd/yyyy'}} </td>
-                    </ng-container>
-
-                    <ng-container matColumnDef="schedtime">
-                        <th mat-header-cell *matHeaderCellDef> Sch Time: </th>
-                        <td mat-cell *matCellDef="let element"> {{element.schedtime}} </td>
-                    </ng-container>
-
-                    <ng-container matColumnDef="esttime">
-                        <th mat-header-cell *matHeaderCellDef> Est Time: </th>
-                        <td mat-cell *matCellDef="let element"> {{element.esttime}} </td>
-                    </ng-container>
-
-                    <ng-container matColumnDef="estloadtime">
-                        <th mat-header-cell *matHeaderCellDef> Est Load: </th>
-                        <td mat-cell *matCellDef="let element"> {{element.estloadtime}} </td>
-                    </ng-container>
-
-                    <ng-container matColumnDef="lastuldloadtime">
-                        <th mat-header-cell *matHeaderCellDef> Last ULD: </th>
-                        <td mat-cell *matCellDef="let element"> {{element.lastuldloadtime}} </td>
-                    </ng-container>
-
-                    <ng-container matColumnDef="state">
-                        <th mat-header-cell *matHeaderCellDef> State: </th>
-                        <td mat-cell *matCellDef="let element"> {{element.state}} </td>
-                    </ng-container>
-
-                    <tr mat-header-row *matHeaderRowDef="detailDisplayCols"></tr>
-                    <tr mat-row *matRowDef="let row; columns: detailDisplayCols;"></tr>
-                </table> -->
-
-                <mat-grid-list id="flightDetailCardGridList" rows="4" cols="3" rowHeight="30px">
-                    <mat-grid-tile>Flight Date:</mat-grid-tile>
-                    <mat-grid-tile>{{data.flightDetail[0].flightDate.millis | date:'MM/dd/yyyy'}}</mat-grid-tile>
-
-                    <mat-grid-tile>Sched Time: </mat-grid-tile>
-                    <mat-grid-tile>{{data.flightDetail[0].flightSchedTime}}</mat-grid-tile>
-
-                    <mat-grid-tile>Est Time: </mat-grid-tile>
-                    <mat-grid-tile>{{data.flightDetail[0].flightEstTime === null ? '- -' : data.flightDetail[0].flightEstTime}} {{data.flightDetail[0].flightEstTimeDiff}}</mat-grid-tile>
-                   
-                    <mat-grid-tile>Est Load Time: </mat-grid-tile>
-                    <mat-grid-tile>{{data.flightDetail[0].flightLoadEstimate === null ? '- -' : data.flightDetail[0].flightLoadEstimate}}</mat-grid-tile>
-
-                    <mat-grid-tile>Last ULD Time: </mat-grid-tile>
-                    <mat-grid-tile>{{data.flightDetail[0].flightLastUldTs === null ? '- -' : data.flightDetail[0].flightLastUldTs}} </mat-grid-tile>
-
-                    <mat-grid-tile>State:</mat-grid-tile>
-                    <mat-grid-tile>{{data.flightDetail[0].flightState === null ? '- -' : data.flightDetail[0].flightState}}</mat-grid-tile>
-
-                    <!-- <mat-grid-tile>Status:</mat-grid-tile>
-                    <mat-grid-tile>{{data.flightDetail[0].flightStatus === null ? '- -' : data.flightDetail[0].flightStatus}}</mat-grid-tile> -->
-                </mat-grid-list>
+                <table id="flightDetailCardGridList2">
+                    <tr>
+                        <td>Est Load Time: </td>
+                        <td>{{data.flightDetail[0].flightLoadEstimate === null ? '- -' : data.flightDetail[0].flightLoadEstimate}}</td>
+                    </tr>
+                    <tr>
+                        <td>Last ULD Time: </td>
+                        <td>{{data.flightDetail[0].flightLastUldTs === null ? '- -' : data.flightDetail[0].flightLastUldTs}} </td>
+                    </tr>
+                    <tr>
+                        <td>State:</td>
+                        <td>{{data.flightDetail[0].flightState === null ? '- -' : data.flightDetail[0].flightState}}</td>
+                    </tr>                
+                </table>
 
             </mat-card-content>
 
 
         </mat-card>
-        <mat-card #uldContainerCard class="uldContainerCard" [class.removePositionsLoaded]="removePositionsLoaded" [class.collapsePositionsLoaded]="!showPositionsLoaded">
-            <mat-card-header>
 
+        <mat-card #uldContainerCard class="uldContainerCard" [class.removePositionsLoaded]="removePositionsLoaded" [class.collapsePositionsLoaded]="!showPositionsLoaded">
+
+            <mat-card-header>
                 <mat-card-title>
-                <div>Load Status: <span class="loading-status-text">{{data.flightDetail[0].flightStatus}}</span></div>
-                <div>Aircraft Type: <span class="loading-status-text">                   
-                    <span class="ac-type" *ngIf="data.flightDetail[0].flightAircraftType === 'A30'">A300-600</span>
-                    <span class="ac-type" *ngIf="data.flightDetail[0].flightAircraftType === '74Y'">747-8</span>
-                    <span class="ac-type" *ngIf="data.flightDetail[0].flightAircraftType === '74P'">747-400</span>
-                    <span class="ac-type" *ngIf="data.flightDetail[0].flightAircraftType === '75P'">757-200</span>
-                    <span class="ac-type" *ngIf="data.flightDetail[0].flightAircraftType === '76P'">B767-300</span>
-                    <span class="ac-type" *ngIf="data.flightDetail[0].flightAircraftType === 'M1F'">MD-11</span>
-                    </span> 
-                </div>
-                    
+
+                    <div>Load Status: <span class="loading-status-text">{{data.flightDetail[0].flightStatus}}</span></div>
+                    <div>Aircraft Type: <span class="loading-status-text ac-type">{{data.flightDetail[0].flightAircraftType | acType}}</span></div>
+                        
                     <button mat-icon-button class="more-button float-right" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
                         <mat-icon>more_vert</mat-icon>
                     </button>
+
                     <mat-menu #menu="matMenu" xPosition="before">
                         <button mat-menu-item (click)="showPositionsLoaded = !showPositionsLoaded">{{showPositionsLoaded == false ? 'Expand' : 'Collpase'}}</button>
                         <button mat-menu-item (click)="removePositionsLoaded = true">Remove</button>
