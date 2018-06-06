@@ -14,24 +14,72 @@
 
 <div style="padding-bottom: 0px;">
 
+    <mat-accordion class="mat-accordian-headers-align">
+        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    <!-- Self aware panel -->
+                    <mat-form-field class="example-form-field" style="margin-right:18px; width: 260px;">
+                        <input matInput type="text" placeholder="Search: Flight | Gateway" #searchInput maxlength="256" [(ngModel)]="filterInputValue" (keyup)='updateFilter($event)' />
+                        <button mat-button *ngIf="filterInputValue" matSuffix mat-icon-button aria-label="Clear" (click)="filterInputValue=''; updateFilter(null)">
+                            <mat-icon>close</mat-icon>
+                        </button>
+                        <!-- <mat-hint align="start"><strong>Don't disclose personal info</strong> </mat-hint> -->
+                        <!-- <mat-hint align="end">{{searchInput.value.length}} / 256</mat-hint> -->
+                    </mat-form-field>
+                    <!-- <mat-icon color="primary" style="margin-right:20px;">settings</mat-icon> -->
+                </mat-panel-title>
+                <mat-panel-description>
+                    <!-- Currently I am {{panelOpenState ? 'open' : 'closed'}} -->
 
-    <div style="margin:auto; height:45px; margin-right: 30px;">
+                </mat-panel-description>
+
+            </mat-expansion-panel-header>
+            <div style="height:60px">
+                <!-- <button mat-button (click)="flightsTable.rowDetail.expandAllRows()">Expand All</button>
+            <button mat-button (click)="flightsTable.rowDetail.collapseAllRows()">Collapse All</button> -->
+                <!-- <button mat-mini-fab mat-button color="primary" (click)="rowLimit = 15">+Row</button> -->
+
+
+                <div style="width:100px; float:left">
+                    <mat-checkbox class="example-margin" style="margin-left:20px;" color="primary" [(ngModel)]="showFlight"> <span>Flight</span> </mat-checkbox>
+                </div>
+                <div style="width:100px; float:left">
+                    <mat-checkbox class="example-margin" style="margin-left:20px;" color="primary" [(ngModel)]="showTail"> <span>Tail</span> </mat-checkbox>
+                </div>
+                <div style="width:100px; float:left">
+                    <mat-checkbox class="example-margin" style="margin-left:20px;" color="primary" [(ngModel)]="showParking"> <span>Parking</span> </mat-checkbox>
+                </div>
+                <div style="width:100px; float:left">
+                    <mat-checkbox class="example-margin" style="margin-left:20px;" color="primary" [(ngModel)]="showCaptain"> <span>Captain</span> </mat-checkbox>
+                </div>
+                <div style="width:100px; float:left">
+
+                    <mat-checkbox class="example-margin" style="margin-left:20px;" color="primary" [(ngModel)]="showEstTime"> <span>Est Time</span> </mat-checkbox>
+                </div>
+                <div style="width:100px; float:left">
+                    <mat-checkbox class="example-margin" style="margin-left:20px;" color="primary" [(ngModel)]="showStatus"> <span>Status</span> </mat-checkbox>
+                </div>
+
+
+            </div>
+        </mat-expansion-panel>
+    </mat-accordion>
+
+
+
+    <div style="margin:auto; height:45px; margin-right: 30px; display:none">
         <!-- <button mat-mini-fab color="primary" (click)="toggleTableOptions()"><mat-icon aria-label="">settings</mat-icon></button> -->
         <!-- <input type='text' style='padding:8px;margin:15px auto;width:30%;' placeholder='Type to filter the name column...' (keyup)='updateFilter($event)' /> -->
         <!-- <button mat-raised-button (click)="openBottomSheet()">Open Bottom</button> -->
-
-
-
         <div style="float:right; margin:0; margin-left: 30px;" matTooltip="Options">
             <button mat-icon-button color="primary" (click)="toggleTableOptions()">
                 <mat-icon>settings</mat-icon>
             </button>
         </div>
 
-
         <div style="padding:0; margin:0; float:right; height: 45px;" *ngIf="showTableOptions" [@flyInOut]>
             <div>
-
                 <!-- <button mat-button (click)="flightsTable.rowDetail.expandAllRows()">Expand All</button>
             <button mat-button (click)="flightsTable.rowDetail.collapseAllRows()">Collapse All</button> -->
                 <!-- <button mat-mini-fab mat-button color="primary" (click)="rowLimit = 15">+Row</button> -->
@@ -64,21 +112,8 @@
 
 
 
-    <ngx-datatable 
-    #flightsTable 
-        style="margin-bottom:25px" 
-        class='material fullscreen' 
-        style="top: 2px; width:100%;" 
-        [columnMode]="'force'" 
-        [limit]="rowLimit" 
-        [footerHeight]="40" 
-        [headerHeight]="40" 
-        [rowHeight]="40" 
-        [rows]='fidsDepartingFlights' 
-        [selectionType]="'single'"
-        (select)='onSelect($event)' 
-        (page)="onPage($event)"
-        [loadingIndicator]="loadingIndicator">
+    <ngx-datatable #flightsTable style="margin-bottom:25px" class='material fullscreen' style="top: 2px; width:100%;" [columnMode]="'force'" [limit]="rowLimit" [footerHeight]="40" [headerHeight]="40" [rowHeight]="40" [rows]='fidsDepartingFlights' [selectionType]="'single'"
+        (select)='onSelect($event)' (page)="onPage($event)" [loadingIndicator]="loadingIndicator">
 
         <!-- <ngx-datatable #flightsTable class="material fullscreen" style="top: 52px; width:100%;" [columnMode]="'force'" [headerHeight]="50" [footerHeight]="0" [rowHeight]="50" [scrollbarV]="true" [scrollbarH]="true" [rows]="flights" [selectionType]="'single'"
         (select)='onSelect($event)'> -->

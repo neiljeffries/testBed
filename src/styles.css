@@ -240,6 +240,7 @@ img {
     max-height: 25px;
 }
 
+
 /* .psectionContainer {} */
 
 .containerPosition {
@@ -253,13 +254,16 @@ img {
     border-radius: 3px;
 }
 
-#flightDetailCardGridList, #flightDetailCardGridList2 {
+#flightDetailCardGridList,
+#flightDetailCardGridList2 {
     float: left;
     width: 250px;
 }
-#flightDetailCardGridList tr td, #flightDetailCardGridList2 tr td{
-height:28px;
-justify-content: left !important;
+
+#flightDetailCardGridList tr td,
+#flightDetailCardGridList2 tr td {
+    height: 28px;
+    justify-content: left !important;
 }
 
 .mat-divider {
@@ -400,7 +404,7 @@ justify-content: left !important;
     padding-top: 2px;
 }
 
-.ab-uld{
+.ab-uld {
     width: 40px;
     height: 46px;
     line-height: 14px;
@@ -414,7 +418,7 @@ justify-content: left !important;
     color: #555;
     margin: 1px;
     border-radius: 3px;
-    padding-top: 2px;  
+    padding-top: 2px;
 }
 
 .deckTitle {
@@ -429,7 +433,7 @@ justify-content: left !important;
 
 .pSectionWrap {
     clear: left;
-    height: 25px;
+    height: 48px;
     float: left;
     margin-top: 10px;
 }
@@ -458,6 +462,7 @@ justify-content: left !important;
 
 /* new vertical position layout */
 
+
 /* .posRight {
     display:none;
 } */
@@ -479,6 +484,7 @@ justify-content: left !important;
     border: solid 1px #e3e3e3;
 }
 
+
 /* .v-uld-wrap-outerWrap {} */
 
 .pos-uld-number {
@@ -499,10 +505,16 @@ justify-content: left !important;
 .pos-lock i {
     font-size: 11px;
 }
+
+
 /* .posPsection{} */
 
-.pRightMargin{
-    margin-right:56px;
+.pRightMargin {
+    margin-right: 56px;
+}
+
+.mat-form-field-appearance-legacy .mat-form-field-underline {
+    bottom: 12px !important;
 }
 
 
