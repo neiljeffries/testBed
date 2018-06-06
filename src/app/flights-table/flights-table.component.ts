@@ -96,6 +96,7 @@ export class FlightsTableComponent {
   showAlert = false;
   expandCollapseRowsText = 'Expand';
   loadingIndicator: boolean = true;
+  panelOpenState = false;
 
   constructor(
     // private bottomSheet: MatBottomSheet,

@@ -513,6 +513,10 @@ img {
     margin-right: 56px;
 }
 
+.mat-form-field-appearance-legacy .mat-form-field-underline {
+    bottom: 12px !important;
+}
+
 
 /* new vertical position layout */
 
