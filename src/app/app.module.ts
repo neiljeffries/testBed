@@ -39,6 +39,8 @@ import { LoadPositionAbComponent } from './airplanes/load-position-ab/load-posit
 import { OnlyNumbersPipe } from 'app/pipes/only-numbers.pipe';
 import { OnlyLettersPipe } from './pipes/only-letters.pipe';
 import { AcTypePipe } from './pipes/ac-type.pipe';
+import { UserComponent } from './user/user.component';
+import { UserService } from 'app/user/user.service';
 
 
 
@@ -70,6 +72,7 @@ import { AcTypePipe } from './pipes/ac-type.pipe';
     OnlyNumbersPipe,
     OnlyLettersPipe,
     AcTypePipe,
+    UserComponent,
   ],
   imports: [
     BrowserModule,
@@ -93,7 +96,7 @@ import { AcTypePipe } from './pipes/ac-type.pipe';
     BottomSheetComponent
 
   ],
-  providers: [ProfileService, CrewmembersService, FrogsService, FlightsService],
+  providers: [ProfileService, CrewmembersService, FrogsService, FlightsService, UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

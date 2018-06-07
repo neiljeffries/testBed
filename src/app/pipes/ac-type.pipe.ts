@@ -17,7 +17,7 @@ export class AcTypePipe implements PipeTransform {
     if (value === '74Y') {
       text = '747-8';
     }
-    if (value === '74P') {
+    if (value === '74N') {
       text = '747-400';
     }
     if (value === '75P') {

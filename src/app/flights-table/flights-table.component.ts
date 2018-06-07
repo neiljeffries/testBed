@@ -7,7 +7,6 @@ import { Component, ViewEncapsulation, ViewChild, HostListener } from '@angular/
 import { MatDialog, MatFormField, MatSelect, MatTabsModule, MatProgressSpinner, MatDatepickerInputEvent,
   MatAccordion, MatSnackBar, MatProgressBar, MatMenu, MatSidenav, MatSidenavContainer, MatSidenavContent, MatGridListModule,
   MatSidenavModule } from '@angular/material';
-
 import { DialogComponent } from 'app/dialog/dialog.component';
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs';
@@ -21,10 +20,7 @@ import { FidsFlight } from '../classes/fids-flight';
 import { FidsAlert } from '../classes/fids-alert';
 import { DatePipe } from '@angular/common';
 
-
-
 // import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
-
 
 // animations: [
 //   trigger('shrinkOut', [
@@ -35,7 +31,6 @@ import { DatePipe } from '@angular/common';
 //     ])
 //   ])
 // ]
-
 
 @Component({
   selector: 'app-flights-table',
@@ -100,7 +95,7 @@ export class FlightsTableComponent {
   panelOpenState = false;
   screenHeight;
   screenWidth;
-  columnMode: string = 'force';
+  columnMode = 'force';
   constructor(
     // private bottomSheet: MatBottomSheet,
     private flightsService: FlightsService, public dialog: MatDialog,
@@ -118,7 +113,7 @@ export class FlightsTableComponent {
     // );
 
     setTimeout(() => { this.loadingIndicator = false; }, 1500);
-    
+
     this.flightsService.getFlightsJsonp().subscribe(
       res => {
         this.fidsData = <FidsData>res;
@@ -246,14 +241,12 @@ export class FlightsTableComponent {
     onResize(event?) {
       this.screenHeight = window.innerHeight;
       this.screenWidth = window.innerWidth;
-      console.log(this.screenWidth+' x '+this.screenHeight);
-      if(this.screenWidth < 417){
-        //this.columnMode = 'standard';
+      console.log(this.screenWidth + ' x ' + this.screenHeight);
+      if (this.screenWidth < 417) {
         this.showCaptain = false;
         this.showEstTime = false;
         this.showStatus = false;
-      }else{
-        //this.columnMode = 'force';
+      } else {
         this.showCaptain = true;
         this.showEstTime = true;
         this.showStatus = true;
