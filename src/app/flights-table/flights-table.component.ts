@@ -68,6 +68,7 @@ export class FlightsTableComponent {
   fidsDepartingFlights: FidsFlight = null;
   fidsAlerts: FidsAlert = null;
   @ViewChild('flightsTable') flightsTable: any;
+  @ViewChild('expPanel') expPanel: any;
   temp = [];
   temp2 = [];
   flights: Flight[] = null;
@@ -192,7 +193,10 @@ export class FlightsTableComponent {
   //   this.rowsExpanded = !this.rowsExpanded;
   // }
 
-
+  expPanelToggle(){
+    console.log(this.expPanel);
+    this.expPanel.toggle();
+  }
 
   toggleTableOptions() {
     this.showTableOptions = !this.showTableOptions;
