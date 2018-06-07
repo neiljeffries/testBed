@@ -11,7 +11,7 @@ import { Http, Response, Jsonp, JsonpModule } from '@angular/http';
 import { Injectable } from '@angular/core';
 
 
-// import { Flight } from './flight';
+ import { Flight } from './flight';
 import { FidsData } from '../classes/fids-data';
 
 

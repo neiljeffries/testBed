@@ -3,7 +3,7 @@
 2. Declare DataTableDetailComponent in your app.module!
 3. Add DataTableDetailService to providers in your app.module!
 */
-import { Component, ViewEncapsulation, ViewChild } from '@angular/core';
+import { Component, ViewEncapsulation, ViewChild, HostListener } from '@angular/core';
 import { MatDialog, MatFormField, MatSelect, MatTabsModule, MatProgressSpinner, MatDatepickerInputEvent,
   MatAccordion, MatSnackBar, MatProgressBar, MatMenu, MatSidenav, MatSidenavContainer, MatSidenavContent, MatGridListModule,
   MatSidenavModule } from '@angular/material';
@@ -20,6 +20,7 @@ import { FidsData } from '../classes/fids-data';
 import { FidsFlight } from '../classes/fids-flight';
 import { FidsAlert } from '../classes/fids-alert';
 import { DatePipe } from '@angular/common';
+
 
 
 // import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
@@ -97,7 +98,9 @@ export class FlightsTableComponent {
   expandCollapseRowsText = 'Expand';
   loadingIndicator = true;
   panelOpenState = false;
-
+  screenHeight;
+  screenWidth;
+  columnMode: string = 'force';
   constructor(
     // private bottomSheet: MatBottomSheet,
     private flightsService: FlightsService, public dialog: MatDialog,
@@ -113,15 +116,16 @@ export class FlightsTableComponent {
     //     console.log(this.errorMessage)
     //   }
     // );
+
     setTimeout(() => { this.loadingIndicator = false; }, 1500);
+    
     this.flightsService.getFlightsJsonp().subscribe(
       res => {
         this.fidsData = <FidsData>res;
         this.fidsArrivingFlights = <FidsFlight>this.fidsData.fidsArrivingFlights;
         this.fidsDepartingFlights = <FidsFlight>this.fidsData.fidsDepartingFlights;
         this.fidsAlerts = <FidsAlert>this.fidsData.fidsAlerts;
-        // this.flights = <Flight[]>flights;
-        // this.temp = [...flights]
+
       },
       error => {
         this.errorMessage = <any>error;
@@ -133,7 +137,7 @@ export class FlightsTableComponent {
     //   .subscribe(data => {
     //     this.showAlert = !this.showAlert;
     //   });
-
+    this.onResize();
   }
 
   onPage(event) {
@@ -212,12 +216,12 @@ export class FlightsTableComponent {
 
     // Name Filter Array
     const temp = this.temp.filter(function (x) {
-      return x.name.toLowerCase().indexOf(val) !== -1 || !val;
+      return x.flightRouteWithNumber.toLowerCase().indexOf(val) !== -1 || !val;
     });
 
     // Age Filter Array
     const temp2 = this.temp.filter(function (d) {
-      return d.age.toString().toLowerCase().indexOf(val) !== -1 || !val;
+      return d.flightCaptain.toString().toLowerCase().indexOf(val) !== -1 || !val;
     });
 
     if (event == null || (event !== null && event.target.value === '')) {
@@ -238,7 +242,23 @@ export class FlightsTableComponent {
     console.log('settings icon clicked and detected in flights-table.component');
   }
 
-
+@HostListener('window:resize', ['$event'])
+    onResize(event?) {
+      this.screenHeight = window.innerHeight;
+      this.screenWidth = window.innerWidth;
+      console.log(this.screenWidth+' x '+this.screenHeight);
+      if(this.screenWidth < 417){
+        //this.columnMode = 'standard';
+        this.showCaptain = false;
+        this.showEstTime = false;
+        this.showStatus = false;
+      }else{
+        //this.columnMode = 'force';
+        this.showCaptain = true;
+        this.showEstTime = true;
+        this.showStatus = true;
+      }
+}
 
 
 
