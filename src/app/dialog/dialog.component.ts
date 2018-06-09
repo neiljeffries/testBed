@@ -1,5 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
+import { FidsFlight } from '../classes/fids-flight';
 
 @Component({
   selector: 'app-dialog',
@@ -8,31 +9,33 @@ import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 })
 export class DialogComponent implements OnInit {
 
-animal: string;
-dialogId: string;
+  dialogId: string;
+  flightDetail: FidsFlight = null;
+  showPositionsLoaded = true;
+  removePositionsLoaded = false;
 
   constructor(
     public dialogRef: MatDialogRef<DialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any
-    ) {
-      this.dialogId = this.dialogRef.id.toString();
-    }
+  ) {
+    this.dialogId = this.dialogRef.id.toString();
+
+
+  }
 
   onNoClick(): void {
     this.dialogRef.close();
   }
 
   ngOnInit() {
-    console.log(this.data);
-    console.log(this.dialogRef.id);
 
-      this.dialogRef.afterOpen().subscribe(() => {
-        console.log('after open fired');
-      });
+    this.dialogRef.afterOpen().subscribe(() => {
+      console.log('after open fired');
+    });
 
-      this.dialogRef.afterClosed().subscribe(() => {
-        console.log('after closed fired');
-      });
+    this.dialogRef.afterClosed().subscribe(() => {
+      console.log('after closed fired');
+    });
   }
 
 

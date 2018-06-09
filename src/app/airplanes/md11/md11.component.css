@@ -1,0 +1,34 @@
+
+  .md11-leftSide {
+    clear: left;
+  }
+  .md11-pos13-14-wrap{
+    height:50px;
+    float:left;
+  }
+  .md11-pos13, .md11-pos14{
+    margin-top:17px;
+  }
+  .md11-posP1{
+    margin-left:0px;
+  }
+
+  .md11-posAb{
+    margin-left:18px;
+  }
+  
+  .md11-posP7{
+    margin-left:18px;
+  }
+  
+
+
+
+  .uld-loaded{
+      background-color: #28a745;
+      border:solid 1px green;
+      color:white;
+  }
+
+  
+  

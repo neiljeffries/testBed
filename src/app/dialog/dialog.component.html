@@ -1,6 +1,4 @@
-{{dialogId}}
-
-<div [hidden]="dialogId != 'favoriteAnimal'">
+<div *ngIf="dialogId === 'favoriteAnimal'">
 
     <h1>hello! {{data.name}}</h1>
 
@@ -17,7 +15,204 @@
 </div>
 
 
-<div [hidden]="dialogId != 'test1'">
+<div *ngIf="dialogId === 'flightDetail'">
 
-    <h1>test1</h1>
+    <div mat-dialog-title class="my-font-larger">
+
+
+
+        {{data.flightDetail[0].flightNumber}} - {{data.flightDetail[0].flightOrigin}}
+        <!-- <i class="material-icons my-font-larger">arrow_forward</i>  -->
+
+
+        <i *ngIf="data.flightDetail[0].flightDirection === 'Arriving'" class="material-icons my-font-larger" style="float:none">flight_land</i>
+        <i *ngIf="data.flightDetail[0].flightDirection === 'Departing'" class="material-icons my-font-larger" style="float:none">flight_takeoff</i> {{data.flightDetail[0].flightDestination}}
+
+        <button mat-dialog-close mat-raised-button mat-icon-button class="more-button small-close-button" aria-label="Toggle menu">
+            <mat-icon>close</mat-icon>
+        </button>
+    </div>
+
+    <mat-dialog-content style="padding-bottom:2px;  padding-top: 10px;">
+        <!-- <mat-divider></mat-divider> -->
+
+
+        <!-- <mat-grid-list cols="3" gutterSize="10px" rowHeight="180px">
+
+            <mat-grid-tile> -->
+
+        <mat-card class="captainCard">
+            <mat-card-header>
+
+                <mat-card-title>
+                    Captain:
+
+                </mat-card-title>
+            </mat-card-header>
+
+            <mat-card-content class="dashboard-card-content">
+                <!-- <mat-divider></mat-divider> -->
+                <p class="my-font">
+
+                    {{data.flightDetail[0].flightCaptain === null ? '- -' : data.flightDetail[0].flightCaptain}}</p>
+            </mat-card-content>
+        </mat-card>
+        <!-- </mat-grid-tile>
+
+            <mat-grid-tile> -->
+
+        <mat-card class="tailCard">
+            <mat-card-header>
+
+                <mat-card-title>
+                    Tail:
+
+                </mat-card-title>
+            </mat-card-header>
+
+            <mat-card-content class="dashboard-card-content">
+                <!-- <mat-divider></mat-divider> -->
+                <p class="my-font">
+
+                    {{data.flightDetail[0].flightTailNumber === null ? '- -' : data.flightDetail[0].flightTailNumber}}</p>
+                <!-- <li> Orientation Gtwy:  {{data.flightDetail[0].flightOrientationGateway}} </li> -->
+                <!-- <li> Origin: {{data.flightDetail[0].flightOrigin}} </li> -->
+            </mat-card-content>
+        </mat-card>
+        <!-- </mat-grid-tile>
+
+            <mat-grid-tile> -->
+
+        <mat-card class="rampCard">
+
+            <mat-card-header>
+
+                <mat-card-title>
+
+                    Parking:
+
+                    <!-- <button mat-icon-button class="more-button" 
+                            [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+                            <mat-icon>more_vert</mat-icon>
+                        </button>
+                            <mat-menu #menu="matMenu" xPosition="before">
+                                <button mat-menu-item>Expand</button>
+                                <button mat-menu-item>Remove</button>
+                            </mat-menu> -->
+
+                </mat-card-title>
+
+            </mat-card-header>
+
+            <mat-card-content class="dashboard-card-content">
+                <!-- <p class="my-font-smaller">Ramp:</p> -->
+                <!-- <mat-divider></mat-divider> -->
+                <p class="my-font" style="text-align:center">
+                    {{data.flightDetail[0].flightParkingPosition === null ? '- -' : data.flightDetail[0].flightParkingPosition}}
+                    <!-- {{data.flightDetail[0].flightParkingPosition}} -->
+                </p>
+                <!-- <li> Route With Number: {{data.flightDetail[0].flightRouteWithNumber}} </li>  -->
+
+                <!-- <li> LTP Data: {{data.flightDetail[0].flightLTPData}} </li> -->
+                <!-- <mat-divider></mat-divider> -->
+            </mat-card-content>
+        </mat-card>
+        <!-- </mat-grid-tile>
+        </mat-grid-list> -->
+
+        <mat-card class="flightDetailCard">
+
+            <mat-card-header>
+
+                <mat-card-title>
+                    Details:
+                    <button mat-icon-button class="more-button float-right" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+                        <mat-icon>more_vert</mat-icon>
+                    </button>
+                    <mat-menu #menu="matMenu" xPosition="before">
+                        <button mat-menu-item>Expand</button>
+                        <button mat-menu-item>Remove</button>
+                    </mat-menu>
+
+                </mat-card-title>
+            </mat-card-header>
+
+            <mat-card-content class="dashboard-card-content">
+
+                <table id="flightDetailCardGridList">
+                    <tr>
+                        <td>Flight Date:</td>
+                        <td>{{data.flightDetail[0].flightDate.millis | date:'MM/dd/yyyy'}}</td>
+                    </tr>
+                    <tr>
+                        <td>Sched Time: </td>
+                        <td>{{data.flightDetail[0].flightSchedTime}}</td>
+                    </tr>
+                    <tr>
+                        <td>Est Time: </td>
+                        <td>{{data.flightDetail[0].flightEstTime === null ? '- -' : data.flightDetail[0].flightEstTime}} {{data.flightDetail[0].flightEstTimeDiff}}</td>
+                    </tr>
+                </table>
+
+                <table id="flightDetailCardGridList2">
+                    <tr>
+                        <td>Est Load Time: </td>
+                        <td>{{data.flightDetail[0].flightLoadEstimate === null ? '- -' : data.flightDetail[0].flightLoadEstimate}}</td>
+                    </tr>
+                    <tr>
+                        <td>Last ULD Time: </td>
+                        <td>{{data.flightDetail[0].flightLastUldTs === null ? '- -' : data.flightDetail[0].flightLastUldTs}} </td>
+                    </tr>
+                    <tr>
+                        <td>State:</td>
+                        <td>{{data.flightDetail[0].flightState === null ? '- -' : data.flightDetail[0].flightState}}</td>
+                    </tr>                
+                </table>
+
+            </mat-card-content>
+
+
+        </mat-card>
+
+        <mat-card #uldContainerCard class="uldContainerCard" [class.removePositionsLoaded]="removePositionsLoaded" [class.collapsePositionsLoaded]="!showPositionsLoaded">
+
+            <mat-card-header>
+                <mat-card-title>
+
+                    <div>Load Status: <span class="loading-status-text">{{data.flightDetail[0].flightStatus}}</span></div>
+                    <div>Aircraft Type: <span class="loading-status-text ac-type">{{data.flightDetail[0].flightAircraftType | acType}}</span></div>
+                        
+                    <button mat-icon-button class="more-button float-right" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+                        <mat-icon>more_vert</mat-icon>
+                    </button>
+
+                    <mat-menu #menu="matMenu" xPosition="before">
+                        <button mat-menu-item (click)="showPositionsLoaded = !showPositionsLoaded">{{showPositionsLoaded == false ? 'Expand' : 'Collpase'}}</button>
+                        <button mat-menu-item (click)="removePositionsLoaded = true">Remove</button>
+                    </mat-menu>
+
+                </mat-card-title>
+            </mat-card-header>
+
+            <mat-card-content class="dashboard-card-content" *ngIf="showPositionsLoaded">
+                <!-- <mat-divider></mat-divider> -->
+                <!-- <div class="loading-status-text">{{data.flightDetail[0].flightStatus}}</div> -->
+                <app-a300600 *ngIf="data.flightDetail[0].flightAircraftType === 'A30'" [flightLTPData]="data.flightDetail[0].flightLTPData"></app-a300600>
+                <app-b7478 *ngIf="data.flightDetail[0].flightAircraftType === '74Y'" [flightLTPData]="data.flightDetail[0].flightLTPData"></app-b7478>
+                <app-b747400 *ngIf="data.flightDetail[0].flightAircraftType === '74P'" [flightLTPData]="data.flightDetail[0].flightLTPData"></app-b747400>
+                <app-b757200 *ngIf="data.flightDetail[0].flightAircraftType === '75P'" [flightLTPData]="data.flightDetail[0].flightLTPData"></app-b757200>
+                <app-b767300 *ngIf="data.flightDetail[0].flightAircraftType === '76P'" [flightLTPData]="data.flightDetail[0].flightLTPData"></app-b767300>
+                <app-md11 *ngIf="data.flightDetail[0].flightAircraftType === 'M1F'" [flightLTPData]="data.flightDetail[0].flightLTPData"></app-md11>
+
+            </mat-card-content>
+        </mat-card>
+
+
+    </mat-dialog-content>
+    <!-- <mat-dialog-actions>
+        <button mat-button mat-dialog-close>No</button>
+   
+        <button mat-button [mat-dialog-close]="true">Yes</button>
+    </mat-dialog-actions> -->
+
 </div>

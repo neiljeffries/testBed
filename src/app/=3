@@ -1,0 +1,17 @@
+
+> node-sass@4.9.0 install /Users/neil/Desktop/workspace/testBed/node_modules/node-sass
+> node scripts/install.js
+
+Downloading binary from https://github.com/sass/node-sass/releases/download/v4.9.0/darwin-x64-64_binding.node
+Download complete
+Binary saved to /Users/neil/Desktop/workspace/testBed/node_modules/node-sass/vendor/darwin-x64-64/binding.node
+Caching binary to /Users/neil/.npm/node-sass/4.9.0/darwin-x64-64_binding.node
+
+> node-sass@4.9.0 postinstall /Users/neil/Desktop/workspace/testBed/node_modules/node-sass
+> node scripts/build.js
+
+Binary found at /Users/neil/Desktop/workspace/testBed/node_modules/node-sass/vendor/darwin-x64-64/binding.node
+Testing binary
+Binary is fine
++ jasmine@3.1.0
+added 37 packages and updated 2 packages in 23.475s

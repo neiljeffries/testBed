@@ -1,8 +1,11 @@
+
+import {throwError as observableThrowError,  Observable } from 'rxjs';
+
+import {catchError, map} from 'rxjs/operators';
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
-import 'rxjs/add/operator/map';
+
 import { Profile } from './profile';
-import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class ProfileService {
@@ -12,9 +15,9 @@ export class ProfileService {
   nameterm: string = '';
 
   getProfile(): Observable<Profile> {
-      return this.http.get(this.profileUrl+this.nameterm)
-          .map((response:Response) => response.json())
-              .catch((error:any) => Observable.throw(error.json().error || 'Server error'));
+      return this.http.get(this.profileUrl+this.nameterm).pipe(
+          map((response:Response) => response.json()),
+              catchError((error:any) => observableThrowError(error.json().error || 'Server error')),);
   }
 
   public jsonObjToProfileObj(data: any): Profile { // <-- handles parsing the json object into a Profile object that we can work with

@@ -1,8 +1,8 @@
 <div class="container">
 
-  <div class="row row-offcanvas row-offcanvas-right">
-    <div class="col-6 col-md-3 sidebar-offcanvas" id="sidebar">
-      <!-- <div class="list-group">
+    <div class="row row-offcanvas row-offcanvas-right">
+        <div class="col-6 col-md-3 sidebar-offcanvas" id="sidebar">
+            <!-- <div class="list-group">
         <a href="#" class="list-group-item active">Link</a>
         <a href="#" class="list-group-item">Link</a>
         <a href="#" class="list-group-item">Link</a>
@@ -15,49 +15,36 @@
         <a href="#" class="list-group-item">Link</a>
       </div> -->
 
-    <div>
-<ngx-datatable
-        class="bootstrap"
-        [rows]="rows"
-        [loadingIndicator]="loadingIndicator"
-        [columns]="columns"
-        [scrollbarV]="false"
-        [columnMode]="'force'"
-        [headerHeight]="40"
-        [footerHeight]="70"        
-        [rowHeight]="40"
-        [limit]="10"
-        [reorderable]="reorderable">
-      </ngx-datatable>
+            <div>
+                <ngx-datatable class="bootstrap" [rows]="rows" [loadingIndicator]="loadingIndicator" [columns]="columns" [scrollbarV]="false" [columnMode]="'force'" [headerHeight]="40" [footerHeight]="70" [rowHeight]="40" [limit]="10" [reorderable]="reorderable">
+                </ngx-datatable>
+            </div>
+
+        </div>
+        <!--/span-->
+        <div class="col-12 col-md-9">
+
+            <div class="page-header">
+                <h1>Information I care about here</h1>
+            </div>
+            <div class="page-header text-center">
+                <div id="showdate"></div>"{{func}}"
+                <div id="datepicker" style="margin-left: auto; margin-right: auto; width: 477px;"></div>
+            </div>
+            <div class="row">
+                <app-data-table (emittedData)="haveEmittedData($event)"></app-data-table>
+            </div>
+            <!--/row-->
+        </div>
+        <!--/span-->
+
+
     </div>
+    <!--/row-->
 
-    </div>
-    <!--/span-->
-    <div class="col-12 col-md-9">
-
-      <div class="page-header">
-        <h1>Information I care about here</h1>
-      </div>
-      <div class="page-header text-center">
-        <div id="showdate"></div>"{{func}}"
-        <div id="datepicker" style="margin-left: auto; margin-right: auto; width: 477px;"></div>
-      </div>
-      <div class="row">
-        <app-data-table (emittedData)="haveEmittedData($event)"></app-data-table>
-      </div>
-      <!--/row-->
-    </div>
-    <!--/span-->
+    <hr>
 
 
-  </div>
-  <!--/row-->
-
-  <hr>
-
-  <footer>
-    <p>&copy; Company 2017</p>
-  </footer>
 
 </div>
 <!--/.container-->

@@ -1,0 +1,33 @@
+
+  .b767300-leftSide {
+    clear: left;
+  }
+  .b767300-pos11-12-13-wrap, .b767300-pos1-wrap{
+    height:50px;
+    float:left;
+  }
+  .b767300-pos1, .b767300-pos11, .b767300-pos12, .b767300-pos13{
+    margin-top: 17px;
+  }
+  .b767300-posP1{
+    margin-left:23px;
+  }
+  .b767300-posP5{
+    margin-left:75px
+  }
+  .b767300-posAb{
+    margin-left:20px;
+  }
+  
+  
+
+
+
+  .uld-loaded{
+      background-color: #28a745;
+      border:solid 1px green;
+      color:white;
+  }
+
+  
+  

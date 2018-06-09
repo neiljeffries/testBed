@@ -1,0 +1,904 @@
+{
+    "fidsFlightStatus": {
+        "fidsLocationComments": [],
+        "fidsArrivingFlights": [{
+            "flightDirection": "Arriving",
+            "flightOrigin": "CGN",
+            "flightDestination": "SDF",
+            "flightNumber": "UPS0204",
+            "flightRouteWithNumber": "CGN - UPS0204",
+            "flightTailNumber": "N285UP",
+            "flightParkingPosition": "",
+            "flightComments": "",
+            "flightCaptain": "R. DINIZ",
+            "flightEstTime": "14:40",
+            "flightSchedTime": "12:57",
+            "flightEstTimeStatus": "late",
+            "flightEstTimeDiff": "+1:43",
+            "flightStatus": "En Route To SDF",
+            "flightLastUldTs": "",
+            "flightLoadEstimate": ""
+        }, {
+            "flightDirection": "Arriving",
+            "flightOrigin": "EMA",
+            "flightDestination": "SDF",
+            "flightNumber": "UPS0232",
+            "flightRouteWithNumber": "EMA - UPS0232",
+            "flightTailNumber": "N346UP",
+            "flightParkingPosition": "02E10",
+            "flightComments": "",
+            "flightCaptain": "B. LAKAH",
+            "flightEstTime": "10:35",
+            "flightSchedTime": "11:46",
+            "flightEstTimeStatus": "early",
+            "flightEstTimeDiff": "-1:11",
+            "flightStatus": "Acft in SDF",
+            "flightLastUldTs": "",
+            "flightLoadEstimate": ""
+        }, {
+            "flightDirection": "Arriving",
+            "flightOrigin": "MHT",
+            "flightDestination": "SDF",
+            "flightNumber": "UPS2047",
+            "flightRouteWithNumber": "MHT - UPS2047",
+            "flightParkingPosition": "",
+            "flightComments": "",
+            "flightCaptain": "",
+            "flightEstTime": "12:11",
+            "flightSchedTime": "12:11",
+            "flightEstTimeStatus": "ontime",
+            "flightEstTimeDiff": "",
+            "flightStatus": "Cancelled",
+            "flightLastUldTs": "",
+            "flightLoadEstimate": ""
+        }, {
+            "flightDirection": "Arriving",
+            "flightOrigin": "SWF",
+            "flightDestination": "SDF",
+            "flightNumber": "UPS2259",
+            "flightRouteWithNumber": "SWF - UPS2259",
+            "flightParkingPosition": "",
+            "flightComments": "",
+            "flightCaptain": "",
+            "flightEstTime": "13:11",
+            "flightSchedTime": "13:11",
+            "flightEstTimeStatus": "ontime",
+            "flightEstTimeDiff": "",
+            "flightStatus": "Cancelled",
+            "flightLastUldTs": "",
+            "flightLoadEstimate": ""
+        }, {
+            "flightDirection": "Arriving",
+            "flightOrigin": "ANC",
+            "flightDestination": "SDF",
+            "flightNumber": "UPS2997",
+            "flightRouteWithNumber": "ANC - UPS2997",
+            "flightTailNumber": "N279UP",
+            "flightParkingPosition": "",
+            "flightComments": "",
+            "flightCaptain": "N. BARRETT",
+            "flightEstTime": "13:10",
+            "flightSchedTime": "13:23",
+            "flightEstTimeStatus": "early",
+            "flightEstTimeDiff": "-:13",
+            "flightStatus": "En Route To SDF",
+            "flightLastUldTs": "",
+            "flightLoadEstimate": ""
+        }, {
+            "flightDirection": "Arriving",
+            "flightOrigin": "PIA",
+            "flightDestination": "SDF",
+            "flightNumber": "UPS9605",
+            "flightRouteWithNumber": "PIA - UPS9605",
+            "flightTailNumber": "N468UP",
+            "flightParkingPosition": "",
+            "flightComments": "",
+            "flightCaptain": "A. JONES",
+            "flightEstTime": "12:45",
+            "flightSchedTime": "11:33",
+            "flightEstTimeStatus": "late",
+            "flightEstTimeDiff": "+1:12",
+            "flightStatus": "Scheduled ",
+            "flightLastUldTs": "",
+            "flightLoadEstimate": ""
+        }, {
+            "flightDirection": "Arriving",
+            "flightOrigin": "BUF",
+            "flightDestination": "SDF",
+            "flightNumber": "UPS9745",
+            "flightRouteWithNumber": "BUF - UPS9745",
+            "flightParkingPosition": "",
+            "flightComments": "",
+            "flightCaptain": "",
+            "flightEstTime": "12:36",
+            "flightSchedTime": "12:36",
+            "flightEstTimeStatus": "ontime",
+            "flightEstTimeDiff": "",
+            "flightStatus": "Cancelled",
+            "flightLastUldTs": "",
+            "flightLoadEstimate": ""
+        }],
+        "fidsDepartingFlights": [{
+            "flightDirection": "Departing",
+            "flightOrigin": "SDF",
+            "flightDestination": "DXB",
+            "flightNumber": "UPS0076",
+            "flightRouteWithNumber": "DXB - UPS0076",
+            "flightTailNumber": "N572UP",
+            "flightParkingPosition": "11P09",
+            "flightComments": "",
+            "flightCaptain": "J. BOCCUZZI",
+            "flightEstTime": "11:30",
+            "flightSchedTime": "08:10",
+            "flightEstTimeStatus": "late",
+            "flightEstTimeDiff": "+3:20",
+            "flightStatus": "Loading in SDF",
+            "flightLastUldTs": "05/29 10:56",
+            "flightLoadEstimate": "100",
+            "flightAircraftType": "74Y",
+            "flightLTPData": {
+                "position": [{
+                    "positionLabel": "P9",
+                    "unitLoadingDevice": "*** VOID ***",
+                    "weight": "0",
+                    "positionLock": "Y",
+                    "positionStatus": "VOID"
+                }, {
+                    "positionLabel": "P5",
+                    "unitLoadingDevice": "*** VOID ***",
+                    "weight": "0",
+                    "positionLock": "Y",
+                    "positionStatus": "VOID"
+                }, {
+                    "positionLabel": "P3",
+                    "unitLoadingDevice": "*** VOID ***",
+                    "weight": "0",
+                    "positionLock": "Y",
+                    "positionStatus": "VOID"
+                }, {
+                    "positionLabel": "P8",
+                    "unitLoadingDevice": "*** VOID ***",
+                    "weight": "0",
+                    "positionLock": "Y",
+                    "positionStatus": "VOID"
+                }, {
+                    "positionLabel": "P7",
+                    "unitLoadingDevice": "*** VOID ***",
+                    "weight": "0",
+                    "positionLock": "Y",
+                    "positionStatus": "VOID"
+                }, {
+                    "positionLabel": "P2",
+                    "unitLoadingDevice": "*** VOID ***",
+                    "weight": "0",
+                    "positionLock": "Y",
+                    "positionStatus": "VOID"
+                }, {
+                    "positionLabel": "P4",
+                    "unitLoadingDevice": "*** VOID ***",
+                    "weight": "0",
+                    "positionLock": "Y",
+                    "positionStatus": "VOID"
+                }, {
+                    "positionLabel": "P1",
+                    "unitLoadingDevice": "*** VOID ***",
+                    "weight": "0",
+                    "positionLock": "Y",
+                    "positionStatus": "VOID"
+                }, {
+                    "positionLabel": "P6",
+                    "unitLoadingDevice": "*** VOID ***",
+                    "weight": "0",
+                    "positionLock": "Y",
+                    "positionStatus": "VOID"
+                }, {
+                    "positionLabel": "13LS",
+                    "unitLoadingDevice": "*** VOID ***",
+                    "weight": "0",
+                    "positionLock": "Y",
+                    "positionStatus": "VOID"
+                }, {
+                    "positionLabel": "14LS",
+                    "unitLoadingDevice": "*** VOID ***",
+                    "weight": "0",
+                    "positionLock": "Y",
+                    "positionStatus": "VOID"
+                }, {
+                    "positionLabel": "6RS",
+                    "unitLoadingDevice": "AMX54404UPS",
+                    "weight": "3914",
+                    "positionLock": "Y",
+                    "positionStatus": "FILLED"
+                }, {
+                    "positionLabel": "5LS",
+                    "unitLoadingDevice": "AMJ52509UPS",
+                    "weight": "1820",
+                    "positionLock": "Y",
+                    "positionStatus": "FILLED"
+                }, {
+                    "positionLabel": "13RS",
+                    "unitLoadingDevice": "*** VOID ***",
+                    "weight": "0",
+                    "positionLock": "Y",
+                    "positionStatus": "VOID"
+                }, {
+                    "positionLabel": "14RS",
+                    "unitLoadingDevice": "*** VOID ***",
+                    "weight": "0",
+                    "positionLock": "Y",
+                    "positionStatus": "VOID"
+                }, {
+                    "positionLabel": "18R",
+                    "unitLoadingDevice": "AMJ60033UPS",
+                    "weight": "3320",
+                    "positionLock": "Y",
+                    "positionStatus": "FILLED"
+                }, {
+                    "positionLabel": "7RS",
+                    "unitLoadingDevice": "AMX54272UPS",
+                    "weight": "4361",
+                    "positionLock": "Y",
+                    "positionStatus": "FILLED"
+                }, {
+                    "positionLabel": "9RS",
+                    "unitLoadingDevice": "AMD50960UPS",
+                    "weight": "5005",
+                    "positionLock": "Y",
+                    "positionStatus": "FILLED"
+                }, {
+                    "positionLabel": "8RS",
+                    "unitLoadingDevice": "AMJ63154UPS",
+                    "weight": "1165",
+                    "positionLock": "Y",
+                    "positionStatus": "FILLED"
+                }, {
+                    "positionLabel": "7LS",
+                    "unitLoadingDevice": "PMC90813UPS",
+                    "weight": "8280",
+                    "positionLock": "Y",
+                    "positionStatus": "FILLED"
+                }, {
+                    "positionLabel": "8LS",
+                    "unitLoadingDevice": "PMC95237UPS",
+                    "weight": "2305",
+                    "positionLock": "Y",
+                    "positionStatus": "FILLED"
+                }, {
+                    "positionLabel": "9LS",
+                    "unitLoadingDevice": "AMJ59313UPS",
+                    "weight": "1350",
+                    "positionLock": "Y",
+                    "positionStatus": "FILLED"
+                }, {
+                    "positionLabel": "10LS",
+                    "unitLoadingDevice": "AMD50818UPS",
+                    "weight": "2318",
+                    "positionLock": "Y",
+                    "positionStatus": "FILLED"
+                }, {
+                    "positionLabel": "10RS",
+                    "unitLoadingDevice": "AMJ52085UPS",
+                    "weight": "1476",
+                    "positionLock": "Y",
+                    "positionStatus": "FILLED"
+                }, {
+                    "positionLabel": "11LS",
+                    "unitLoadingDevice": "AMJ59305UPS",
+                    "weight": "1610",
+                    "positionLock": "Y",
+                    "positionStatus": "FILLED"
+                }, {
+                    "positionLabel": "AB",
+                    "unitLoadingDevice": "BELLY",
+                    "weight": "60",
+                    "positionLock": "Y",
+                    "positionStatus": "FILLED"
+                }, {
+                    "positionLabel": "12LS",
+                    "unitLoadingDevice": "AAD15650UPS",
+                    "weight": "7700",
+                    "positionLock": "Y",
+                    "positionStatus": "FILLED"
+                }, {
+                    "positionLabel": "11RS",
+                    "unitLoadingDevice": "AMD50806UPS",
+                    "weight": "3449",
+                    "positionLock": "Y",
+                    "positionStatus": "FILLED"
+                }, {
+                    "positionLabel": "1",
+                    "unitLoadingDevice": "PMC94415UPS",
+                    "weight": "1020",
+                    "positionLock": "Y",
+                    "positionStatus": "FILLED"
+                }, {
+                    "positionLabel": "4R",
+                    "unitLoadingDevice": "AMP68194UPS",
+                    "weight": "2635",
+                    "positionLock": "Y",
+                    "positionStatus": "FILLED"
+                }, {
+                    "positionLabel": "18L",
+                    "unitLoadingDevice": "AMP67599UPS",
+                    "weight": "765",
+                    "positionLock": "Y",
+                    "positionStatus": "FILLED"
+                }, {
+                    "positionLabel": "19L",
+                    "unitLoadingDevice": "AMJ58950UPS",
+                    "weight": "4475",
+                    "positionLock": "Y",
+                    "positionStatus": "FILLED"
+                }, {
+                    "positionLabel": "6LS",
+                    "unitLoadingDevice": "AMD50701UPS",
+                    "weight": "2912",
+                    "positionLock": "Y",
+                    "positionStatus": "FILLED"
+                }, {
+                    "positionLabel": "3",
+                    "unitLoadingDevice": "AAY42723UPS",
+                    "weight": "1115",
+                    "positionLock": "Y",
+                    "positionStatus": "FILLED"
+                }, {
+                    "positionLabel": "5RS",
+                    "unitLoadingDevice": "AAD46474UPS",
+                    "weight": "2867",
+                    "positionLock": "Y",
+                    "positionStatus": "FILLED"
+                }, {
+                    "positionLabel": "19R",
+                    "unitLoadingDevice": "AAX15971UPS",
+                    "weight": "3389",
+                    "positionLock": "Y",
+                    "positionStatus": "FILLED"
+                }, {
+                    "positionLabel": "2",
+                    "unitLoadingDevice": "PMC94320UPS",
+                    "weight": "902",
+                    "positionLock": "Y",
+                    "positionStatus": "FILLED"
+                }, {
+                    "positionLabel": "4L",
+                    "unitLoadingDevice": "AAY42607UPS",
+                    "weight": "1580",
+                    "positionLock": "Y",
+                    "positionStatus": "FILLED"
+                }, {
+                    "positionLabel": "20",
+                    "unitLoadingDevice": "AAY79726UPS",
+                    "weight": "2665",
+                    "positionLock": "Y",
+                    "positionStatus": "FILLED"
+                }, {
+                    "positionLabel": "12RS",
+                    "unitLoadingDevice": "AMD50716UPS",
+                    "weight": "3808",
+                    "positionLock": "Y",
+                    "positionStatus": "FILLED"
+                }]
+            }
+        }, {
+            "flightDirection": "Departing",
+            "flightOrigin": "SDF",
+            "flightDestination": "CGN",
+            "flightNumber": "UPS0207",
+            "flightRouteWithNumber": "CGN - UPS0207",
+            "flightTailNumber": "N350UP",
+            "flightParkingPosition": "01D06",
+            "flightComments": "",
+            "flightCaptain": "R. JUNTUNEN",
+            "flightEstTime": "12:41",
+            "flightSchedTime": "12:41",
+            "flightEstTimeStatus": "ontime",
+            "flightEstTimeDiff": "",
+            "flightStatus": "Loading in SDF",
+            "flightLastUldTs": "05/29 09:12",
+            "flightLoadEstimate": "100",
+            "flightAircraftType": "76P",
+            "flightLTPData": {
+                "position": [{
+                    "positionLabel": "AB",
+                    "unitLoadingDevice": "BELLY",
+                    "weight": "25",
+                    "positionLock": "Y",
+                    "positionStatus": "FILLED"
+                }, {
+                    "positionLabel": "AB",
+                    "unitLoadingDevice": "BELLY",
+                    "weight": "1",
+                    "positionLock": "Y",
+                    "positionStatus": "FILLED"
+                }, {
+                    "positionLabel": "2R",
+                    "unitLoadingDevice": "AAD14752UPS",
+                    "weight": "3820",
+                    "positionLock": "Y",
+                    "positionStatus": "FILLED"
+                }, {
+                    "positionLabel": "1",
+                    "unitLoadingDevice": "AAY42018UPS",
+                    "weight": "3180",
+                    "positionLock": "Y",
+                    "positionStatus": "FILLED"
+                }, {
+                    "positionLabel": "2L",
+                    "unitLoadingDevice": "AAD15358UPS",
+                    "weight": "3360",
+                    "positionLock": "Y",
+                    "positionStatus": "FILLED"
+                }, {
+                    "positionLabel": "3C",
+                    "unitLoadingDevice": "AMJ62239UPS",
+                    "weight": "578",
+                    "positionLock": "Y",
+                    "positionStatus": "FILLED"
+                }, {
+                    "positionLabel": "P5",
+                    "unitLoadingDevice": "*** VOID ***",
+                    "weight": "0",
+                    "positionLock": "Y",
+                    "positionStatus": "VOID"
+                }, {
+                    "positionLabel": "P3",
+                    "unitLoadingDevice": "*** VOID ***",
+                    "weight": "0",
+                    "positionLock": "Y",
+                    "positionStatus": "VOID"
+                }, {
+                    "positionLabel": "P4",
+                    "unitLoadingDevice": "*** VOID ***",
+                    "weight": "0",
+                    "positionLock": "Y",
+                    "positionStatus": "VOID"
+                }, {
+                    "positionLabel": "P6",
+                    "unitLoadingDevice": "*** VOID ***",
+                    "weight": "0",
+                    "positionLock": "Y",
+                    "positionStatus": "VOID"
+                }, {
+                    "positionLabel": "P2",
+                    "unitLoadingDevice": "*** VOID ***",
+                    "weight": "0",
+                    "positionLock": "Y",
+                    "positionStatus": "VOID"
+                }, {
+                    "positionLabel": "P7",
+                    "unitLoadingDevice": "*** VOID ***",
+                    "weight": "0",
+                    "positionLock": "Y",
+                    "positionStatus": "VOID"
+                }, {
+                    "positionLabel": "P1",
+                    "unitLoadingDevice": "*** VOID ***",
+                    "weight": "0",
+                    "positionLock": "Y",
+                    "positionStatus": "VOID"
+                }, {
+                    "positionLabel": "4C",
+                    "unitLoadingDevice": "AMJ59103UPS",
+                    "weight": "591",
+                    "positionLock": "Y",
+                    "positionStatus": "FILLED"
+                }, {
+                    "positionLabel": "12R",
+                    "unitLoadingDevice": "PAH39543UPS",
+                    "weight": "1785",
+                    "positionLock": "Y",
+                    "positionStatus": "FILLED"
+                }, {
+                    "positionLabel": "13",
+                    "unitLoadingDevice": "AAY42011UPS",
+                    "weight": "3351",
+                    "positionLock": "Y",
+                    "positionStatus": "FILLED"
+                }, {
+                    "positionLabel": "12L",
+                    "unitLoadingDevice": "AAD15511UPS",
+                    "weight": "2995",
+                    "positionLock": "Y",
+                    "positionStatus": "FILLED"
+                }, {
+                    "positionLabel": "10C",
+                    "unitLoadingDevice": "AMJ59028UPS",
+                    "weight": "591",
+                    "positionLock": "Y",
+                    "positionStatus": "FILLED"
+                }, {
+                    "positionLabel": "11C",
+                    "unitLoadingDevice": "AMJ61712UPS",
+                    "weight": "578",
+                    "positionLock": "Y",
+                    "positionStatus": "FILLED"
+                }, {
+                    "positionLabel": "9C",
+                    "unitLoadingDevice": "AMJ61700UPS",
+                    "weight": "578",
+                    "positionLock": "Y",
+                    "positionStatus": "FILLED"
+                }, {
+                    "positionLabel": "5C",
+                    "unitLoadingDevice": "AMJ60316UPS",
+                    "weight": "578",
+                    "positionLock": "Y",
+                    "positionStatus": "FILLED"
+                }, {
+                    "positionLabel": "8C",
+                    "unitLoadingDevice": "AMJ52233UPS",
+                    "weight": "585",
+                    "positionLock": "Y",
+                    "positionStatus": "FILLED"
+                }, {
+                    "positionLabel": "6C",
+                    "unitLoadingDevice": "AMJ52596UPS",
+                    "weight": "585",
+                    "positionLock": "Y",
+                    "positionStatus": "FILLED"
+                }, {
+                    "positionLabel": "7C",
+                    "unitLoadingDevice": "AMJ61639UPS",
+                    "weight": "578",
+                    "positionLock": "Y",
+                    "positionStatus": "FILLED"
+                }]
+            }
+        }, {
+            "flightDirection": "Departing",
+            "flightOrigin": "SDF",
+            "flightDestination": "SDF",
+            "flightNumber": "UPS9343",
+            "flightRouteWithNumber": "SDF - UPS9343",
+            "flightTailNumber": "N149UP",
+            "flightParkingPosition": "",
+            "flightComments": "",
+            "flightCaptain": "",
+            "flightEstTime": "08:15",
+            "flightSchedTime": "08:15",
+            "flightEstTimeStatus": "ontime",
+            "flightEstTimeDiff": "",
+            "flightStatus": "Awaiting Loading",
+            "flightLastUldTs": "",
+            "flightLoadEstimate": "",
+            "flightAircraftType": "A30",
+            "flightLTPData": {}
+        }, {
+            "flightDirection": "Departing",
+            "flightOrigin": "SDF",
+            "flightDestination": "SDF",
+            "flightNumber": "UPS9345",
+            "flightRouteWithNumber": "SDF - UPS9345",
+            "flightTailNumber": "N467UP",
+            "flightParkingPosition": "",
+            "flightComments": "",
+            "flightCaptain": "",
+            "flightEstTime": "08:15",
+            "flightSchedTime": "08:15",
+            "flightEstTimeStatus": "ontime",
+            "flightEstTimeDiff": "",
+            "flightStatus": "Loading in SDF",
+            "flightLastUldTs": "05/29 09:56",
+            "flightLoadEstimate": "100",
+            "flightAircraftType": "75P",
+            "flightLTPData": {
+                "position": [{
+                    "positionLabel": "2",
+                    "unitLoadingDevice": "*** VOID ***",
+                    "weight": "0",
+                    "positionLock": "Y",
+                    "positionStatus": "VOID"
+                }, {
+                    "positionLabel": "3",
+                    "unitLoadingDevice": "*** VOID ***",
+                    "weight": "0",
+                    "positionLock": "Y",
+                    "positionStatus": "VOID"
+                }, {
+                    "positionLabel": "1",
+                    "unitLoadingDevice": "*** VOID ***",
+                    "weight": "0",
+                    "positionLock": "Y",
+                    "positionStatus": "VOID"
+                }, {
+                    "positionLabel": "14",
+                    "unitLoadingDevice": "*** VOID ***",
+                    "weight": "0",
+                    "positionLock": "Y",
+                    "positionStatus": "VOID"
+                }, {
+                    "positionLabel": "15",
+                    "unitLoadingDevice": "*** VOID ***",
+                    "weight": "0",
+                    "positionLock": "Y",
+                    "positionStatus": "VOID"
+                }, {
+                    "positionLabel": "11",
+                    "unitLoadingDevice": "*** VOID ***",
+                    "weight": "0",
+                    "positionLock": "Y",
+                    "positionStatus": "VOID"
+                }, {
+                    "positionLabel": "B34",
+                    "unitLoadingDevice": "BELLY",
+                    "weight": "0",
+                    "positionLock": "Y",
+                    "positionStatus": "FILLED"
+                }, {
+                    "positionLabel": "7",
+                    "unitLoadingDevice": "*** VOID ***",
+                    "weight": "0",
+                    "positionLock": "Y",
+                    "positionStatus": "VOID"
+                }, {
+                    "positionLabel": "10",
+                    "unitLoadingDevice": "*** VOID ***",
+                    "weight": "0",
+                    "positionLock": "Y",
+                    "positionStatus": "VOID"
+                }, {
+                    "positionLabel": "8",
+                    "unitLoadingDevice": "*** VOID ***",
+                    "weight": "0",
+                    "positionLock": "Y",
+                    "positionStatus": "VOID"
+                }, {
+                    "positionLabel": "9",
+                    "unitLoadingDevice": "*** VOID ***",
+                    "weight": "0",
+                    "positionLock": "Y",
+                    "positionStatus": "VOID"
+                }, {
+                    "positionLabel": "4",
+                    "unitLoadingDevice": "*** VOID ***",
+                    "weight": "0",
+                    "positionLock": "Y",
+                    "positionStatus": "VOID"
+                }, {
+                    "positionLabel": "12",
+                    "unitLoadingDevice": "*** VOID ***",
+                    "weight": "0",
+                    "positionLock": "Y",
+                    "positionStatus": "VOID"
+                }, {
+                    "positionLabel": "6",
+                    "unitLoadingDevice": "*** VOID ***",
+                    "weight": "0",
+                    "positionLock": "Y",
+                    "positionStatus": "VOID"
+                }, {
+                    "positionLabel": "B31",
+                    "unitLoadingDevice": "BELLY",
+                    "weight": "0",
+                    "positionLock": "Y",
+                    "positionStatus": "FILLED"
+                }, {
+                    "positionLabel": "5",
+                    "unitLoadingDevice": "*** VOID ***",
+                    "weight": "0",
+                    "positionLock": "Y",
+                    "positionStatus": "VOID"
+                }, {
+                    "positionLabel": "13",
+                    "unitLoadingDevice": "*** VOID ***",
+                    "weight": "0",
+                    "positionLock": "Y",
+                    "positionStatus": "VOID"
+                }]
+            }
+        }, {
+            "flightDirection": "Departing",
+            "flightOrigin": "SDF",
+            "flightDestination": "SDF",
+            "flightNumber": "UPS9348",
+            "flightRouteWithNumber": "SDF - UPS9348",
+            "flightTailNumber": "N308UP",
+            "flightParkingPosition": "",
+            "flightComments": "",
+            "flightCaptain": "",
+            "flightEstTime": "08:15",
+            "flightSchedTime": "08:15",
+            "flightEstTimeStatus": "ontime",
+            "flightEstTimeDiff": "",
+            "flightStatus": "Loading in SDF",
+            "flightLastUldTs": "05/29 08:39",
+            "flightLoadEstimate": "100",
+            "flightAircraftType": "76P",
+            "flightLTPData": {
+                "position": [{
+                    "positionLabel": "3L",
+                    "unitLoadingDevice": "*** VOID ***",
+                    "weight": "0",
+                    "positionLock": "Y",
+                    "positionStatus": "VOID"
+                }, {
+                    "positionLabel": "1",
+                    "unitLoadingDevice": "*** VOID ***",
+                    "weight": "0",
+                    "positionLock": "Y",
+                    "positionStatus": "VOID"
+                }, {
+                    "positionLabel": "2R",
+                    "unitLoadingDevice": "*** VOID ***",
+                    "weight": "0",
+                    "positionLock": "Y",
+                    "positionStatus": "VOID"
+                }, {
+                    "positionLabel": "2L",
+                    "unitLoadingDevice": "*** VOID ***",
+                    "weight": "0",
+                    "positionLock": "Y",
+                    "positionStatus": "VOID"
+                }, {
+                    "positionLabel": "3R",
+                    "unitLoadingDevice": "*** VOID ***",
+                    "weight": "0",
+                    "positionLock": "Y",
+                    "positionStatus": "VOID"
+                }, {
+                    "positionLabel": "P2",
+                    "unitLoadingDevice": "*** VOID ***",
+                    "weight": "0",
+                    "positionLock": "Y",
+                    "positionStatus": "VOID"
+                }, {
+                    "positionLabel": "11L",
+                    "unitLoadingDevice": "*** VOID ***",
+                    "weight": "0",
+                    "positionLock": "Y",
+                    "positionStatus": "VOID"
+                }, {
+                    "positionLabel": "P4",
+                    "unitLoadingDevice": "*** VOID ***",
+                    "weight": "0",
+                    "positionLock": "Y",
+                    "positionStatus": "VOID"
+                }, {
+                    "positionLabel": "AB",
+                    "unitLoadingDevice": "BELLY",
+                    "weight": "0",
+                    "positionLock": "Y",
+                    "positionStatus": "FILLED"
+                }, {
+                    "positionLabel": "8L",
+                    "unitLoadingDevice": "*** VOID ***",
+                    "weight": "0",
+                    "positionLock": "Y",
+                    "positionStatus": "VOID"
+                }, {
+                    "positionLabel": "11R",
+                    "unitLoadingDevice": "*** VOID ***",
+                    "weight": "0",
+                    "positionLock": "Y",
+                    "positionStatus": "VOID"
+                }, {
+                    "positionLabel": "6R",
+                    "unitLoadingDevice": "*** VOID ***",
+                    "weight": "0",
+                    "positionLock": "Y",
+                    "positionStatus": "VOID"
+                }, {
+                    "positionLabel": "12L",
+                    "unitLoadingDevice": "*** VOID ***",
+                    "weight": "0",
+                    "positionLock": "Y",
+                    "positionStatus": "VOID"
+                }, {
+                    "positionLabel": "9R",
+                    "unitLoadingDevice": "*** VOID ***",
+                    "weight": "0",
+                    "positionLock": "Y",
+                    "positionStatus": "VOID"
+                }, {
+                    "positionLabel": "4L",
+                    "unitLoadingDevice": "*** VOID ***",
+                    "weight": "0",
+                    "positionLock": "Y",
+                    "positionStatus": "VOID"
+                }, {
+                    "positionLabel": "10L",
+                    "unitLoadingDevice": "*** VOID ***",
+                    "weight": "0",
+                    "positionLock": "Y",
+                    "positionStatus": "VOID"
+                }, {
+                    "positionLabel": "5R",
+                    "unitLoadingDevice": "*** VOID ***",
+                    "weight": "0",
+                    "positionLock": "Y",
+                    "positionStatus": "VOID"
+                }, {
+                    "positionLabel": "8R",
+                    "unitLoadingDevice": "*** VOID ***",
+                    "weight": "0",
+                    "positionLock": "Y",
+                    "positionStatus": "VOID"
+                }, {
+                    "positionLabel": "P6",
+                    "unitLoadingDevice": "*** VOID ***",
+                    "weight": "0",
+                    "positionLock": "Y",
+                    "positionStatus": "VOID"
+                }, {
+                    "positionLabel": "12R",
+                    "unitLoadingDevice": "*** VOID ***",
+                    "weight": "0",
+                    "positionLock": "Y",
+                    "positionStatus": "VOID"
+                }, {
+                    "positionLabel": "7R",
+                    "unitLoadingDevice": "*** VOID ***",
+                    "weight": "0",
+                    "positionLock": "Y",
+                    "positionStatus": "VOID"
+                }, {
+                    "positionLabel": "13",
+                    "unitLoadingDevice": "*** VOID ***",
+                    "weight": "0",
+                    "positionLock": "Y",
+                    "positionStatus": "VOID"
+                }, {
+                    "positionLabel": "6L",
+                    "unitLoadingDevice": "*** VOID ***",
+                    "weight": "0",
+                    "positionLock": "Y",
+                    "positionStatus": "VOID"
+                }, {
+                    "positionLabel": "4R",
+                    "unitLoadingDevice": "*** VOID ***",
+                    "weight": "0",
+                    "positionLock": "Y",
+                    "positionStatus": "VOID"
+                }, {
+                    "positionLabel": "7L",
+                    "unitLoadingDevice": "*** VOID ***",
+                    "weight": "0",
+                    "positionLock": "Y",
+                    "positionStatus": "VOID"
+                }, {
+                    "positionLabel": "10R",
+                    "unitLoadingDevice": "*** VOID ***",
+                    "weight": "0",
+                    "positionLock": "Y",
+                    "positionStatus": "VOID"
+                }, {
+                    "positionLabel": "P3",
+                    "unitLoadingDevice": "*** VOID ***",
+                    "weight": "0",
+                    "positionLock": "Y",
+                    "positionStatus": "VOID"
+                }, {
+                    "positionLabel": "P5",
+                    "unitLoadingDevice": "*** VOID ***",
+                    "weight": "0",
+                    "positionLock": "Y",
+                    "positionStatus": "VOID"
+                }, {
+                    "positionLabel": "P1",
+                    "unitLoadingDevice": "*** VOID ***",
+                    "weight": "0",
+                    "positionLock": "Y",
+                    "positionStatus": "VOID"
+                }, {
+                    "positionLabel": "9L",
+                    "unitLoadingDevice": "*** VOID ***",
+                    "weight": "0",
+                    "positionLock": "Y",
+                    "positionStatus": "VOID"
+                }, {
+                    "positionLabel": "P7",
+                    "unitLoadingDevice": "*** VOID ***",
+                    "weight": "0",
+                    "positionLock": "Y",
+                    "positionStatus": "VOID"
+                }, {
+                    "positionLabel": "5L",
+                    "unitLoadingDevice": "*** VOID ***",
+                    "weight": "0",
+                    "positionLock": "Y",
+                    "positionStatus": "VOID"
+                }]
+            }
+        }]
+    }
+}

@@ -1,8 +1,9 @@
 import { Component, OnInit, Inject, ViewChild } from '@angular/core';
 import { FrogsService } from 'app/frogs.service'
-import { MatDialog, MatDatepickerInputEvent, MatAccordion, MatSnackBar } from '@angular/material';
+import { MatDialog, MatDatepickerInputEvent, MatAccordion, MatSnackBar, MatBottomSheet, MatBottomSheetRef } from '@angular/material';
 import { DialogComponent } from 'app/dialog/dialog.component';
 import { ProfileComponent } from 'app/profile/profile.component';
+import { BottomSheetComponent } from 'app/bottom-sheet/bottom-sheet.component';
 @Component({
   selector: 'app-frogs',
   styleUrls: ['./frog-dashboard.component.css'],
@@ -32,8 +33,13 @@ export class FrogDashboardComponent implements OnInit {
   constructor(
     private frogsService: FrogsService,
     public dialog: MatDialog,
-    public snackBar: MatSnackBar
+    public snackBar: MatSnackBar,
+    private bottomSheet: MatBottomSheet
   ) { }
+
+  openBottomSheet(): void {
+    this.bottomSheet.open(BottomSheetComponent);
+  }
 
   openSnackBar() {
     // this.snackBar.openFromComponent(ProfileComponent, {
@@ -58,7 +64,12 @@ export class FrogDashboardComponent implements OnInit {
 
 
 
-  addEvent(type: string, event: MatDatepickerInputEvent<Date>) {
+  addStartEvent(type: string, event: MatDatepickerInputEvent<Date>) {
+    this.events.push(`${type}: ${event.value}`);
+    console.log(`${type}: ${event.value}`);
+  }
+
+  addEndEvent(type: string, event: MatDatepickerInputEvent<Date>) {
     this.events.push(`${type}: ${event.value}`);
     console.log(`${type}: ${event.value}`);
   }
@@ -97,7 +108,16 @@ export class FrogDashboardComponent implements OnInit {
     console.log(e.checked ? 'on' : 'off');
   }
 
+  filterDates(startDate, endDate) {
+    console.log(startDate);
+    console.log(endDate);
+    if (startDate === null || startDate === '' || endDate === null || endDate === '') {
+      alert('need both dates!!!')
+    } else {
+      // choice???
+    }
 
+  }
 
 }
 

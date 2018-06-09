@@ -44,11 +44,20 @@
 </mat-card>
 
 <mat-card>
+
     <mat-form-field>
-        <input matInput [matDatepicker]="picker" placeholder="Input & change events" (dateInput)="addEvent('input', $event)" (dateChange)="addEvent('change', $event)">
+        <input matInput #date1 [matDatepicker]="picker" placeholder="Input & change events" (dateInput)="addStartEvent('input', $event)" (dateChange)="addStartEvent('change', $event)">
         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
+
+    <mat-form-field>
+        <input matInput #date2 [matDatepicker]="picker2" placeholder="Input & change events" (dateInput)="addEndEvent('input', $event)" (dateChange)="addEndEvent('change', $event)">
+        <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+        <mat-datepicker #picker2></mat-datepicker>
+    </mat-form-field>
+
+    <button mat-button (click)="filterDates(date1.value, date2.value)">Submit</button>
 
     <div class="example-events">
         <div *ngFor="let e of events">{{e}}</div>
@@ -82,7 +91,7 @@
 
     <mat-accordion class="mat-accordian-headers-align">
 
-        <mat-expansion-panel>
+        <!-- <mat-expansion-panel>
 
             <mat-expansion-panel-header>
                 <mat-panel-title>
@@ -102,7 +111,7 @@
                 <input matInput placeholder="Age">
             </mat-form-field>
 
-        </mat-expansion-panel>
+        </mat-expansion-panel> -->
 
         <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
 
@@ -135,3 +144,5 @@
         {{chip.name}}
     </mat-chip>
 </mat-chip-list>
+
+<button mat-raised-button (click)="openBottomSheet()">Open file</button>

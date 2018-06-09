@@ -1,22 +1,70 @@
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" routerLink="/hubx">Hubx</a>
-    </div>
-    <ul class="nav navbar-nav">
-      <li><a routerLink="/datatable">Data Table</a></li>
-      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a routerLink="/crew" class="active">crew</a></li>
-          <li><a routerLink="/frogs">frogs</a></li>
-          <li><a routerLink="/profile">profile</a></li>
+<!-- <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" routerLink="/hubx">FIDS</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li><a routerLink="/datatable">Dashboard</a></li>
+            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Airline<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a routerLink="/crew" class="active">crew</a></li>
+                    <li><a routerLink="/frogs">alerts</a></li>
+                    <li><a routerLink="/profile">profile</a></li>
+                    <li><a routerLink="/flights">flights</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Page 2</a></li>
         </ul>
-      </li>
-      <li><a href="#">Page 2</a></li>
-    </ul>
-    <ul class="nav navbar-nav navbar-right">
-      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-    </ul>
-  </div>
-</nav>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up for alerts</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        </ul>
+    </div>
+</nav> -->
+
+
+<mat-toolbar class="ups-top-navigation navbar-fixed-top">
+
+    <button mat-button (click)="openSideMenu($event)" class="navBarSlideOverButton"><i class="material-icons">menu</i></button>
+
+    <div>
+        <span class="headerInset">
+            <div class="zone zone-header">
+                <a id="brandLink" class="navbar-brand" href="javascript:void(0);">
+                    <img alt="Ups-Logo" class="img-responsive ups_logo" src="assets/images/UPS_Logo.png">
+                </a>
+            </div>
+        </span>
+        <span class="headerInset2">
+        </span>
+        <span class="headerInset3">
+        </span>
+        <span class="brandingContainer">
+            <span class="brandingText">FIDS </span>
+        </span>
+
+
+
+    </div>
+
+
+
+    <!-- <span class="leftSideMenuArea" style="padding-left: 90px;">FIDS</span> -->
+
+    <span class="example-fill-remaining-space">
+        <!-- This fills the remaining space of the current row -->
+    </span>
+
+    <span class="rightSideMenuArea">
+    <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+     <mat-menu #menu="matMenu">
+        <button mat-menu-item><span class="glyphicon glyphicon-log-in"></span> &nbsp; Login</button>
+    <button mat-menu-item routerLink="/profile"><span class="glyphicon glyphicon-user"></span> &nbsp; Profile</button>
+    <button mat-menu-item routerLink="/preferences">Preferences</button>
+    <button mat-menu-item routerLink="/flights">Flights</button>
+    <button mat-menu-item routerLink="/dashboard">Dashboard</button>
+    <button mat-menu-item routerLink="/alerts">Alerts</button>
+    </mat-menu>
+    </span>
+
+</mat-toolbar>
