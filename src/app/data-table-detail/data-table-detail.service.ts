@@ -1,8 +1,8 @@
 /*
 Remember to add DataTableDetailService to providers in your app.module!
 */
-import { Http, Response } from "@angular/http";
-import { Observable } from "rxjs";
+import { Http, Response } from '@angular/http';
+import { Observable } from 'rxjs/Observable';
 import { Injectable } from '@angular/core';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch'
@@ -11,9 +11,9 @@ import { Person } from './person';
 @Injectable()
 export class DataTableDetailService {
 
-  private url = "assets/data/100k.json";
-  constructor(private http:Http) { }
-  
+  private url = 'ssets/data/100k.json';
+  constructor(private http: Http) { }
+
   getData(): Observable<Person[]> {
     return this.http.get(this.url)
       .map(this.extractData)
@@ -21,7 +21,7 @@ export class DataTableDetailService {
   }
 
   private extractData(res: Response) {
-    let body = res.json();
+    const body = res.json();
     return body;
   }
 
