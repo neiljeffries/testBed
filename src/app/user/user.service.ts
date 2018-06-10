@@ -8,7 +8,7 @@ import { FidsUser } from 'app/classes/fids-user';
   providedIn: 'root'
 })
 export class UserService {
-
+isLoggedIn = false;
 user_api_url = 'https://localhost:7002/fids-service/api/mobile/user?callback=JSONP_CALLBACK';
 // https://foi.inside.ups.com/fids-service/api/mobile/user?callback=JSONP_CALLBACK;
 
@@ -23,6 +23,17 @@ user_api_url = 'https://localhost:7002/fids-service/api/mobile/user?callback=JSO
       // , catchError(this.handleErrorObservable)
    )};
 
+
+  // store the URL so we can redirect after logging in
+  redirectUrl: string;
+
+  loggedIn(): boolean {
+    return this.isLoggedIn;
+  }
+
+  logout(): void {
+    this.isLoggedIn = false;
+  }
    private extractData(res: Response) {
     const body = res.json();
     this.fidsUser.next(res.json());

@@ -8,26 +8,37 @@ import { HubxDashboardComponent } from 'app/hubx-dashboard/hubx-dashboard.compon
 import { FlightsTableComponent } from 'app/flights-table/flights-table.component';
 import { FidsDashboardComponent } from "app/fids-dashboard/fids-dashboard.component";
 import { B747400Component } from "app/airplanes/b747400/b747400.component";
+import { AuthGuard } from "app/auth.guard";
+import { PageNotFoundComponent } from 'app/not-found.component';
+import { NotAuthorizedComponent } from 'app/not-authorized.component';
+
+// import { PageNotFoundComponent }    from './not-found.component';
 
 const routes: Routes = [
-  { path: 'alerts', component: FrogDashboardComponent },
-  { path: 'crew', component: CrewmembersComponent },
-  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
-  { path: '*', redirectTo: '/dashboard', pathMatch: 'full' },
-  { path: 'profile', component: ProfileComponent },
-  { path: 'datatable', component: DataTableComponent },
-  { path: 'hubx', component: HubxDashboardComponent },
-  { path: 'flights', component: FlightsTableComponent },
-  { path: 'dashboard', component: FidsDashboardComponent },
-  { path: '747400', component: B747400Component }
+    { path: 'alerts', component: FrogDashboardComponent },
+    // { path: 'crew', component: CrewmembersComponent },
+    { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+    //{ path: '*', redirectTo: '/dashboard', pathMatch: 'full' },
+    { path: 'profile', component: ProfileComponent },
+    // { path: 'datatable', component: DataTableComponent },
+    // { path: 'hubx', component: HubxDashboardComponent },
+    { path: 'notauthorized', component: NotAuthorizedComponent },
+    { path: 'flights', component: FlightsTableComponent, canActivate: [AuthGuard] },
+    { path: 'dashboard', component: FidsDashboardComponent },
+    // { path: '747400', component: B747400Component },
+    { path: '**', component: PageNotFoundComponent }
+   
 ];
 
 
 @NgModule({
-  imports: [ RouterModule.forRoot(routes) ],
-  exports: [ RouterModule ]
+    imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule],
+    providers: [
+        AuthGuard
+    ]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
 
 
 

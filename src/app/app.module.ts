@@ -41,6 +41,9 @@ import { OnlyLettersPipe } from './pipes/only-letters.pipe';
 import { AcTypePipe } from './pipes/ac-type.pipe';
 import { UserComponent } from './user/user.component';
 import { UserService } from 'app/user/user.service';
+import { PageNotFoundComponent } from 'app/not-found.component';
+import { NotAuthorizedComponent } from 'app/not-authorized.component';
+
 
 
 
@@ -73,6 +76,8 @@ import { UserService } from 'app/user/user.service';
     OnlyLettersPipe,
     AcTypePipe,
     UserComponent,
+    PageNotFoundComponent,
+    NotAuthorizedComponent
   ],
   imports: [
     BrowserModule,
